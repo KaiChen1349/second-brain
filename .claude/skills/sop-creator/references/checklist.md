@@ -1,60 +1,60 @@
-# Checklist Template
+# 檢查清單範本
 
-For: Quality control, verification, recurring tasks.
+適用於：品質控制、驗證、定期重複的任務。
 
 ```markdown
 ---
-title: [Checklist Name]
-owner: [Person or team]
+title: [檢查清單名稱]
+owner: [負責人或團隊]
 last_updated: YYYY-MM-DD
 ---
 
-# [Checklist Name]
+# [檢查清單名稱]
 
-> **Use when:** [Trigger for using this checklist]
+> **使用時機：** [使用此檢查清單的觸發條件]
 
-**Date:** _______________
-**Completed by:** _______________
-
----
-
-## Definition of Done
-
-This checklist is complete when:
-- [ ] All required items checked
-- [ ] Any failed items have follow-up logged
-- [ ] Sign-off completed
+**日期：** _______________
+**執行人：** _______________
 
 ---
 
-## Section 1: [Category]
+## 完成定義
 
-- [ ] [Item]
-- [ ] [Item]
-- [ ] [Item]
-
-## Section 2: [Category]
-
-- [ ] [Item]
-- [ ] [Item]
-- [ ] [Item]
-
-> **If any items fail:** [What to do]
-
-## Section 3: [Category]
-
-- [ ] [Item]
-- [ ] [Item]
+此檢查清單完成的條件：
+- [ ] 所有必要項目已勾選
+- [ ] 未通過的項目已記錄後續追蹤
+- [ ] 簽核完成
 
 ---
 
-## Sign-Off
+## 第 1 節：[類別]
 
-**All items complete:** [ ] Yes  [ ] No
+- [ ] [項目]
+- [ ] [項目]
+- [ ] [項目]
 
-**Issues found:** _______________________
+## 第 2 節：[類別]
 
-**Follow-up needed:** [ ] Yes  [ ] No
+- [ ] [項目]
+- [ ] [項目]
+- [ ] [項目]
 
-**Completed by:** _______ **Date:** _______
+> **如果有任何項目未通過：** [該怎麼做]
+
+## 第 3 節：[類別]
+
+- [ ] [項目]
+- [ ] [項目]
+
+---
+
+## 簽核
+
+**所有項目已完成：** [ ] 是  [ ] 否
+
+**發現的問題：** _______________________
+
+**需要後續追蹤：** [ ] 是  [ ] 否
+
+**執行人：** _______ **日期：** _______
 ```

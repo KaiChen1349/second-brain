@@ -5,11 +5,11 @@ metadata:
   tags: measure, layout, dimensions, getBoundingClientRect, scale
 ---
 
-# Measuring DOM nodes in Remotion
+# 在 Remotion 中測量 DOM 節點
 
-Remotion applies a `scale()` transform to the video container, which affects values from `getBoundingClientRect()`. Use `useCurrentScale()` to get correct measurements.
+Remotion 會對影片容器套用 `scale()` 變換，這會影響 `getBoundingClientRect()` 的值。使用 `useCurrentScale()` 來取得正確的測量值。
 
-## Measuring element dimensions
+## 測量元素尺寸
 
 ```tsx
 import { useCurrentScale } from "remotion";
@@ -32,4 +32,3 @@ export const MyComponent = () => {
   return <div ref={ref}>Content to measure</div>;
 };
 ```
-

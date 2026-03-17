@@ -1,49 +1,49 @@
-# [Brand Name] — Tone of Voice
+# [品牌名稱] — 語調指南
 
-## Voice Character
+## 語調特色
 
-REPLACE: Describe the brand's personality in 2-3 sentences. How should it "sound" when speaking?
+請替換：用 2-3 句描述品牌的個性。它「聽起來」應該是什麼感覺？
 
-## Core Attributes
+## 核心屬性
 
-### 1. REPLACE Attribute
-REPLACE with description of how this attribute manifests in writing.
+### 1. 請替換屬性名稱
+請替換為此屬性在寫作中如何展現的描述。
 
-### 2. REPLACE Attribute
-REPLACE with description.
+### 2. 請替換屬性名稱
+請替換為描述。
 
-### 3. REPLACE Attribute
-REPLACE with description.
-
----
-
-## Writing Guidelines
-
-### Do
-- REPLACE with positive writing guideline
-- REPLACE
-- REPLACE
-
-### Don't
-- REPLACE with what to avoid
-- REPLACE
-- REPLACE
+### 3. 請替換屬性名稱
+請替換為描述。
 
 ---
 
-## Example Phrases
+## 撰寫指南
 
-### Headlines
-- "REPLACE with example headline"
-- "REPLACE"
+### 要做
+- 請替換為正面撰寫指南
+- 請替換
+- 請替換
 
-### CTAs
-- "REPLACE with example CTA"
-- "REPLACE"
-
-### Descriptions
-- "REPLACE with example description style"
+### 不要做
+- 請替換為應避免的事項
+- 請替換
+- 請替換
 
 ---
 
-*Last updated: REPLACE*
+## 範例用語
+
+### 標題
+- 「請替換為範例標題」
+- 「請替換」
+
+### 行動呼籲
+- 「請替換為範例行動呼籲」
+- 「請替換」
+
+### 描述
+- 「請替換為範例描述風格」
+
+---
+
+*最後更新：請替換*

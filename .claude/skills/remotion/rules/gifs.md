@@ -5,11 +5,11 @@ metadata:
   tags: gif, animation, images, animated, apng, avif, webp
 ---
 
-# Using Animated images in Remotion
+# 在 Remotion 中使用動態圖片
 
-## Basic usage
+## 基本用法
 
-Use `<AnimatedImage>` to display a GIF, APNG, AVIF or WebP image synchronized with Remotion's timeline:
+使用 `<AnimatedImage>` 來顯示與 Remotion 時間軸同步的 GIF、APNG、AVIF 或 WebP 圖片：
 
 ```tsx
 import {AnimatedImage, staticFile} from 'remotion';
@@ -19,54 +19,54 @@ export const MyComposition = () => {
 };
 ```
 
-Remote URLs are also supported (must have CORS enabled):
+也支援遠端 URL（必須啟用 CORS）：
 
 ```tsx
 <AnimatedImage src="https://example.com/animation.gif" width={500} height={500} />
 ```
 
-## Sizing and fit
+## 尺寸和適應方式
 
-Control how the image fills its container with the `fit` prop:
+使用 `fit` 屬性控制圖片如何填滿容器：
 
 ```tsx
-// Stretch to fill (default)
+// 拉伸填滿（預設）
 <AnimatedImage src={staticFile("animation.gif")} width={500} height={300} fit="fill" />
 
-// Maintain aspect ratio, fit inside container
+// 保持長寬比，適應容器內部
 <AnimatedImage src={staticFile("animation.gif")} width={500} height={300} fit="contain" />
 
-// Fill container, crop if needed
+// 填滿容器，必要時裁剪
 <AnimatedImage src={staticFile("animation.gif")} width={500} height={300} fit="cover" />
 ```
 
-## Playback speed
+## 播放速度
 
-Use `playbackRate` to control the animation speed:
+使用 `playbackRate` 來控制動畫速度：
 
 ```tsx
-<AnimatedImage src={staticFile("animation.gif")} width={500} height={500} playbackRate={2} /> {/* 2x speed */}
-<AnimatedImage src={staticFile("animation.gif")} width={500} height={500} playbackRate={0.5} /> {/* Half speed */}
+<AnimatedImage src={staticFile("animation.gif")} width={500} height={500} playbackRate={2} /> {/* 2 倍速 */}
+<AnimatedImage src={staticFile("animation.gif")} width={500} height={500} playbackRate={0.5} /> {/* 半速 */}
 ```
 
-## Looping behavior
+## 循環行為
 
-Control what happens when the animation finishes:
+控制動畫結束後的行為：
 
 ```tsx
-// Loop indefinitely (default)
+// 無限循環（預設）
 <AnimatedImage src={staticFile("animation.gif")} width={500} height={500} loopBehavior="loop" />
 
-// Play once, show final frame
+// 播放一次，顯示最後一幀
 <AnimatedImage src={staticFile("animation.gif")} width={500} height={500} loopBehavior="pause-after-finish" />
 
-// Play once, then clear canvas
+// 播放一次，然後清除畫布
 <AnimatedImage src={staticFile("animation.gif")} width={500} height={500} loopBehavior="clear-after-finish" />
 ```
 
-## Styling
+## 樣式
 
-Use the `style` prop for additional CSS (use `width` and `height` props for sizing):
+使用 `style` 屬性設定額外的 CSS（使用 `width` 和 `height` 屬性設定尺寸）：
 
 ```tsx
 <AnimatedImage
@@ -82,15 +82,15 @@ Use the `style` prop for additional CSS (use `width` and `height` props for sizi
 />
 ```
 
-## Getting GIF duration
+## 取得 GIF 時長
 
-Use `getGifDurationInSeconds()` from `@remotion/gif` to get the duration of a GIF.
+使用 `@remotion/gif` 的 `getGifDurationInSeconds()` 來取得 GIF 的時長。
 
 ```bash
-npx remotion add @remotion/gif # If project uses npm
-bunx remotion add @remotion/gif # If project uses bun
-yarn remotion add @remotion/gif # If project uses yarn
-pnpm exec remotion add @remotion/gif # If project uses pnpm
+npx remotion add @remotion/gif # 如果專案使用 npm
+bunx remotion add @remotion/gif # 如果專案使用 bun
+yarn remotion add @remotion/gif # 如果專案使用 yarn
+pnpm exec remotion add @remotion/gif # 如果專案使用 pnpm
 ```
 
 ```tsx
@@ -98,10 +98,10 @@ import {getGifDurationInSeconds} from '@remotion/gif';
 import {staticFile} from 'remotion';
 
 const duration = await getGifDurationInSeconds(staticFile('animation.gif'));
-console.log(duration); // e.g. 2.5
+console.log(duration); // 例如 2.5
 ```
 
-This is useful for setting the composition duration to match the GIF:
+這對於設定合成時長以匹配 GIF 很有用：
 
 ```tsx
 import {getGifDurationInSeconds} from '@remotion/gif';
@@ -115,15 +115,15 @@ const calculateMetadata: CalculateMetadataFunction = async () => {
 };
 ```
 
-## Alternative
+## 替代方案
 
-If `<AnimatedImage>` does not work (only supported in Chrome and Firefox), you can use `<Gif>` from `@remotion/gif` instead.
+如果 `<AnimatedImage>` 無法使用（僅在 Chrome 和 Firefox 中支援），你可以改用 `@remotion/gif` 的 `<Gif>`。
 
 ```bash
-npx remotion add @remotion/gif # If project uses npm
-bunx remotion add @remotion/gif # If project uses bun
-yarn remotion add @remotion/gif # If project uses yarn
-pnpm exec remotion add @remotion/gif # If project uses pnpm
+npx remotion add @remotion/gif # 如果專案使用 npm
+bunx remotion add @remotion/gif # 如果專案使用 bun
+yarn remotion add @remotion/gif # 如果專案使用 yarn
+pnpm exec remotion add @remotion/gif # 如果專案使用 pnpm
 ```
 
 ```tsx
@@ -135,4 +135,4 @@ export const MyComposition = () => {
 };
 ```
 
-The `<Gif>` component has the same props as `<AnimatedImage>` but only supports GIF files.
+`<Gif>` 元件與 `<AnimatedImage>` 具有相同的屬性，但僅支援 GIF 檔案。

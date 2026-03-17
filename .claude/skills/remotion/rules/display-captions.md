@@ -5,34 +5,34 @@ metadata:
   tags: captions, subtitles, display, tiktok, highlight
 ---
 
-# Displaying captions in Remotion
+# 在 Remotion 中顯示字幕
 
-This guide explains how to display captions in Remotion, assuming you already have captions in the `Caption` format.
+本指南說明如何在 Remotion 中顯示字幕，假設你已經擁有 `Caption` 格式的字幕。
 
-## Prerequisites
+## 前置條件
 
-First, the @remotion/captions package needs to be installed.
-If it is not installed, use the following command:
+首先，需要安裝 @remotion/captions 套件。
+如果尚未安裝，請使用以下命令：
 
 ```bash
-npx remotion add @remotion/captions # If project uses npm
-bunx remotion add @remotion/captions # If project uses bun
-yarn remotion add @remotion/captions # If project uses yarn
-pnpm exec remotion add @remotion/captions # If project uses pnpm
+npx remotion add @remotion/captions # 如果專案使用 npm
+bunx remotion add @remotion/captions # 如果專案使用 bun
+yarn remotion add @remotion/captions # 如果專案使用 yarn
+pnpm exec remotion add @remotion/captions # 如果專案使用 pnpm
 ```
 
-## Creating pages
+## 建立分頁
 
-Use `createTikTokStyleCaptions()` to group captions into pages. The `combineTokensWithinMilliseconds` option controls how many words appear at once:
+使用 `createTikTokStyleCaptions()` 將字幕分組為頁面。`combineTokensWithinMilliseconds` 選項控制一次顯示多少字詞：
 
 ```tsx
 import {useMemo} from 'react';
 import {createTikTokStyleCaptions} from '@remotion/captions';
 import type {Caption} from '@remotion/captions';
 
-// How often captions should switch (in milliseconds)
-// Higher values = more words per page
-// Lower values = fewer words (more word-by-word)
+// 字幕切換頻率（以毫秒為單位）
+// 較高的值 = 每頁更多字詞
+// 較低的值 = 更少字詞（更接近逐字顯示）
 const SWITCH_CAPTIONS_EVERY_MS = 1200;
 
 const {pages} = useMemo(() => {
@@ -43,9 +43,9 @@ const {pages} = useMemo(() => {
 }, [captions]);
 ```
 
-## Rendering with Sequences
+## 使用 Sequence 渲染
 
-Map over the pages and render each one in a `<Sequence>`. Calculate the start frame and duration from the page timing:
+遍歷頁面，並將每個頁面渲染在 `<Sequence>` 中。根據頁面時間計算起始影格和持續時間：
 
 ```tsx
 import {Sequence, useVideoConfig, AbsoluteFill} from 'remotion';
@@ -84,9 +84,9 @@ const CaptionedContent: React.FC = () => {
 };
 ```
 
-## Word highlighting
+## 字詞高亮
 
-A caption page contains `tokens` which you can use to highlight the currently spoken word:
+字幕頁面包含 `tokens`，你可以用它來高亮當前正在朗讀的字詞：
 
 ```tsx
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
@@ -98,9 +98,9 @@ const CaptionPage: React.FC<{page: TikTokPage}> = ({page}) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
 
-  // Current time relative to the start of the sequence
+  // 相對於 sequence 開始的當前時間
   const currentTimeMs = (frame / fps) * 1000;
-  // Convert to absolute time by adding the page start
+  // 加上頁面起始時間轉換為絕對時間
   const absoluteTimeMs = page.startMs + currentTimeMs;
 
   return (

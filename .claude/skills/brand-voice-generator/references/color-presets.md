@@ -1,12 +1,12 @@
-# Color Presets
+# 顏色預設
 
-Quick color configurations for common brand themes.
+常見品牌主題的快速顏色設定。
 
 ---
 
-## Dark Themes
+## 深色主題
 
-### Midnight Blue (Developer-focused)
+### 午夜藍（開發者導向）
 
 ```json
 "colors": {
@@ -22,9 +22,9 @@ Quick color configurations for common brand themes.
   "card_bg_alt": "161B22"
 }
 ```
-Good for: Tech, developer tools, AI/ML content
+適用於：科技、開發者工具、AI/ML 內容
 
-### Catppuccin Mocha (Soft Dark)
+### Catppuccin Mocha（柔和深色）
 
 ```json
 "colors": {
@@ -40,9 +40,9 @@ Good for: Tech, developer tools, AI/ML content
   "card_bg_alt": "45475a"
 }
 ```
-Good for: Creative, design, softer aesthetic
+適用於：創意、設計、較柔和的美學
 
-### Pure Dark (High Contrast)
+### 純黑（高對比）
 
 ```json
 "colors": {
@@ -58,9 +58,9 @@ Good for: Creative, design, softer aesthetic
   "card_bg_alt": "262626"
 }
 ```
-Good for: Bold statements, high-impact content
+適用於：大膽宣言、高衝擊力內容
 
-### GitHub Dark
+### GitHub 深色
 
 ```json
 "colors": {
@@ -76,13 +76,13 @@ Good for: Bold statements, high-impact content
   "card_bg_alt": "30363d"
 }
 ```
-Good for: Open source, developer communities
+適用於：開源、開發者社群
 
 ---
 
-## Light Themes
+## 淺色主題
 
-### Clean White
+### 乾淨白色
 
 ```json
 "colors": {
@@ -98,9 +98,9 @@ Good for: Open source, developer communities
   "card_bg_alt": "f3f4f6"
 }
 ```
-Good for: Professional, corporate, documentation
+適用於：專業、企業、文件
 
-### Warm Paper
+### 溫暖紙張
 
 ```json
 "colors": {
@@ -116,9 +116,9 @@ Good for: Professional, corporate, documentation
   "card_bg_alt": "f5f5f4"
 }
 ```
-Good for: Content, publishing, creative writing
+適用於：內容、出版、創意寫作
 
-### Cool Gray
+### 冷灰
 
 ```json
 "colors": {
@@ -134,87 +134,87 @@ Good for: Content, publishing, creative writing
   "card_bg_alt": "e2e8f0"
 }
 ```
-Good for: SaaS, modern apps, tech products
+適用於：SaaS、現代應用、科技產品
 
 ---
 
-## Accent Color Options
+## 強調色選項
 
-### By Brand Personality
+### 依品牌個性
 
-| Personality | Color | Hex | Usage |
+| 個性 | 顏色 | Hex | 用途 |
 |-------------|-------|-----|-------|
-| Trust, Reliability | Blue | 3B82F6 | Tech, finance, enterprise |
-| Energy, Action | Orange | F97316 | Startups, CTAs, creative |
-| Growth, Success | Green | 22C55E | Health, sustainability, finance |
-| Creativity, Premium | Purple | 8B5CF6 | Design, luxury, creative tools |
-| Warning, Urgency | Red | EF4444 | News, alerts, sales |
-| Innovation, AI | Cyan | 06B6D4 | AI/ML, tech, futurism |
+| 信任、可靠 | 藍色 | 3B82F6 | 科技、金融、企業 |
+| 活力、行動 | 橘色 | F97316 | 新創、行動呼籲、創意 |
+| 成長、成功 | 綠色 | 22C55E | 健康、永續、金融 |
+| 創意、高端 | 紫色 | 8B5CF6 | 設計、奢華、創意工具 |
+| 警告、緊迫 | 紅色 | EF4444 | 新聞、警示、促銷 |
+| 創新、AI | 青色 | 06B6D4 | AI/ML、科技、未來主義 |
 
-### Complementary Pairs
+### 互補配對
 
-| Primary | Secondary | Style |
+| 主色 | 副色 | 風格 |
 |---------|-----------|-------|
-| 3B82F6 (Blue) | 60A5FA (Light Blue) | Monochromatic |
-| F97316 (Orange) | 3B82F6 (Blue) | Complementary |
-| 22C55E (Green) | 8B5CF6 (Purple) | Split complementary |
-| 8B5CF6 (Purple) | F59E0B (Amber) | Warm/cool contrast |
-| EF4444 (Red) | 10B981 (Emerald) | High contrast |
+| 3B82F6（藍色） | 60A5FA（淺藍） | 同色系 |
+| F97316（橘色） | 3B82F6（藍色） | 互補色 |
+| 22C55E（綠色） | 8B5CF6（紫色） | 分裂互補 |
+| 8B5CF6（紫色） | F59E0B（琥珀） | 冷暖對比 |
+| EF4444（紅色） | 10B981（翡翠綠） | 高對比 |
 
 ---
 
-## Font Pairings
+## 字型配對
 
-### Developer-Focused
-- Heading: JetBrains Mono
-- Body: Inter
-- Code: JetBrains Mono
+### 開發者導向
+- 標題：JetBrains Mono
+- 內文：Inter
+- 程式碼：JetBrains Mono
 
-### Professional/Corporate
-- Heading: Montserrat
-- Body: Open Sans
-- Code: Fira Code
+### 專業/企業
+- 標題：Montserrat
+- 內文：Open Sans
+- 程式碼：Fira Code
 
-### Modern/Clean
-- Heading: Inter
-- Body: Inter
-- Code: JetBrains Mono
+### 現代/簡潔
+- 標題：Inter
+- 內文：Inter
+- 程式碼：JetBrains Mono
 
-### Creative/Friendly
-- Heading: Poppins
-- Body: Lato
-- Code: Monaco
+### 創意/友善
+- 標題：Poppins
+- 內文：Lato
+- 程式碼：Monaco
 
-### Bold/Impact
-- Heading: Montserrat (Black weight)
-- Body: Source Sans Pro
-- Code: Consolas
+### 大膽/衝擊力
+- 標題：Montserrat（Black 字重）
+- 內文：Source Sans Pro
+- 程式碼：Consolas
 
 ---
 
-## Quick Start Combos
+## 快速開始組合
 
-### "Developer Content Creator"
-- Theme: Midnight Blue (dark)
-- Accent: 3B82F6 (blue)
-- Fonts: Inter / Inter / JetBrains Mono
+### 「開發者內容創作者」
+- 主題：午夜藍（深色）
+- 強調色：3B82F6（藍色）
+- 字型：Inter / Inter / JetBrains Mono
 
-### "Modern SaaS"
-- Theme: Cool Gray (light)
-- Accent: 0EA5E9 (cyan)
-- Fonts: Inter / Inter / Fira Code
+### 「現代 SaaS」
+- 主題：冷灰（淺色）
+- 強調色：0EA5E9（青色）
+- 字型：Inter / Inter / Fira Code
 
-### "Bold Tech Influencer"
-- Theme: Pure Dark
-- Accent: F97316 (orange)
-- Fonts: Montserrat / Inter / JetBrains Mono
+### 「大膽科技影響者」
+- 主題：純黑
+- 強調色：F97316（橘色）
+- 字型：Montserrat / Inter / JetBrains Mono
 
-### "Professional Services"
-- Theme: Clean White
-- Accent: 2563EB (blue)
-- Fonts: Montserrat / Open Sans / Fira Code
+### 「專業服務」
+- 主題：乾淨白色
+- 強調色：2563EB（藍色）
+- 字型：Montserrat / Open Sans / Fira Code
 
-### "Creative Studio"
-- Theme: Catppuccin Mocha
-- Accent: FAB387 (peach)
-- Fonts: Poppins / Lato / JetBrains Mono
+### 「創意工作室」
+- 主題：Catppuccin Mocha
+- 強調色：FAB387（蜜桃色）
+- 字型：Poppins / Lato / JetBrains Mono

@@ -5,13 +5,13 @@ metadata:
   tags: decode, validation, video, audio, compatibility, browser
 ---
 
-# Checking if a video can be decoded
+# 檢查影片是否可解碼
 
-Use Mediabunny to check if a video can be decoded by the browser before attempting to play it.
+使用 Mediabunny 在嘗試播放影片之前，檢查瀏覽器是否能解碼該影片。
 
-## The `canDecode()` function
+## `canDecode()` 函式
 
-This function can be copy-pasted into any project.
+此函式可以直接複製貼上到任何專案中。
 
 ```tsx
 import { Input, ALL_FORMATS, UrlSource } from "mediabunny";
@@ -44,22 +44,22 @@ export const canDecode = async (src: string) => {
 };
 ```
 
-## Usage
+## 使用方式
 
 ```tsx
 const src = "https://remotion.media/video.mp4";
 const isDecodable = await canDecode(src);
 
 if (isDecodable) {
-  console.log("Video can be decoded");
+  console.log("影片可以解碼");
 } else {
-  console.log("Video cannot be decoded by this browser");
+  console.log("此瀏覽器無法解碼該影片");
 }
 ```
 
-## Using with Blob
+## 搭配 Blob 使用
 
-For file uploads or drag-and-drop, use `BlobSource`:
+對於檔案上傳或拖放功能，使用 `BlobSource`：
 
 ```tsx
 import { Input, ALL_FORMATS, BlobSource } from "mediabunny";
@@ -70,6 +70,6 @@ export const canDecodeBlob = async (blob: Blob) => {
     source: new BlobSource(blob),
   });
 
-  // Same validation logic as above
+  // 與上方相同的驗證邏輯
 };
 ```

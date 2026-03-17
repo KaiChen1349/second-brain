@@ -5,15 +5,15 @@ metadata:
   tags: assets, staticFile, images, fonts, public
 ---
 
-# Importing assets in Remotion
+# 在 Remotion 中匯入素材
 
-## The public folder
+## public 資料夾
 
-Place assets in the `public/` folder at your project root.
+將素材放置在專案根目錄的 `public/` 資料夾中。
 
-## Using staticFile()
+## 使用 staticFile()
 
-You MUST use `staticFile()` to reference files from the `public/` folder:
+你必須使用 `staticFile()` 來參照 `public/` 資料夾中的檔案：
 
 ```tsx
 import {Img, staticFile} from 'remotion';
@@ -23,11 +23,11 @@ export const MyComposition = () => {
 };
 ```
 
-The function returns an encoded URL that works correctly when deploying to subdirectories.
+此函式會回傳一個編碼過的 URL，在部署到子目錄時也能正確運作。
 
-## Using with components
+## 搭配元件使用
 
-**Images:**
+**圖片：**
 
 ```tsx
 import {Img, staticFile} from 'remotion';
@@ -35,7 +35,7 @@ import {Img, staticFile} from 'remotion';
 <Img src={staticFile('photo.png')} />;
 ```
 
-**Videos:**
+**影片：**
 
 ```tsx
 import {Video} from '@remotion/media';
@@ -44,7 +44,7 @@ import {staticFile} from 'remotion';
 <Video src={staticFile('clip.mp4')} />;
 ```
 
-**Audio:**
+**音訊：**
 
 ```tsx
 import {Audio} from '@remotion/media';
@@ -53,7 +53,7 @@ import {staticFile} from 'remotion';
 <Audio src={staticFile('music.mp3')} />;
 ```
 
-**Fonts:**
+**字型：**
 
 ```tsx
 import {staticFile} from 'remotion';
@@ -63,16 +63,16 @@ await fontFamily.load();
 document.fonts.add(fontFamily);
 ```
 
-## Remote URLs
+## 遠端 URL
 
-Remote URLs can be used directly without `staticFile()`:
+遠端 URL 可以直接使用，無需 `staticFile()`：
 
 ```tsx
 <Img src="https://example.com/image.png" />
 <Video src="https://remotion.media/video.mp4" />
 ```
 
-## Important notes
+## 重要注意事項
 
-- Remotion components (`<Img>`, `<Video>`, `<Audio>`) ensure assets are fully loaded before rendering
-- Special characters in filenames (`#`, `?`, `&`) are automatically encoded
+- Remotion 元件（`<Img>`、`<Video>`、`<Audio>`）會確保素材在渲染前完全載入
+- 檔案名稱中的特殊字元（`#`、`?`、`&`）會自動編碼

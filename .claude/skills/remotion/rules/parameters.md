@@ -5,37 +5,37 @@ metadata:
   tags: parameters, zod, schema
 ---
 
-To make a video parametrizable, a Zod schema can be added to a composition.
+要使影片可參數化，可以在合成中加入 Zod schema。
 
-First, `zod` must be installed - it must be exactly version `3.22.3`.
+首先，必須安裝 `zod` - 版本必須剛好是 `3.22.3`。
 
-Search the project for lockfiles and run the correct command depending on the package manager:
+搜尋專案中的 lockfile 並根據套件管理器執行對應的命令：
 
-If `package-lock.json` is found, use the following command:
+如果找到 `package-lock.json`，使用以下命令：
 
 ```bash
 npm i zod@3.22.3
 ```
 
-If `bun.lockb` is found, use the following command:
+如果找到 `bun.lockb`，使用以下命令：
 
 ```bash
 bun i zod@3.22.3
 ```
 
-If `yarn.lock` is found, use the following command:
+如果找到 `yarn.lock`，使用以下命令：
 
 ```bash
 yarn add zod@3.22.3
 ```
 
-If `pnpm-lock.yaml` is found, use the following command:
+如果找到 `pnpm-lock.yaml`，使用以下命令：
 
 ```bash
 pnpm i zod@3.22.3
 ```
 
-Then, a Zod schema can be defined alongside the component:
+然後，可以在元件旁邊定義 Zod schema：
 
 ```tsx title="src/MyComposition.tsx"
 import {z} from 'zod';
@@ -53,7 +53,7 @@ const MyComponent: React.FC<z.infer<typeof MyCompositionSchema>> = () => {
 };
 ```
 
-In the root file, the schema can be passed to the composition:
+在根檔案中，可以將 schema 傳遞給合成：
 
 ```tsx title="src/Root.tsx"
 import {Composition} from 'remotion';
@@ -64,32 +64,32 @@ export const RemotionRoot = () => {
 };
 ```
 
-Now, the user can edit the parameter visually in the sidebar.
+現在，使用者可以在側邊欄中視覺化地編輯參數。
 
-All schemas that are supported by Zod are supported by Remotion.
+Zod 支援的所有 schema 都被 Remotion 支援。
 
-Remotion requires that the top-level type is a z.object(), because the collection of props of a React component is always an object.
+Remotion 要求頂層類型是 z.object()，因為 React 元件的 props 集合始終是一個物件。
 
-## Color picker
+## 色彩選擇器
 
-For adding a color picker, use `zColor()` from `@remotion/zod-types`.
+要新增色彩選擇器，使用 `@remotion/zod-types` 的 `zColor()`。
 
-If it is not installed, use the following command:
+如果尚未安裝，使用以下命令：
 
 ```bash
-npx remotion add @remotion/zod-types # If project uses npm
-bunx remotion add @remotion/zod-types # If project uses bun
-yarn remotion add @remotion/zod-types # If project uses yarn
-pnpm exec remotion add @remotion/zod-types # If project uses pnpm
+npx remotion add @remotion/zod-types # 如果專案使用 npm
+bunx remotion add @remotion/zod-types # 如果專案使用 bun
+yarn remotion add @remotion/zod-types # 如果專案使用 yarn
+pnpm exec remotion add @remotion/zod-types # 如果專案使用 pnpm
 ```
 
-Then import `zColor` from `@remotion/zod-types`:
+然後從 `@remotion/zod-types` 匯入 `zColor`：
 
 ```tsx
 import {zColor} from '@remotion/zod-types';
 ```
 
-Then use it in the schema:
+然後在 schema 中使用：
 
 ```tsx
 export const MyCompositionSchema = z.object({

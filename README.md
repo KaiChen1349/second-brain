@@ -1,93 +1,93 @@
-# Claude Code Second Brain Skills
+# Claude Code 第二大腦技能集
 
-A collection of custom skills that turn Claude Code into a second brain for knowledge work. These skills demonstrate progressive disclosure of context - there's no magic, just structured knowledge that makes Claude hyper-capable for specific tasks.
+一套自訂技能集合，將 Claude Code 打造成知識工作的第二大腦。這些技能展示了上下文的漸進式載入——沒有魔法，只是結構化的知識，讓 Claude 在特定任務中發揮超強能力。
 
-## What This Is
+## 這是什麼
 
-Most people think of Claude Code as a tool for writing and debugging code. These skills extend it into a system for capturing and operationalizing knowledge:
+大多數人把 Claude Code 當作寫程式和除錯的工具。這些技能將它擴展為一個擷取和落實知識的系統：
 
-- **External integrations** - Connect to MCP servers (Zapier, GitHub, etc.) without context bloat
-- **Video creation** - Programmatic videos with Remotion and React
-- **Presentations** - Professional slides and LinkedIn carousels with your brand styling
-- **Documentation** - Runbooks, SOPs, and technical docs that people actually follow
-- **Skill development** - Creating new skills to extend Claude's capabilities further
-- **Brand consistency** - Define your voice and visual identity once, use everywhere
+- **外部整合** - 連接 MCP 伺服器（Zapier、GitHub 等），不會造成上下文膨脹
+- **影片製作** - 使用 Remotion 和 React 程式化地製作影片
+- **簡報製作** - 具備品牌風格的專業投影片和 LinkedIn 輪播圖
+- **文件撰寫** - 人們真的會照著做的 Runbook、SOP 和技術文件
+- **技能開發** - 建立新技能以進一步擴展 Claude 的能力
+- **品牌一致性** - 一次定義你的語調和視覺識別，到處使用
 
-The system works through progressive disclosure: Claude only loads detailed instructions when needed, keeping context efficient while maintaining deep expertise for each domain.
+此系統透過漸進式載入運作：Claude 只在需要時才載入詳細指令，保持上下文的高效率，同時在每個領域維持深度專業知識。
 
 ---
 
-## Brand & Voice Generator
+## 品牌與語調產生器
 
-Generate tone-of-voice and brand-system files that power the PPTX Generator and can guide customization of all the other skills. This skill walks you through creating your brand identity, defining your writing voice, and establishing your visual system.
+產生品牌語調和品牌系統檔案，驅動 PPTX 產生器，也可以引導所有其他技能的客製化。這個技能會引導你建立品牌識別、定義寫作語調，以及建立視覺系統。
 
-**Core Philosophy**: Your brand and voice should be documented once and reused everywhere. The files this skill creates become the source of truth for all content generation.
+**核心理念**：你的品牌和語調應該只記錄一次，然後到處重複使用。這個技能建立的檔案將成為所有內容產生的唯一真實來源。
 
 <details>
-<summary><big>📦 What It Creates</big></summary>
+<summary><big>📦 產生的檔案</big></summary>
 
-| File | Purpose | Used By |
+| 檔案 | 用途 | 使用者 |
 |------|---------|---------|
-| `brand.json` | Colors, fonts, assets | PPTX Generator |
-| `config.json` | Output settings | PPTX Generator |
-| `brand-system.md` | Design philosophy & guidelines | All skills |
-| `tone-of-voice.md` | Writing voice & personality | PPTX content, SOPs |
+| `brand.json` | 顏色、字型、素材 | PPTX 產生器 |
+| `config.json` | 輸出設定 | PPTX 產生器 |
+| `brand-system.md` | 設計哲學與準則 | 所有技能 |
+| `tone-of-voice.md` | 寫作語調與個性 | PPTX 內容、SOP |
 
 </details>
 
 <details>
-<summary><big>🔄 Process Overview</big></summary>
+<summary><big>🔄 流程概覽</big></summary>
 
-1. **Gather Brand Basics** - Name, description, primary use case
-2. **Define Colors** - 10 color values for the complete system
-3. **Define Typography** - Heading, body, and code fonts
-4. **Define Assets** - Logo and icon paths
-5. **Discover Voice** - Personality, vocabulary, sentence patterns
-6. **Create Design Philosophy** - Core principles and signature elements
-7. **Generate Files** - Create all four files with gathered information
+1. **收集品牌基本資訊** - 名稱、描述、主要用途
+2. **定義顏色** - 完整系統的 10 個色值
+3. **定義字型** - 標題、內文和程式碼字型
+4. **定義素材** - Logo 和圖示路徑
+5. **探索語調** - 個性、詞彙、句型模式
+6. **建立設計哲學** - 核心原則和標誌性元素
+7. **產生檔案** - 用收集到的資訊建立所有四個檔案
 
 </details>
 
 <details>
-<summary><big>🎭 Voice Templates Included</big></summary>
+<summary><big>🎭 內建的語調範本</big></summary>
 
-The skill includes 5 example voice configurations to help you discover your own:
+技能內含 5 個語調範例設定，幫助你找到自己的風格：
 
-- **Technical Educator** - Enthusiastic expert who teaches by showing
-- **Calm Authority** - Confident and measured, lets expertise speak through specifics
-- **Builder's Perspective** - Developer-to-developer, unfiltered opinions backed by code
-- **Approachable Expert** - Makes the complex accessible without dumbing it down
-- **Contrarian Thinker** - Challenges conventional wisdom with evidence
+- **技術教育者** - 充滿熱情的專家，透過展示來教學
+- **沉穩權威** - 自信且從容，讓專業知識透過具體細節說話
+- **建造者視角** - 開發者對開發者，以程式碼支撐的直率觀點
+- **平易近人的專家** - 讓複雜的事物變得易懂，但不會過度簡化
+- **逆向思考者** - 用證據挑戰傳統智慧
 
 </details>
 
 <br/>
 
-**Triggers**: "help me create a brand system", "generate my tone of voice", "set up my brand for presentations", "create brand files"
+**觸發方式**：「幫我建立品牌系統」、「產生我的語調」、「為簡報設定品牌」、「建立品牌檔案」
 
 ---
 
-## Skills Overview
+## 技能概覽
 
-### MCP Client
+### MCP 客戶端
 
-Connect Claude Code to external MCP servers (Zapier, GitHub, Sequential Thinking, etc.) with progressive disclosure - tool schemas load on-demand instead of bloating your context window.
+將 Claude Code 連接到外部 MCP 伺服器（Zapier、GitHub、Sequential Thinking 等），採用漸進式載入——工具結構定義按需載入，而非塞滿你的上下文視窗。
 
-**Core Philosophy**: MCP servers expose thousands of tokens worth of tool definitions. This skill wraps them as a lightweight client, loading only what you need when you need it.
+**核心理念**：MCP 伺服器會暴露數千個 token 的工具定義。這個技能將它們包裝成輕量級客戶端，只在需要時才載入所需內容。
 
 <details>
-<summary><big>🔧 Setup: Create Your Config</big></summary>
+<summary><big>🔧 設定：建立你的設定檔</big></summary>
 
-**Step 1:** Copy the example config to create your own:
+**步驟 1：** 複製範例設定檔來建立自己的設定：
 
 ```bash
 cp .claude/skills/mcp-client/references/example-mcp-config.json \
    .claude/skills/mcp-client/references/mcp-config.json
 ```
 
-**Step 2:** Edit `mcp-config.json` with your API keys and servers.
+**步驟 2：** 編輯 `mcp-config.json`，填入你的 API 金鑰和伺服器資訊。
 
-The config format is identical to Claude Desktop's MCP config:
+設定格式與 Claude Desktop 的 MCP 設定完全相同：
 
 ```json
 {
@@ -104,239 +104,239 @@ The config format is identical to Claude Desktop's MCP config:
 }
 ```
 
-**Transport types:**
-- `url` + `api_key` → Remote server with Bearer auth (Zapier)
-- `command` + `args` → Local stdio server (npx, python, docker)
-- `url` ending in `/sse` → SSE transport
-- `url` ending in `/mcp` → Streamable HTTP
+**傳輸類型：**
+- `url` + `api_key` → 帶 Bearer 驗證的遠端伺服器（Zapier）
+- `command` + `args` → 本地 stdio 伺服器（npx、python、docker）
+- `url` 以 `/sse` 結尾 → SSE 傳輸
+- `url` 以 `/mcp` 結尾 → 可串流 HTTP
 
 </details>
 
 <details>
-<summary><big>📋 Available Commands (Agent Takes Care of This)</big></summary>
+<summary><big>📋 可用指令（代理程式會自動處理）</big></summary>
 
 ```bash
-# List configured servers
+# 列出已設定的伺服器
 python .claude/skills/mcp-client/scripts/mcp_client.py servers
 
-# List tools from a server (with full schemas)
+# 列出伺服器的工具（包含完整結構定義）
 python .claude/skills/mcp-client/scripts/mcp_client.py tools zapier
 
-# Call a tool
+# 呼叫工具
 python .claude/skills/mcp-client/scripts/mcp_client.py call zapier <tool_name> '{"param": "value"}'
 ```
 
 </details>
 
 <details>
-<summary><big>📝 Document Tool Gotchas in CLAUDE.md</big></summary>
+<summary><big>📝 在 CLAUDE.md 中記錄工具注意事項</big></summary>
 
-**Important:** After setting up MCP servers, ask Claude to test each tool and document any quirks. This saves time on future calls.
+**重要：** 設定好 MCP 伺服器後，請讓 Claude 測試每個工具並記錄任何特殊行為。這會節省未來呼叫的時間。
 
-Add a section to your project's `CLAUDE.md` (or create one) - example:
+在你專案的 `CLAUDE.md` 中加入一個區段（或建立一個）——範例：
 
 ```markdown
-## MCP Tool Notes
+## MCP 工具筆記
 
 ### Zapier
-- `send_gmail_email`: The `to` field must be a single email, not an array
-- `create_notion_page`: Requires `database_id`, not `page_id`
-- Rate limit: 2 Zapier tasks per MCP call
+- `send_gmail_email`：`to` 欄位必須是單一電子郵件，不是陣列
+- `create_notion_page`：需要 `database_id`，不是 `page_id`
+- 速率限制：每次 MCP 呼叫最多 2 個 Zapier 任務
 
 ### Sequential Thinking
-- Always set `nextThoughtNeeded: true` until final thought
-- `totalThoughts` is advisory, can be adjusted mid-process
+- 務必設定 `nextThoughtNeeded: true` 直到最後一個思考
+- `totalThoughts` 是建議值，可在過程中調整
 ```
 
-**Why this matters:** MCP tools often have undocumented argument requirements or behaviors. Testing once and documenting saves context and prevents repeated errors.
+**為什麼這很重要：** MCP 工具經常有未記錄的參數要求或行為。測試一次並記錄下來，可以節省上下文空間並避免重複錯誤。
 
-**Workflow:**
-1. Connect a new MCP server
-2. Ask Claude: "List all tools from [server] and test each one with sample inputs"
-3. Document any failures, required formats, or gotchas in CLAUDE.md
-4. Claude will reference these notes on future calls
-
-</details>
-
-<br/>
-
-**Example Triggers**: "connect to Zapier", "use MCP server", "list MCP tools", "call Zapier action", or any MCP server interaction
-
----
-
-### PPTX Generator
-
-Generate professional, on-brand presentation slides and LinkedIn carousels using python-pptx.
-
-> **Credit**: This skill was originally created by Rasmus and is [maintained here](https://github.com/Wirasm/presentation-slides-skill). The version here has been adapted with brand-specific configurations.
-
-<details>
-<summary><big>🎛️ Three Operating Modes</big></summary>
-
-1. **Slide Generation** - Create 16:9 presentations with brand styling
-2. **Carousel Generation** - Create square 1:1 LinkedIn carousels (exports to PDF)
-3. **Layout Management** - Create, edit, and improve cookbook layouts
-
-</details>
-
-<details>
-<summary><big>✨ Key Features</big></summary>
-
-- 16 slide layout templates in the cookbook (title, content, stats, two-column, multi-card, floating-cards, circular-hero, quote, chart, code, and more)
-- 5 carousel-specific layouts (hook, single-point, numbered-point, quote, CTA)
-- Brand system with colors, fonts, and assets
-- Batch generation (max 5 slides at a time) for reliability
-- Variety enforcement rules to prevent repetitive layouts
-
-</details>
-
-<details>
-<summary><big>💡 Critical Concept</big></summary>
-
-**Visual-first layout selection** - content-slide is the LAST RESORT, not the default.
-
-The skill includes a decision tree to transform bullets into visual layouts:
-- 3-5 equal items → multi-card-slide
-- 2-4 big numbers → stats-slide
-- Comparing two things → two-column-slide
-- Central concept with surrounding items → circular-hero-slide
-- Powerful quote → quote-slide
-
-Only use content-slide when none of the visual layouts fit.
+**工作流程：**
+1. 連接新的 MCP 伺服器
+2. 請 Claude：「列出 [伺服器] 的所有工具並用範例輸入測試每一個」
+3. 在 CLAUDE.md 中記錄任何失敗、所需格式或注意事項
+4. Claude 在未來的呼叫中會參考這些筆記
 
 </details>
 
 <br/>
 
-**Triggers**: Requests for slides, presentations, carousels, PPTX, or layouts with a brand name
+**觸發範例**：「連接 Zapier」、「使用 MCP 伺服器」、「列出 MCP 工具」、「呼叫 Zapier 動作」，或任何 MCP 伺服器互動
 
 ---
 
-### SOP Creator
+### PPTX 產生器
 
-Create runbooks, playbooks, and technical documentation that people actually follow.
+使用 python-pptx 產生專業的品牌風格簡報投影片和 LinkedIn 輪播圖。
 
-**Core Philosophy**: Nobody reads 50-page docs. Make it scannable, actionable, and impossible to misunderstand.
+> **致謝**：此技能最初由 Rasmus 建立，[維護於此](https://github.com/Wirasm/presentation-slides-skill)。這裡的版本已針對品牌特定設定進行調整。
 
 <details>
-<summary><big>📂 Document Types</big></summary>
+<summary><big>🎛️ 三種操作模式</big></summary>
 
-- **Tech/Engineering**: Runbook, Deployment Playbook, Troubleshooting Guide, How-To, ADR
-- **Operations/Business**: Process SOP, Checklist, Decision Tree, Handoff Doc
-- **Content/Creative**: Production Workflow, Review Process, Publishing Checklist
-- **General**: Standard SOP, Quick Reference, Onboarding Guide
+1. **投影片產生** - 建立 16:9 品牌風格簡報
+2. **輪播圖產生** - 建立方形 1:1 LinkedIn 輪播圖（匯出為 PDF）
+3. **版面管理** - 建立、編輯和改進食譜版面
 
 </details>
 
 <details>
-<summary><big>🏗️ Universal Structure</big></summary>
+<summary><big>✨ 主要功能</big></summary>
 
-1. Definition of Done (checklist - most important, put near the top)
-2. When to Use This
-3. Prerequisites
-4. The Process (numbered steps)
-5. Verify Completion
-6. When Things Go Wrong
-7. Questions?
+- 食譜中有 16 個投影片版面範本（標題、內容、數據、雙欄、多卡片、浮動卡片、圓形主視覺、引言、圖表、程式碼等）
+- 5 個輪播圖專用版面（鉤子、單一重點、編號重點、引言、行動呼籲）
+- 含顏色、字型和素材的品牌系統
+- 批次產生（每次最多 5 張投影片）確保可靠性
+- 多樣性規則防止重複的版面
 
 </details>
 
 <details>
-<summary><big>📏 Writing Rules</big></summary>
+<summary><big>💡 關鍵概念</big></summary>
 
-- Be specific (numbers, names, thresholds - not "as needed" or "regularly")
-- Action-first steps (verbs, not descriptions)
-- Warnings come first (before the dangerous step, not after)
-- Clear decision points (if X, then Y - not "handle based on priority")
+**視覺優先的版面選擇** - content-slide 是最後手段，不是預設選項。
+
+技能包含一個決策樹，將條列式內容轉換為視覺版面：
+- 3-5 個同等項目 → multi-card-slide
+- 2-4 個大數字 → stats-slide
+- 比較兩個事物 → two-column-slide
+- 中心概念搭配周圍項目 → circular-hero-slide
+- 有力的引言 → quote-slide
+
+只有在沒有任何視覺版面適合時才使用 content-slide。
 
 </details>
 
 <br/>
 
-**Triggers**: Requests to document a process, create a runbook, build operational docs, formalize technical procedures
+**觸發方式**：包含品牌名稱的投影片、簡報、輪播圖、PPTX 或版面請求
 
 ---
 
-### Skill Creator
+### SOP 建立器
 
-Guide for creating effective skills that extend Claude's capabilities.
+建立人們真的會照著做的 Runbook、Playbook 和技術文件。
 
-**Core Philosophy**: Skills are modular, self-contained packages that transform Claude from a general-purpose agent into a specialized agent. Only add context Claude doesn't already have.
+**核心理念**：沒人會讀 50 頁的文件。讓它可掃描、可執行，而且不可能被誤解。
 
 <details>
-<summary><big>🎁 What Skills Provide</big></summary>
+<summary><big>📂 文件類型</big></summary>
 
-1. Specialized workflows - Multi-step procedures for specific domains
-2. Tool integrations - Instructions for working with specific file formats or APIs
-3. Domain expertise - Company-specific knowledge, schemas, business logic
-4. Bundled resources - Scripts, references, and assets for complex tasks
+- **技術/工程**：Runbook、部署 Playbook、故障排除指南、操作指南、ADR
+- **營運/業務**：流程 SOP、檢查清單、決策樹、交接文件
+- **內容/創意**：製作工作流程、審查流程、發佈檢查清單
+- **通用**：標準 SOP、快速參考、入職指南
 
 </details>
 
 <details>
-<summary><big>🧭 Core Principles</big></summary>
+<summary><big>🏗️ 通用結構</big></summary>
 
-- **Concise is Key** - Only add context Claude doesn't already have
-- **Set Appropriate Degrees of Freedom** - Match specificity to task fragility
-- **Progressive Disclosure** - Metadata always in context, body when triggered, resources as needed
+1. 完成定義（檢查清單——最重要，放在最前面）
+2. 何時使用
+3. 前提條件
+4. 流程（編號步驟）
+5. 驗證完成
+6. 出問題時怎麼辦
+7. 有問題？
 
 </details>
 
 <details>
-<summary><big>🗂️ Skill Anatomy</big></summary>
+<summary><big>📏 撰寫規則</big></summary>
+
+- 具體明確（數字、名稱、閾值——不要用「視需要」或「定期」）
+- 步驟以動作開頭（動詞，不是描述）
+- 警告放在前面（在危險步驟之前，不是之後）
+- 清楚的決策點（如果 X，則 Y——不要「依優先順序處理」）
+
+</details>
+
+<br/>
+
+**觸發方式**：記錄流程、建立 Runbook、撰寫營運文件、規範化技術程序的請求
+
+---
+
+### 技能建立器
+
+建立有效技能的指南，擴展 Claude 的能力。
+
+**核心理念**：技能是模組化、自成一體的套件，將 Claude 從通用型代理程式轉變為專門型代理程式。只加入 Claude 還不知道的上下文。
+
+<details>
+<summary><big>🎁 技能提供什麼</big></summary>
+
+1. 專門化工作流程 - 特定領域的多步驟程序
+2. 工具整合 - 與特定檔案格式或 API 協作的指令
+3. 領域專業知識 - 公司特有的知識、結構定義、業務邏輯
+4. 打包資源 - 複雜任務所需的腳本、參考資料和素材
+
+</details>
+
+<details>
+<summary><big>🧭 核心原則</big></summary>
+
+- **簡潔是關鍵** - 只加入 Claude 還不知道的上下文
+- **設定適當的自由度** - 根據任務的脆弱性匹配具體程度
+- **漸進式載入** - 中繼資料始終在上下文中，主體在觸發時載入，資源按需載入
+
+</details>
+
+<details>
+<summary><big>🗂️ 技能結構</big></summary>
 
 ```
 skill-name/
-├── SKILL.md (required)
-│   ├── YAML frontmatter (name, description)
-│   └── Markdown instructions
-└── Bundled Resources (optional)
-    ├── scripts/     - Executable code
-    ├── references/  - Documentation loaded as needed
-    └── assets/      - Files used in output
+├── SKILL.md（必要）
+│   ├── YAML 前置資料（名稱、描述）
+│   └── Markdown 指令
+└── 打包資源（選填）
+    ├── scripts/     - 可執行程式碼
+    ├── references/  - 按需載入的文件
+    └── assets/      - 輸出使用的檔案
 ```
 
 </details>
 
 <details>
-<summary><big>🔄 Creation Process</big></summary>
+<summary><big>🔄 建立流程</big></summary>
 
-1. Understand with concrete examples
-2. Plan reusable contents
-3. Initialize (run init_skill.py)
-4. Edit and implement
-5. Package (run package_skill.py)
-6. Iterate based on real usage
+1. 用具體範例來理解
+2. 規劃可重複使用的內容
+3. 初始化（執行 init_skill.py）
+4. 編輯和實作
+5. 打包（執行 package_skill.py）
+6. 根據實際使用來迭代
 
 </details>
 
-**Triggers**: Requests to create or update skills that extend Claude's capabilities
+**觸發方式**：建立或更新擴展 Claude 能力的技能的請求
 
 ---
 
-### Remotion Video Creator
+### Remotion 影片建立器
 
-Create programmatic videos using React with [Remotion](https://remotion.dev). This skill gives Claude expert knowledge of the Remotion framework - animations, compositions, assets, captions, and more.
+使用 React 和 [Remotion](https://remotion.dev) 程式化地製作影片。這個技能讓 Claude 擁有 Remotion 框架的專業知識——動畫、合成、素材、字幕等。
 
-> **Credit**: This skill is from the official [remotion-dev/skills](https://github.com/remotion-dev/skills) repository by Jonny Burger and the Remotion team.
+> **致謝**：此技能來自 Jonny Burger 和 Remotion 團隊的官方 [remotion-dev/skills](https://github.com/remotion-dev/skills) 倉庫。
 
-**Core Philosophy**: Videos are React components. Claude writes the code, you see it render in real-time, then export to MP4/WebM.
+**核心理念**：影片就是 React 元件。Claude 撰寫程式碼，你即時看到渲染結果，然後匯出為 MP4/WebM。
 
 <details>
-<summary><big>🚀 Setup: Create a Remotion Project</big></summary>
+<summary><big>🚀 設定：建立 Remotion 專案</big></summary>
 
-**Step 1:** Create a new Remotion project:
+**步驟 1：** 建立新的 Remotion 專案：
 
 ```bash
 npx create-video@latest
 ```
 
-When prompted, select:
-- **Empty** template
-- **Enable TailwindCSS** (recommended)
-- **Install Skills** (this adds the Remotion skill automatically)
+出現提示時，選擇：
+- **Empty**（空白）範本
+- **啟用 TailwindCSS**（建議）
+- **安裝技能**（這會自動加入 Remotion 技能）
 
-**Step 2:** Start the development server:
+**步驟 2：** 啟動開發伺服器：
 
 ```bash
 cd my-video
@@ -344,137 +344,137 @@ npm install
 npm run dev
 ```
 
-This opens a browser preview where you'll see your video render in real-time.
+這會開啟瀏覽器預覽，你可以即時看到影片渲染。
 
-**Step 3:** Point Claude to your project:
+**步驟 3：** 將 Claude 指向你的專案：
 
 ```
-"Edit my Remotion project at /path/to/my-video"
+「編輯我位於 /path/to/my-video 的 Remotion 專案」
 ```
 
-Claude will read the project structure and edit the React components in `src/`.
+Claude 會讀取專案結構並編輯 `src/` 中的 React 元件。
 
 </details>
 
 <details>
-<summary><big>🎬 What You Can Create</big></summary>
+<summary><big>🎬 你可以建立什麼</big></summary>
 
-The skill includes 28 modular rules covering:
+技能包含 28 個模組化規則，涵蓋：
 
-- **Animations** - Interpolation, springs, easing curves
-- **Compositions** - Multi-scene videos, dynamic duration
-- **Assets** - Images, videos, audio, fonts, GIFs, Lottie
-- **Text** - Typewriter effects, word highlights, measuring text
-- **Captions** - TikTok-style captions, SRT import, transcription
-- **Charts** - Animated bar charts, data visualization
-- **3D** - Three.js and React Three Fiber integration
-- **Transitions** - Scene transitions, sequencing patterns
-- **Maps** - Animated Mapbox maps
+- **動畫** - 內插、彈簧效果、緩動曲線
+- **合成** - 多場景影片、動態時長
+- **素材** - 圖片、影片、音訊、字型、GIF、Lottie
+- **文字** - 打字機效果、文字高亮、文字測量
+- **字幕** - TikTok 風格字幕、SRT 匯入、轉錄
+- **圖表** - 動畫長條圖、資料視覺化
+- **3D** - Three.js 和 React Three Fiber 整合
+- **轉場** - 場景轉場、排序模式
+- **地圖** - 動畫 Mapbox 地圖
 
 </details>
 
 <details>
-<summary><big>💡 Tips for Prompting</big></summary>
+<summary><big>💡 提示技巧</big></summary>
 
-**Good prompts** describe what can be drawn in a web interface:
-- "Create a 10-second intro with my logo fading in, then text typing out"
-- "Add a bar chart that animates the values from 0 to their final state"
-- "Make the title bounce in with a spring animation"
+**好的提示**描述可以在網頁介面中繪製的內容：
+- 「建立一個 10 秒的片頭，我的 Logo 淡入，然後文字逐字打出」
+- 「加入一個長條圖，數值從 0 動畫到最終值」
+- 「讓標題用彈簧動畫彈入」
 
-**Don't** asking Claude to produce an entire video - one composition at a time is the way to go.
+**不要**要求 Claude 一次做出整支影片——一次做一個合成才是正確的方式。
 
 </details>
 
 <br/>
 
-**Triggers**: Mentions of "Remotion", paths containing `remotion-videos/`, files like `remotion.config.ts`, or requests for animated React video content
+**觸發方式**：提到「Remotion」、包含 `remotion-videos/` 的路徑、`remotion.config.ts` 等檔案，或請求製作動畫 React 影片內容
 
 ---
 
-## Customization Guide
+## 客製化指南
 
-These skills work out of the box, but some contain brand-specific configurations you'll want to customize for your own use.
+這些技能開箱即用，但有些包含品牌特定的設定，你會想要根據自己的需求進行客製化。
 
-### What Needs Customization
+### 需要客製化的項目
 
-| Skill | Customization Required | Effort |
+| 技能 | 需要的客製化 | 工作量 |
 |-------|------------------------|--------|
-| **SOP Creator** | Works as-is | None |
-| **Skill Creator** | Works as-is | None |
-| **Remotion** | Create project externally | Low |
-| **MCP Client** | Create config + add API keys | Low |
-| **PPTX Generator** | Brand system setup required | Medium |
+| **SOP 建立器** | 直接使用 | 無 |
+| **技能建立器** | 直接使用 | 無 |
+| **Remotion** | 在外部建立專案 | 低 |
+| **MCP 客戶端** | 建立設定檔 + 加入 API 金鑰 | 低 |
+| **PPTX 產生器** | 需要設定品牌系統 | 中等 |
 
 <details>
-<summary><big>🟢 No Effort: SOP Creator & Skill Creator</big></summary>
+<summary><big>🟢 零工作量：SOP 建立器和技能建立器</big></summary>
 
-These skills focus on universal principles and workflows that work for anyone. Use them immediately without any configuration.
+這些技能專注於對任何人都適用的通用原則和工作流程。無需任何設定即可立即使用。
 
 </details>
 
 <details>
-<summary><big>🟡 Low Effort: Remotion</big></summary>
+<summary><big>🟡 低工作量：Remotion</big></summary>
 
-1. Run `npx create-video@latest` to create a Remotion project
-2. Select Empty template + TailwindCSS + Install Skills
-3. Start `npm run dev` and tell Claude the project path
+1. 執行 `npx create-video@latest` 建立 Remotion 專案
+2. 選擇空白範本 + TailwindCSS + 安裝技能
+3. 啟動 `npm run dev` 並告訴 Claude 專案路徑
 
-The skill provides domain knowledge - the project itself lives outside this repo.
-
-</details>
-
-<details>
-<summary><big>🟡 Low Effort: MCP Client</big></summary>
-
-1. Copy `example-mcp-config.json` to `mcp-config.json`
-2. Add your API keys (Zapier, GitHub tokens, etc.)
-3. Test each server's tools and document gotchas in your `CLAUDE.md`
-
-The config format matches Claude Desktop, so you can reuse existing configs.
+技能提供領域知識——專案本身存放在此倉庫之外。
 
 </details>
 
 <details>
-<summary><big>🟡 Medium Effort: PPTX Generator</big></summary>
+<summary><big>🟡 低工作量：MCP 客戶端</big></summary>
 
-This skill requires a complete brand setup before generating slides. Use the **Brand & Voice Generator** skill to create these files interactively, or manually copy from the template folder.
+1. 將 `example-mcp-config.json` 複製為 `mcp-config.json`
+2. 加入你的 API 金鑰（Zapier、GitHub 權杖等）
+3. 測試每個伺服器的工具並在 `CLAUDE.md` 中記錄注意事項
 
-**Required files** (in `brands/your-brand-name/`):
+設定格式與 Claude Desktop 相同，所以你可以重複使用現有的設定。
 
-1. **`brand.json`** - Colors (10 values), fonts (3), and asset paths
-2. **`config.json`** - Output directory, batch size, file naming
-3. **`brand-system.md`** - Design philosophy, color rationale, typography rules, signature elements
-4. **`tone-of-voice.md`** - Voice character, vocabulary patterns, do's and don'ts, example phrases
+</details>
 
-**Setup steps**:
-1. Run the Brand & Voice Generator skill, OR
-2. Copy `brands/template/` to `brands/your-brand-name/`
-3. Replace all `REPLACE` placeholders in each file
-4. Add your logo to `brands/your-brand-name/assets/`
-5. Test by generating a simple presentation
+<details>
+<summary><big>🟡 中等工作量：PPTX 產生器</big></summary>
 
-See `brands/dynamous/` for a complete example of a configured brand.
+這個技能需要在產生投影片之前完成完整的品牌設定。使用**品牌與語調產生器**技能互動式地建立這些檔案，或手動從範本資料夾複製。
+
+**必要檔案**（在 `brands/your-brand-name/` 中）：
+
+1. **`brand.json`** - 顏色（10 個值）、字型（3 個）和素材路徑
+2. **`config.json`** - 輸出目錄、批次大小、檔案命名
+3. **`brand-system.md`** - 設計哲學、顏色理念、排版規則、標誌性元素
+4. **`tone-of-voice.md`** - 語調特色、詞彙模式、該做與不該做、範例用語
+
+**設定步驟**：
+1. 執行品牌與語調產生器技能，或
+2. 將 `brands/template/` 複製到 `brands/your-brand-name/`
+3. 替換每個檔案中的所有 `REPLACE` 佔位符
+4. 將你的 Logo 放入 `brands/your-brand-name/assets/`
+5. 產生一個簡單的簡報來測試
+
+參見 `brands/dynamous/` 了解完整的品牌設定範例。
 
 </details>
 
 ---
 
-## Quick Start
+## 快速開始
 
-1. **For SOPs and documentation**: Use the SOP Creator directly - it works out of the box
-2. **For new skills**: Use the Skill Creator to build your own extensions
-3. **For MCP integrations**:
-   - Copy `example-mcp-config.json` to `mcp-config.json` and add your API keys
-   - Ask Claude to test the tools and document any gotchas in `CLAUDE.md`
-4. **For videos**:
-   - Run `npx create-video@latest` to create a Remotion project
-   - Start the dev server with `npm run dev`
-   - Tell Claude the project path and start prompting
-5. **For presentations**:
-   - First, run the Brand & Voice Generator to set up your brand
-   - Or manually copy and configure the template folder in `brands/`
-   - Then generate slides with the PPTX Generator skill
+1. **製作 SOP 和文件**：直接使用 SOP 建立器——開箱即用
+2. **建立新技能**：使用技能建立器來打造你自己的擴充
+3. **MCP 整合**：
+   - 將 `example-mcp-config.json` 複製為 `mcp-config.json` 並加入你的 API 金鑰
+   - 請 Claude 測試工具並在 `CLAUDE.md` 中記錄注意事項
+4. **製作影片**：
+   - 執行 `npx create-video@latest` 建立 Remotion 專案
+   - 用 `npm run dev` 啟動開發伺服器
+   - 告訴 Claude 專案路徑並開始下達指令
+5. **製作簡報**：
+   - 首先，執行品牌與語調產生器來設定你的品牌
+   - 或手動複製並設定 `brands/` 中的範本資料夾
+   - 然後用 PPTX 產生器技能來產生投影片
 
 ---
 
-*These skills demonstrate that extending Claude Code is straightforward - it's just well-organized context that makes the agent an expert in your specific workflows.*
+*這些技能展示了擴展 Claude Code 是很直觀的——只是組織良好的上下文，讓代理程式成為你特定工作流程的專家。*

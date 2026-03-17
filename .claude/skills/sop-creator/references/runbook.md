@@ -1,86 +1,86 @@
-# Runbook Template
+# Runbook 範本
 
-For: Incident response, on-call, emergency fixes.
+適用於：事件回應、值班、緊急修復。
 
 ```markdown
 ---
-title: [Service] [Issue Type] Runbook
-owner: [team-name]
-oncall: "#[oncall-channel]"
+title: [服務] [問題類型] Runbook
+owner: [團隊名稱]
+oncall: "#[值班頻道]"
 last_tested: YYYY-MM-DD
 ---
 
-# [Service] [Issue Type] Runbook
+# [服務] [問題類型] Runbook
 
-> **TL;DR:** [One sentence: what this fixes and when to use it]
+> **摘要：** [一句話：這修復什麼以及何時使用]
 
-## Definition of Done
+## 完成定義
 
-You're done when ALL of these are true:
-- [ ] [Primary success indicator - e.g., "Alert resolved"]
-- [ ] [Secondary indicator - e.g., "Error rate < 0.1%"]
-- [ ] [Verification step - e.g., "Health check returns 200"]
-- [ ] [Cleanup step - e.g., "Incident ticket updated"]
+以下全部達成即為完成：
+- [ ] [主要成功指標——例如「告警已解除」]
+- [ ] [次要指標——例如「錯誤率 < 0.1%」]
+- [ ] [驗證步驟——例如「健康檢查回傳 200」]
+- [ ] [清理步驟——例如「事件工單已更新」]
 
-## Symptoms
+## 症狀
 
-You're here because:
-- [ ] Alert: `[alert-name]` firing
-- [ ] [Error message or log pattern]
-- [ ] [Dashboard showing X metric above/below Y]
+你在這裡是因為：
+- [ ] 告警：`[告警名稱]` 觸發中
+- [ ] [錯誤訊息或日誌模式]
+- [ ] [儀表板顯示 X 指標高於/低於 Y]
 
-## Quick Diagnosis
+## 快速診斷
 
 ```bash
-# Check service status
+# 檢查服務狀態
 kubectl get pods -n [namespace] -l app=[service-name]
 
-# Check logs
+# 檢查日誌
 kubectl logs -n [namespace] deployment/[service-name] --tail=100 | grep -i error
 ```
 
-| Symptom | Likely Cause | Fix |
+| 症狀 | 可能原因 | 修復方式 |
 |---------|--------------|-----|
-| [Symptom 1] | [Cause] | [Action] |
-| [Symptom 2] | [Cause] | [Action] |
+| [症狀 1] | [原因] | [動作] |
+| [症狀 2] | [原因] | [動作] |
 
-## Mitigation Steps
+## 緩解步驟
 
-### 1. [First thing to try]
-
-```bash
-[command]
-```
-
-**Done when:** [How you know this step worked]
-
-### 2. [Second thing to try]
+### 1. [首先嘗試的方法]
 
 ```bash
-[command]
+[指令]
 ```
 
-**Done when:** [Completion criteria]
+**完成條件：** [如何知道此步驟成功]
 
-### 3. [If nothing else works]
+### 2. [其次嘗試的方法]
 
 ```bash
-[command]
+[指令]
 ```
 
-**Done when:** [Completion criteria]
+**完成條件：** [完成標準]
 
-## Escalation
+### 3. [如果其他方法都無效]
 
-**Escalate if:**
-- Quick fixes don't work after [X] minutes
-- [Other escalation trigger]
+```bash
+[指令]
+```
 
-**Contact:** [Person/channel] via [method]
+**完成條件：** [完成標準]
 
-## Post-Resolution
+## 向上呈報
 
-- [ ] Verify Definition of Done checklist above
-- [ ] Update incident ticket with timeline
-- [ ] Schedule postmortem if needed
+**在以下情況下向上呈報：**
+- 快速修復在 [X] 分鐘後仍無效
+- [其他呈報觸發條件]
+
+**聯絡：** [人員/頻道] 透過 [方式]
+
+## 事後處理
+
+- [ ] 驗證上方的完成定義檢查清單
+- [ ] 更新事件工單的時間線
+- [ ] 如有需要安排事後檢討
 ```

@@ -5,13 +5,13 @@ metadata:
   tags: frames, extract, video, thumbnail, filmstrip, canvas
 ---
 
-# Extracting frames from videos
+# 從影片中擷取影格
 
-Use Mediabunny to extract frames from videos at specific timestamps. This is useful for generating thumbnails, filmstrips, or processing individual frames.
+使用 Mediabunny 從影片的特定時間戳擷取影格。適用於生成縮圖、膠片條或處理個別影格。
 
-## The `extractFrames()` function
+## `extractFrames()` 函式
 
-This function can be copy-pasted into any project.
+此函式可以直接複製貼上到任何專案中。
 
 ```tsx
 import {
@@ -100,9 +100,9 @@ export async function extractFrames({
 }
 ```
 
-## Basic usage
+## 基本用法
 
-Extract frames at specific timestamps:
+在特定時間戳擷取影格：
 
 ```tsx
 await extractFrames({
@@ -118,9 +118,9 @@ await extractFrames({
 });
 ```
 
-## Creating a filmstrip
+## 建立膠片條
 
-Use a callback function to dynamically calculate timestamps based on video metadata:
+使用回呼函式根據影片中繼資料動態計算時間戳：
 
 ```tsx
 const canvasWidth = 500;
@@ -158,9 +158,9 @@ await extractFrames({
 });
 ```
 
-## Cancellation with AbortSignal
+## 使用 AbortSignal 取消
 
-Cancel frame extraction after a timeout:
+在逾時後取消影格擷取：
 
 ```tsx
 const controller = new AbortController();
@@ -188,7 +188,7 @@ try {
 }
 ```
 
-## Timeout with Promise.race
+## 使用 Promise.race 設定逾時
 
 ```tsx
 const controller = new AbortController();

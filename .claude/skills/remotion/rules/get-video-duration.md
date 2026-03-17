@@ -5,11 +5,11 @@ metadata:
   tags: duration, video, length, time, seconds
 ---
 
-# Getting video duration with Mediabunny
+# 使用 Mediabunny 取得影片時長
 
-Mediabunny can extract the duration of a video file. It works in browser, Node.js, and Bun environments.
+Mediabunny 可以提取影片檔案的時長。它在瀏覽器、Node.js 和 Bun 環境中都可運作。
 
-## Getting video duration
+## 取得影片時長
 
 ```tsx
 import { Input, ALL_FORMATS, UrlSource } from "mediabunny";
@@ -27,29 +27,29 @@ export const getVideoDuration = async (src: string) => {
 };
 ```
 
-## Usage
+## 使用方式
 
 ```tsx
 const duration = await getVideoDuration("https://remotion.media/video.mp4");
-console.log(duration); // e.g. 10.5 (seconds)
+console.log(duration); // 例如 10.5（秒）
 ```
 
-## Using with local files
+## 搭配本機檔案使用
 
-For local files, use `FileSource` instead of `UrlSource`:
+對於本機檔案，使用 `FileSource` 而非 `UrlSource`：
 
 ```tsx
 import { Input, ALL_FORMATS, FileSource } from "mediabunny";
 
 const input = new Input({
   formats: ALL_FORMATS,
-  source: new FileSource(file), // File object from input or drag-drop
+  source: new FileSource(file), // 來自 input 或拖放的 File 物件
 });
 
 const durationInSeconds = await input.computeDuration();
 ```
 
-## Using with staticFile in Remotion
+## 在 Remotion 中搭配 staticFile 使用
 
 ```tsx
 import { staticFile } from "remotion";

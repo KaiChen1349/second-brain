@@ -1,70 +1,70 @@
-# [Brand Name] — Brand System
+# [品牌名稱] — 品牌系統
 
-> REPLACE with a one-line brand description.
-
----
-
-## Brand Philosophy
-
-### Core Principles
-
-1. **Principle One**
-   REPLACE with description.
-
-2. **Principle Two**
-   REPLACE with description.
-
-3. **Principle Three**
-   REPLACE with description.
+> 請替換為一行品牌描述。
 
 ---
 
-## Color System
+## 品牌哲學
 
-### Primary Accent
+### 核心原則
 
-| Name | Hex | Use |
+1. **原則一**
+   請替換為描述。
+
+2. **原則二**
+   請替換為描述。
+
+3. **原則三**
+   請替換為描述。
+
+---
+
+## 顏色系統
+
+### 主要強調色
+
+| 名稱 | Hex | 用途 |
 |------|-----|-----|
-| Accent | `#REPLACE` | Primary buttons, links, highlights |
-| Accent Dark | `#REPLACE` | Hover states, outlines |
-| Accent Light | `#REPLACE` | Secondary accents |
+| 強調色 | `#REPLACE` | 主要按鈕、連結、高亮 |
+| 強調色深 | `#REPLACE` | 懸停狀態、外框 |
+| 強調色淺 | `#REPLACE` | 次要強調 |
 
-### Theme Base
+### 主題基底
 
 ```
-Background:     #REPLACE
-Background Alt: #REPLACE
-Surface:        #REPLACE
-Text Primary:   #REPLACE
-Text Secondary: #REPLACE
+背景：          #REPLACE
+替代背景：      #REPLACE
+表面：          #REPLACE
+主要文字：      #REPLACE
+次要文字：      #REPLACE
 ```
 
 ---
 
-## Typography
+## 字型排版
 
-### Font Stack
+### 字型組合
 
-- **Heading:** REPLACE (headlines, titles, buttons)
-- **Body:** REPLACE (paragraphs, descriptions)
-- **Code:** REPLACE (code blocks, terminal)
+- **標題：** REPLACE（大標題、標題、按鈕）
+- **內文：** REPLACE（段落、描述）
+- **程式碼：** REPLACE（程式碼區塊、終端）
 
-### Usage Guidelines
+### 使用指南
 
-| Element | Font | Weight | Size |
+| 元素 | 字型 | 字重 | 大小 |
 |---------|------|--------|------|
-| Display | Heading | 700 | 36px+ |
-| H1 | Heading | 700 | 30px |
-| H2 | Heading | 600 | 24px |
-| Body | Body | 400 | 16-18px |
-| Code | Code | 400 | 14px |
+| 展示 | 標題 | 700 | 36px+ |
+| H1 | 標題 | 700 | 30px |
+| H2 | 標題 | 600 | 24px |
+| 內文 | 內文 | 400 | 16-18px |
+| 程式碼 | 程式碼 | 400 | 14px |
 
 ---
 
-## Signature Elements
+## 標誌性元素
 
-REPLACE: Describe any unique visual patterns, decorative elements, or signature design choices for this brand.
+請替換：描述此品牌的任何獨特視覺模式、裝飾元素或標誌性設計選擇。
 
 ---
 
-*Last updated: REPLACE*
+*最後更新：請替換*

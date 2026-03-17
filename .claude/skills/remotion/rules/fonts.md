@@ -5,22 +5,22 @@ metadata:
   tags: fonts, google-fonts, typography, text
 ---
 
-# Using fonts in Remotion
+# 在 Remotion 中使用字型
 
-## Google Fonts with @remotion/google-fonts
+## 使用 @remotion/google-fonts 載入 Google Fonts
 
-The recommended way to use Google Fonts. It's type-safe and automatically blocks rendering until the font is ready.
+使用 Google Fonts 的推薦方式。具備型別安全，並自動阻擋渲染直到字型準備就緒。
 
-### Prerequisites
+### 前置條件
 
-First, the @remotion/google-fonts package needs to be installed.
-If it is not installed, use the following command:
+首先，需要安裝 @remotion/google-fonts 套件。
+如果尚未安裝，請使用以下命令：
 
 ```bash
-npx remotion add @remotion/google-fonts # If project uses npm
-bunx remotion add @remotion/google-fonts # If project uses bun
-yarn remotion add @remotion/google-fonts # If project uses yarn
-pnpm exec remotion add @remotion/google-fonts # If project uses pnpm
+npx remotion add @remotion/google-fonts # 如果專案使用 npm
+bunx remotion add @remotion/google-fonts # 如果專案使用 bun
+yarn remotion add @remotion/google-fonts # 如果專案使用 yarn
+pnpm exec remotion add @remotion/google-fonts # 如果專案使用 pnpm
 ```
 
 ```tsx
@@ -33,7 +33,7 @@ export const MyComposition = () => {
 };
 ```
 
-Preferrably, specify only needed weights and subsets to reduce file size:
+建議只指定需要的字重和子集以減少檔案大小：
 
 ```tsx
 import { loadFont } from "@remotion/google-fonts/Roboto";
@@ -44,9 +44,9 @@ const { fontFamily } = loadFont("normal", {
 });
 ```
 
-### Waiting for font to load
+### 等待字型載入
 
-Use `waitUntilDone()` if you need to know when the font is ready:
+如果你需要知道字型何時準備就緒，使用 `waitUntilDone()`：
 
 ```tsx
 import { loadFont } from "@remotion/google-fonts/Lobster";
@@ -56,24 +56,24 @@ const { fontFamily, waitUntilDone } = loadFont();
 await waitUntilDone();
 ```
 
-## Local fonts with @remotion/fonts
+## 使用 @remotion/fonts 載入本地字型
 
-For local font files, use the `@remotion/fonts` package.
+對於本地字型檔案，使用 `@remotion/fonts` 套件。
 
-### Prerequisites
+### 前置條件
 
-First, install @remotion/fonts:
+首先，安裝 @remotion/fonts：
 
 ```bash
-npx remotion add @remotion/fonts # If project uses npm
-bunx remotion add @remotion/fonts # If project uses bun
-yarn remotion add @remotion/fonts # If project uses yarn
-pnpm exec remotion add @remotion/fonts # If project uses pnpm
+npx remotion add @remotion/fonts # 如果專案使用 npm
+bunx remotion add @remotion/fonts # 如果專案使用 bun
+yarn remotion add @remotion/fonts # 如果專案使用 yarn
+pnpm exec remotion add @remotion/fonts # 如果專案使用 pnpm
 ```
 
-### Loading a local font
+### 載入本地字型
 
-Place your font file in the `public/` folder and use `loadFont()`:
+將字型檔案放在 `public/` 資料夾中，並使用 `loadFont()`：
 
 ```tsx
 import { loadFont } from "@remotion/fonts";
@@ -89,9 +89,9 @@ export const MyComposition = () => {
 };
 ```
 
-### Loading multiple weights
+### 載入多種字重
 
-Load each weight separately with the same family name:
+使用相同的 family 名稱分別載入每種字重：
 
 ```tsx
 import { loadFont } from "@remotion/fonts";
@@ -111,22 +111,22 @@ await Promise.all([
 ]);
 ```
 
-### Available options
+### 可用選項
 
 ```tsx
 loadFont({
-  family: "MyFont", // Required: name to use in CSS
-  url: staticFile("font.woff2"), // Required: font file URL
-  format: "woff2", // Optional: auto-detected from extension
-  weight: "400", // Optional: font weight
-  style: "normal", // Optional: normal or italic
-  display: "block", // Optional: font-display behavior
+  family: "MyFont", // 必要：CSS 中使用的名稱
+  url: staticFile("font.woff2"), // 必要：字型檔案 URL
+  format: "woff2", // 選填：從副檔名自動偵測
+  weight: "400", // 選填：字重
+  style: "normal", // 選填：normal 或 italic
+  display: "block", // 選填：font-display 行為
 });
 ```
 
-## Using in components
+## 在元件中使用
 
-Call `loadFont()` at the top level of your component or in a separate file that's imported early:
+在元件的頂層或在早期匯入的單獨檔案中呼叫 `loadFont()`：
 
 ```tsx
 import { loadFont } from "@remotion/google-fonts/Montserrat";

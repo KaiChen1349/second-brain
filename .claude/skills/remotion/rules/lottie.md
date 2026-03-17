@@ -5,28 +5,28 @@ metadata:
   category: Animation
 ---
 
-# Using Lottie Animations in Remotion
+# 在 Remotion 中使用 Lottie 動畫
 
-## Prerequisites
+## 前置條件
 
-First, the @remotion/lottie package needs to be installed.  
-If it is not, use the following command:
+首先需要安裝 @remotion/lottie 套件。
+如果尚未安裝，使用以下命令：
 
 ```bash
-npx remotion add @remotion/lottie # If project uses npm
-bunx remotion add @remotion/lottie # If project uses bun
-yarn remotion add @remotion/lottie # If project uses yarn
-pnpm exec remotion add @remotion/lottie # If project uses pnpm
+npx remotion add @remotion/lottie # 如果專案使用 npm
+bunx remotion add @remotion/lottie # 如果專案使用 bun
+yarn remotion add @remotion/lottie # 如果專案使用 yarn
+pnpm exec remotion add @remotion/lottie # 如果專案使用 pnpm
 ```
 
-## Displaying a Lottie file
+## 顯示 Lottie 檔案
 
-To import a Lottie animation:
+要匯入 Lottie 動畫：
 
-- Fetch the Lottie asset
-- Wrap the loading process in `delayRender()` and `continueRender()`
-- Save the animation data in a state
-- Render the Lottie animation using the `Lottie` component from the `@remotion/lottie` package
+- 獲取 Lottie 素材
+- 將載入過程包裝在 `delayRender()` 和 `continueRender()` 中
+- 將動畫資料儲存在 state 中
+- 使用 `@remotion/lottie` 套件的 `Lottie` 元件渲染動畫
 
 ```tsx
 import {Lottie, LottieAnimationData} from '@remotion/lottie';
@@ -58,11 +58,10 @@ export const MyAnimation = () => {
 };
 ```
 
-## Styling and animating
+## 樣式和動畫
 
-Lottie supports the `style` prop to allow styles and animations:
+Lottie 支援 `style` 屬性以允許設定樣式和動畫：
 
 ```tsx
 return <Lottie animationData={animationData} style={{width: 400, height: 400}} />;
 ```
-

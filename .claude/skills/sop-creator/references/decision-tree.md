@@ -1,116 +1,116 @@
-# Decision Tree Template
+# 決策樹範本
 
-For: Complex processes with conditional paths.
+適用於：具有條件路徑的複雜流程。
 
 ```markdown
 ---
-title: [Decision Process Name]
-owner: [Person or team]
+title: [決策流程名稱]
+owner: [負責人或團隊]
 last_updated: YYYY-MM-DD
 ---
 
-# [Decision Process Name]
+# [決策流程名稱]
 
-> **TL;DR:** How to handle [situation type]. Start at top, follow the path.
+> **摘要：** 如何處理 [情況類型]。從頂部開始，沿著路徑走。
 
-## Definition of Done
+## 完成定義
 
-This process is complete when:
-- [ ] Correct path identified and followed
-- [ ] [Primary action completed]
-- [ ] [Outcome verified]
-- [ ] [Any notification/handoff done]
+此流程完成的條件：
+- [ ] 已辨識並遵循正確路徑
+- [ ] [主要動作已完成]
+- [ ] [結果已驗證]
+- [ ] [任何通知/交接已完成]
 
 ---
 
-## Start Here
+## 從這裡開始
 
-**What are you dealing with?**
+**你正在處理什麼？**
 
-| Situation | Go to |
+| 情況 | 前往 |
 |-----------|-------|
-| [Situation A] | [Path A](#path-a) |
-| [Situation B] | [Path B](#path-b) |
-| [Situation C] | [Path C](#path-c) |
-| Not sure | [Assessment](#assessment) |
+| [情況 A] | [路徑 A](#path-a) |
+| [情況 B] | [路徑 B](#path-b) |
+| [情況 C] | [路徑 C](#path-c) |
+| 不確定 | [評估](#assessment) |
 
 ---
 
-## Assessment
+## 評估
 
-**Question: [What to determine first]**
+**問題：[首先要確定什麼]**
 
-- If **[Answer A]** → Go to [Path A](#path-a)
-- If **[Answer B]** → Go to [Path B](#path-b)
-- If **unclear** → [Who to ask]
-
----
-
-## Path A
-
-**You're here because:** [Condition]
-
-### Do this:
-
-1. [Action]
-2. [Action]
-3. [Action]
-
-**Done when:** [Completion criteria]
-
-→ Go to [Verify Completion](#verify-completion)
+- 如果 **[答案 A]** → 前往 [路徑 A](#path-a)
+- 如果 **[答案 B]** → 前往 [路徑 B](#path-b)
+- 如果 **不確定** → [詢問誰]
 
 ---
 
-## Path B
+## 路徑 A
 
-**You're here because:** [Condition]
+**你在這裡是因為：** [條件]
 
-### First, check [factor]:
+### 執行以下步驟：
 
-| If | Then |
+1. [動作]
+2. [動作]
+3. [動作]
+
+**完成條件：** [完成標準]
+
+→ 前往 [驗證完成](#verify-completion)
+
+---
+
+## 路徑 B
+
+**你在這裡是因為：** [條件]
+
+### 首先，檢查 [因素]：
+
+| 如果 | 那麼 |
 |----|------|
-| [Condition 1] | [Action] |
-| [Condition 2] | [Action] |
-| None of above | Escalate to [contact] |
+| [條件 1] | [動作] |
+| [條件 2] | [動作] |
+| 以上皆非 | 向上呈報至 [聯絡人] |
 
-**Done when:** [Completion criteria]
+**完成條件：** [完成標準]
 
-→ Go to [Verify Completion](#verify-completion)
-
----
-
-## Path C
-
-**You're here because:** [Condition]
-
-> **Warning:** [Important caution if applicable]
-
-1. [Action]
-2. [Action]
-3. **Check:** [Verification point]
-   - OK → [Next action]
-   - NOT OK → Escalate to [contact]
-
-**Done when:** [Completion criteria]
-
-→ Go to [Verify Completion](#verify-completion)
+→ 前往 [驗證完成](#verify-completion)
 
 ---
 
-## Verify Completion
+## 路徑 C
 
-Return to Definition of Done and confirm:
-- [ ] Correct path identified and followed
-- [ ] [Primary action completed]
-- [ ] [Outcome verified]
-- [ ] [Any notification/handoff done]
+**你在這裡是因為：** [條件]
 
-## Escalation
+> **警告：** [重要注意事項（如適用）]
 
-**Escalate if:**
-- Stuck for more than [timeframe]
-- [Other trigger]
+1. [動作]
+2. [動作]
+3. **檢查：** [驗證點]
+   - 正常 → [下一步動作]
+   - 異常 → 向上呈報至 [聯絡人]
 
-**Contact:** [Person/channel]
+**完成條件：** [完成標準]
+
+→ 前往 [驗證完成](#verify-completion)
+
+---
+
+## 驗證完成
+
+回到完成定義並確認：
+- [ ] 已辨識並遵循正確路徑
+- [ ] [主要動作已完成]
+- [ ] [結果已驗證]
+- [ ] [任何通知/交接已完成]
+
+## 向上呈報
+
+**在以下情況下向上呈報：**
+- 卡住超過 [時間]
+- [其他觸發條件]
+
+**聯絡：** [人員/頻道]
 ```

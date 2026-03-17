@@ -1,187 +1,187 @@
-# Voice Templates
+# 語調範本集
 
-Example voice configurations to help users discover their own voice.
+幫助使用者探索自己語調的範例語調設定。
 
 ---
 
-## Example 1: Technical Educator
+## 範例 1：技術教育者
 
-**Voice Character:**
-Enthusiastic expert who teaches by showing, not telling. Admits limitations openly. Grounds everything in real experience.
+**語調特色：**
+充滿熱情的專家，透過展示而非講述來教學。坦然承認局限。一切建立在真實經驗上。
 
-**Core Attributes:**
-1. **Practical** - Leads with action, theory second
-2. **Honest** - Shows the messy middle, not just results
-3. **Energetic** - Genuine excitement without hype
+**核心屬性：**
+1. **務實** - 先講行動，理論其次
+2. **誠實** - 展示雜亂的過程，不只是結果
+3. **充滿活力** - 真實的興奮感，沒有炒作
 
-**Vocabulary Patterns:**
-- "Super" as intensifier (super easy, super powerful)
-- "Honestly" / "Here's the thing" for authenticity
-- Contractions throughout (don't, can't, it's)
-- "So" to start sentences frequently
+**詞彙模式：**
+- 「超級」作為加強詞（超級簡單、超級強大）
+- 「說實話」/「重點是」表達真實感
+- 全程使用縮寫
+- 經常用「所以」開頭
 
-**Do:**
-- Use specific numbers and examples
-- Show iterations, not just final results
-- Admit when something doesn't work
-- Address the audience directly ("you")
+**要做：**
+- 使用具體數字和範例
+- 展示迭代過程，不只是最終結果
+- 坦承某些東西不好用
+- 直接對受眾說話（「你」）
 
-**Don't:**
-- Overpromise or hype
-- Use corporate speak
-- Hedge with endless qualifiers
-- Hide limitations
+**不要做：**
+- 過度承諾或炒作
+- 使用企業腔
+- 用無盡的限定詞含糊其辭
+- 隱藏局限
 
-**Example Headlines:**
+**標題範例：**
 - "The Simple Strategy to 100x AI Coding"
 - "Stop Vibe Coding. Start Building Systems."
 - "What NOT to Focus On When Building AI Agents"
 
 ---
 
-## Example 2: Calm Authority
+## 範例 2：沉穩權威
 
-**Voice Character:**
-Confident and measured. Lets expertise speak through specifics, not claims. Philosophical grounding beneath practical advice.
+**語調特色：**
+自信且從容。讓專業知識透過具體細節說話，而非聲明。實用建議之下有哲學底蘊。
 
-**Core Attributes:**
-1. **Confident** - Takes positions without hedging
-2. **Measured** - No unnecessary exclamation points
-3. **Deep** - Connects practical to philosophical
+**核心屬性：**
+1. **自信** - 有立場，不含糊
+2. **從容** - 不用多餘的驚嘆號
+3. **有深度** - 連接實務與哲學
 
-**Vocabulary Patterns:**
-- Minimal intensifiers
-- "The reality is..." for directness
-- Complete sentences, few fragments
-- Strategic use of "we" for inclusion
+**詞彙模式：**
+- 最少的加強詞
+- 「現實是...」表達直接
+- 完整句子，少用碎片句
+- 策略性地使用「我們」表達包容
 
-**Do:**
-- Make complex ideas feel inevitable
-- Support claims with reasoning
-- Acknowledge nuance where real
-- Use rhythm and pacing intentionally
+**要做：**
+- 讓複雜的想法感覺理所當然
+- 用推理支撐聲明
+- 在真實存在的地方承認細微差別
+- 刻意運用節奏和步調
 
-**Don't:**
-- Shout or oversell
-- Use trendy buzzwords
-- Rush through explanations
-- Ignore counterarguments
+**不要做：**
+- 大聲喊叫或過度推銷
+- 使用流行術語
+- 匆忙帶過解釋
+- 忽視反面論點
 
-**Example Headlines:**
+**標題範例：**
 - "Why Most AI Implementations Fail"
 - "The Difference Between Tools and Systems"
 - "A Framework for Thinking About Automation"
 
 ---
 
-## Example 3: Builder's Perspective
+## 範例 3：建造者視角
 
-**Voice Character:**
-Developer-to-developer communication. Unfiltered opinions backed by code. Humor that's natural, not forced.
+**語調特色：**
+開發者對開發者的溝通。以程式碼支撐的直率觀點。自然而不做作的幽默。
 
-**Core Attributes:**
-1. **Credible** - You've built this stuff
-2. **Direct** - No corporate filter
-3. **Real** - Willing to call out BS
+**核心屬性：**
+1. **可信** - 你真的做過這些東西
+2. **直接** - 沒有企業濾鏡
+3. **真實** - 願意指出問題
 
-**Vocabulary Patterns:**
-- Technical terms used casually
-- "Look" / "Listen" to start points
-- Informal contractions and slang OK
-- Self-deprecating humor where natural
+**詞彙模式：**
+- 隨意使用技術術語
+- 「看」/「聽著」開始重點
+- 非正式的縮寫和俗語可以
+- 適當時自嘲的幽默
 
-**Do:**
-- Reference actual code and systems
-- Share real numbers and metrics
-- Disagree when warranted
-- Use humor naturally
+**要做：**
+- 引用實際的程式碼和系統
+- 分享真實的數字和指標
+- 有理由時提出不同意見
+- 自然地使用幽默
 
-**Don't:**
-- Pretend to know what you don't
-- Polish away the rough edges
-- Avoid controversy artificially
-- Talk down to the audience
+**不要做：**
+- 假裝知道你不知道的東西
+- 打磨掉粗糙的邊角
+- 人為地迴避爭議
+- 對受眾說教
 
-**Example Headlines:**
+**標題範例：**
 - "I Rewrote Our Entire Backend in a Weekend"
 - "This Architecture Pattern is Wrong. Here's Why."
 - "Stop Over-Engineering Your AI Agents"
 
 ---
 
-## Example 4: Approachable Expert
+## 範例 4：平易近人的專家
 
-**Voice Character:**
-Makes the complex accessible without dumbing it down. Inclusive language that assumes intelligence but not prior knowledge.
+**語調特色：**
+讓複雜的事物變得易懂，但不會過度簡化。使用包容的語言，假設受眾聰明但沒有先備知識。
 
-**Core Attributes:**
-1. **Inclusive** - Anyone can learn this
-2. **Clear** - Explains the "why" behind the "what"
-3. **Encouraging** - Progress over perfection
+**核心屬性：**
+1. **包容** - 任何人都可以學會這個
+2. **清晰** - 解釋「什麼」背後的「為什麼」
+3. **鼓勵** - 進步重於完美
 
-**Vocabulary Patterns:**
-- "Let's" for collaborative feeling
-- "Think of it like..." for analogies
-- Questions to guide thinking
-- "The good news is..." for encouragement
+**詞彙模式：**
+- 「讓我們」營造協作感
+- 「把它想成...」用於類比
+- 用問題引導思考
+- 「好消息是...」表達鼓勵
 
-**Do:**
-- Use analogies and examples
-- Break complex topics into steps
-- Celebrate small wins
-- Anticipate confusion points
+**要做：**
+- 使用類比和範例
+- 將複雜主題拆成步驟
+- 慶祝小勝利
+- 預期困惑的地方
 
-**Don't:**
-- Use jargon without explaining
-- Assume prior knowledge
-- Rush through fundamentals
-- Make people feel dumb
+**不要做：**
+- 不解釋就使用專業術語
+- 假設有先備知識
+- 匆忙帶過基礎
+- 讓人覺得自己很笨
 
-**Example Headlines:**
+**標題範例：**
 - "A Gentle Introduction to AI Agents"
 - "Understanding RAG: A Complete Guide"
 - "You Don't Need to Be a PhD to Build AI"
 
 ---
 
-## Example 5: Contrarian Thinker
+## 範例 5：逆向思考者
 
-**Voice Character:**
-Challenges conventional wisdom with evidence. Not contrarian for engagement, but because you've seen what actually works.
+**語調特色：**
+用證據挑戰傳統智慧。不是為了流量而唱反調，而是因為你見過什麼真正有效。
 
-**Core Attributes:**
-1. **Challenging** - Questions assumptions
-2. **Evidence-based** - Backs up disagreements
-3. **Constructive** - Offers alternatives, not just criticism
+**核心屬性：**
+1. **挑戰性** - 質疑假設
+2. **有證據** - 用資料支撐不同意見
+3. **建設性** - 提供替代方案，而非只是批評
 
-**Vocabulary Patterns:**
-- "Here's what actually works..."
-- "The conventional wisdom is wrong about..."
-- "I used to believe X, then I learned..."
-- Data and specific examples to support
+**詞彙模式：**
+- 「真正有效的是...」
+- 「傳統觀點在...方面是錯的」
+- 「我過去相信 X，後來我學到了...」
+- 用數據和具體範例來支撐
 
-**Do:**
-- Challenge popular ideas with evidence
-- Provide alternative approaches
-- Show your work
-- Acknowledge when conventional wisdom IS right
+**要做：**
+- 用證據挑戰流行觀點
+- 提供替代方法
+- 展示你的論證過程
+- 在傳統智慧正確時承認
 
-**Don't:**
-- Be contrarian for engagement
-- Attack people instead of ideas
-- Ignore legitimate counterpoints
-- Overclaim your alternative
+**不要做：**
+- 為了流量而唱反調
+- 攻擊人而非想法
+- 忽視合理的反面觀點
+- 過度聲稱你的替代方案
 
-**Example Headlines:**
+**標題範例：**
 - "RAG is Not the Answer. Here's What Is."
 - "Why I Stopped Using [Popular Tool]"
 - "The Uncomfortable Truth About AI Agents"
 
 ---
 
-## Using These Templates
+## 如何使用這些範本
 
-1. **Mix and match** - Most voices combine elements from multiple templates
-2. **Find your ratio** - Maybe 50% Technical Educator + 30% Builder + 20% Calm Authority
-3. **Adapt, don't copy** - These are starting points, not scripts
-4. **Let your natural voice come through** - The template should enhance, not replace
+1. **混搭** - 大多數語調結合了多個範本的元素
+2. **找到你的比例** - 也許 50% 技術教育者 + 30% 建造者 + 20% 沉穩權威
+3. **調整，不要複製** - 這些是起點，不是劇本
+4. **讓你的自然語調展現** - 範本應該增強，而非取代

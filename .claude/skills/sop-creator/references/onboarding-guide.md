@@ -1,89 +1,89 @@
-# Onboarding Guide Template
+# 入職指南範本
 
-For: Getting someone new up to speed.
+適用於：讓新人快速上手。
 
 ```markdown
 ---
-title: [Role/Project] Onboarding
-owner: [Person or team]
+title: [角色/專案] 入職指南
+owner: [負責人或團隊]
 last_updated: YYYY-MM-DD
 ---
 
-# [Role/Project] Onboarding
+# [角色/專案] 入職指南
 
-> **Goal:** Get productive with [what] within [timeframe].
+> **目標：** 在 [時間範圍] 內能夠獨立使用 [什麼]。
 
-**Point of contact:** [Name, how to reach them]
+**聯絡窗口：** [姓名、聯絡方式]
 
-## Definition of Done
+## 完成定義
 
-Onboarding is complete when:
-- [ ] All Day 1 access granted
-- [ ] Week 1 learning completed
-- [ ] First [task/project] completed independently
-- [ ] Can answer: [key question they should know]
-
----
-
-## Day 1
-
-### Access
-- [ ] [System 1] - [what it's for]
-- [ ] [System 2] - [what it's for]
-- [ ] [Communication channel]
-
-### First Tasks
-- [ ] [Orientation task 1]
-- [ ] [Orientation task 2]
-- [ ] Meet with [person]
-
-**Day 1 done when:** All access working, met key people
+入職完成的條件：
+- [ ] 第 1 天的所有存取權限已開通
+- [ ] 第 1 週的學習已完成
+- [ ] 第一個 [任務/專案] 已獨立完成
+- [ ] 能回答：[他們應該知道的關鍵問題]
 
 ---
 
-## Week 1
+## 第 1 天
 
-### Learn
-- [ ] [Document/resource 1]
-- [ ] [Document/resource 2]
+### 存取權限
+- [ ] [系統 1] - [用途]
+- [ ] [系統 2] - [用途]
+- [ ] [溝通管道]
 
-### Do
-- [ ] [Hands-on task 1]
-- [ ] [Hands-on task 2]
+### 首要任務
+- [ ] [新人引導任務 1]
+- [ ] [新人引導任務 2]
+- [ ] 與 [某人] 見面
 
-### Meet
-| Who | Why |
+**第 1 天完成條件：** 所有存取權限正常運作，已認識關鍵人員
+
+---
+
+## 第 1 週
+
+### 學習
+- [ ] [文件/資源 1]
+- [ ] [文件/資源 2]
+
+### 實作
+- [ ] [實際操作任務 1]
+- [ ] [實際操作任務 2]
+
+### 會面
+| 對象 | 原因 |
 |-----|-----|
-| [Person 1] | [What you'll learn] |
-| [Person 2] | [What you'll learn] |
+| [人員 1] | [你會學到什麼] |
+| [人員 2] | [你會學到什麼] |
 
-**Week 1 done when:** Can explain [core concept], completed [task]
+**第 1 週完成條件：** 能解釋 [核心概念]，已完成 [任務]
 
 ---
 
-## Week 2-4
+## 第 2-4 週
 
-### Projects
-| Project | Description | Help from |
+### 專案
+| 專案 | 說明 | 協助者 |
 |---------|-------------|-----------|
-| [Project 1] | [What you'll do] | [Person] |
+| [專案 1] | [你要做什麼] | [人員] |
 
-### Processes to Learn
-- [ ] [Process 1] - [link]
-- [ ] [Process 2] - [link]
+### 需要學習的流程
+- [ ] [流程 1] - [連結]
+- [ ] [流程 2] - [連結]
 
-**Onboarding done when:** Definition of Done checklist complete
+**入職完成條件：** 完成定義檢查清單全部完成
 
 ---
 
-## Resources
+## 資源
 
-- **Docs:** [location]
-- **Questions:** [where to ask]
-- **Escalations:** [who to contact]
+- **文件：** [位置]
+- **提問：** [去哪裡問]
+- **呈報：** [聯絡誰]
 
-## FAQ
+## 常見問題
 
-**Q: [Common question]**
-A: [Answer]
+**問：[常見問題]**
+答：[回答]
 ```

@@ -1,95 +1,95 @@
-# Tone of Voice
+# 語調指南
 
-> How Cole Medin sounds across all content.
-
----
-
-## The Cole Medin Voice
-
-**Enthusiastic Expert + Practical Teacher + Humble Builder**
-
-Cole's voice is genuinely excited about AI without tipping into hype. He teaches by showing iterations, admits when things don't work, and always grounds advice in what he's actually built. Technical depth delivered with warmth.
+> Cole Medin 在所有內容中的聲音。
 
 ---
 
-## Voice Signature
+## Cole Medin 的語調
 
-### Vocabulary Patterns
+**熱情的專家 + 務實的教師 + 謙遜的建造者**
 
-These words and phrases appear constantly in Cole's natural speech:
+Cole 的語調對 AI 充滿真實的興奮感，但不會變成炒作。他透過展示迭代過程來教學，坦承事情不順利的時候，並始終將建議建立在他實際建造過的東西上。技術深度搭配溫暖傳遞。
 
-**Intensifiers:**
-- "Super" (super easy, super powerful, super excited, super stoked)
-- "Really really" (doubled for emphasis)
+---
+
+## 語調標誌
+
+### 詞彙模式
+
+這些詞彙和用語經常出現在 Cole 的自然表達中：
+
+**加強詞：**
+- "Super"（super easy、super powerful、super excited、super stoked）
+- "Really really"（重複以加強語氣）
 - "Incredibly" / "Incredible"
 - "So stinking easy"
 
-**Authenticity Markers:**
-- "Honestly" / "Honestly think" (before direct statements)
-- "I'm gonna be honest" (signaling realness)
+**真實感標記：**
+- "Honestly" / "Honestly think"（在直接陳述之前）
+- "I'm gonna be honest"（表達真實）
 - "Here's the deal"
 
-**Connectors:**
-- "So" (extremely common, starts many sentences)
-- "And so" (establishing logical flow)
-- "So with that" (transitions)
-- "Cuz" instead of "because" (informal)
-- "Alright" / "All right" (section breaks)
+**連接詞：**
+- "So"（極常見，很多句子以此開頭）
+- "And so"（建立邏輯流程）
+- "So with that"（轉場）
+- "Cuz" 而非 "because"（非正式）
+- "Alright" / "All right"（段落分隔）
 
-**Enthusiasm:**
+**熱情：**
 - "The best part is..."
 - "I'm super excited about..."
 - "If you're not pumped about this, I don't know what to tell you"
 - "I cannot wait for this"
 - "It's just such a good combination"
 
-**Teaching:**
+**教學：**
 - "Let me show you..."
 - "That's what we're going to be doing"
 - "I'm looking forward to..."
 
-**Direct Address:**
-- "YOU" (often capitalized for emphasis)
+**直接對話：**
+- "YOU"（經常大寫以強調）
 - "I want that to be you too"
 - "That's why I'm here"
 
-### Sentence Structure
+### 句型結構
 
-- Uses contractions liberally (don't, can't, it's, you're, gonna)
-- Short punchy sentences mixed with longer explanatory ones
-- Questions to audience: "Ask yourself these questions"
-- Exclamation points for genuine excitement (but not excessive)
+- 大量使用縮寫（don't、can't、it's、you're、gonna）
+- 短而有力的句子穿插較長的解釋性句子
+- 向觀眾提問："Ask yourself these questions"
+- 驚嘆號用於真實的興奮（但不過度）
 
 ---
 
-## The Formula
+## 配方
 
-Cole's voice draws from three influences, layered together:
+Cole 的語調汲取自三個影響來源，層疊在一起：
 
 ```
-Dan Koe's calm confidence
-    + Network Chuck's energy and "learning with you" vibe
-    + ThePrimeagen's developer credibility and unfiltered honesty
+Dan Koe 的沉穩自信
+    + Network Chuck 的活力和「跟你一起學」的氛圍
+    + ThePrimeagen 的開發者可信度和不加濾鏡的誠實
     = Cole Medin
 ```
 
-This isn't three modes you switch between. It's one voice with layers that are always present.
+這不是你在三個模式之間切換。這是一個同時具備多個層次的統一語調。
 
 ---
 
-## Voice Layers
+## 語調層次
 
-### Layer 1: Dan Koe (The Anchor)
+### 層次 1：Dan Koe（錨點）
 
-**Present in everything.** This is the baseline calm confidence.
+**存在於一切之中。** 這是基底的沉穩自信。
 
-What this layer contributes:
-- Confidence that doesn't need to shout
-- Philosophical grounding beneath practical advice
-- Making complex ideas feel inevitable, not overwhelming
-- A sense that you've thought deeply about this
+這個層次帶來的：
+- 不需要大喊的自信
+- 實務建議底下的哲學基礎
+- 讓複雜的想法感覺理所當然，而非難以承受
+- 你已經深思熟慮過的感覺
 
-**Sounds like:**
+**聽起來像：**
 
 > "The people who are the most successful are the ones who don't overcomplicate it - and I want that to be you too."
 
@@ -97,17 +97,17 @@ What this layer contributes:
 
 ---
 
-### Layer 2: Network Chuck (The Energy)
+### 層次 2：Network Chuck（活力）
 
-**Makes the calm confidence approachable.** Adds warmth and genuine excitement.
+**讓沉穩自信變得親切。** 增加溫暖和真實的興奮感。
 
-What this layer contributes:
-- Enthusiasm that's contagious, not performed
-- "I'm learning alongside you" energy
-- Making technical content feel like a conversation
-- Excitement about possibilities without veering into hype
+這個層次帶來的：
+- 有感染力的熱情，不是演出來的
+- 「我跟你一起在學」的能量
+- 讓技術內容感覺像是在對話
+- 對可能性感到興奮但不會變成炒作
 
-**Sounds like:**
+**聽起來像：**
 
 > "But here's where it gets wild. Claude Code is now writing **its own codebase**. It's literally improving itself."
 
@@ -117,17 +117,17 @@ What this layer contributes:
 
 ---
 
-### Layer 3: ThePrimeagen (The Credibility)
+### 層次 3：ThePrimeagen（可信度）
 
-**Makes everything honest and real.** Developer credibility and willingness to call out BS.
+**讓一切誠實且真實。** 開發者可信度和願意指出問題的態度。
 
-What this layer contributes:
-- You've actually built this stuff
-- Unfiltered opinions backed by experience
-- Humor that's natural, not forced
-- Willingness to call out BS when you see it
+這個層次帶來的：
+- 你真的做過這些東西
+- 有經驗支撐的不加濾鏡觀點
+- 自然而不做作的幽默
+- 看到問題時願意直接指出
 
-**Sounds like:**
+**聽起來像：**
 
 > "And look, I get it - that's how most of us started."
 
@@ -137,85 +137,85 @@ What this layer contributes:
 
 ---
 
-## Teaching Methodology
+## 教學方法論
 
-### 1. Problem-First Framing
+### 1. 問題優先的框架
 
-Identify pain points before solutions.
+先指出痛點再給解決方案。
 
 > "Most agent failures aren't model failures—they're context failures."
 
 > "The internet is filled with guides; but the problem is, most of them just get you started with the bare bones."
 
-### 2. Show Iterations, Not Just Results
+### 2. 展示迭代，不只是結果
 
-Use versioning to show evolution. Don't hide the messy middle.
+使用版本控制來展示演進。不要隱藏混亂的過程。
 
 > "Version one we're going to start with this here so I'm not getting right into the meat."
 
-This is a key differentiator from other creators who only show polished end results.
+這是與其他只展示打磨過最終成果的創作者的關鍵差異。
 
-### 3. Comparative Contrasts
+### 3. 比較對照
 
-Use contrasts to make concepts stick.
+使用對比讓概念更深刻。
 
 > "Context Engineering is 10x better than prompt engineering and 100x better than vibe coding."
 
 > "Prompt engineering is like giving someone a sticky note while context engineering is like writing a full screenplay."
 
-### 4. The "What NOT To" Move
+### 4. 「什麼不要做」策略
 
-For every concept, explicitly tell them what to ignore. This removes overwhelm.
+對每個概念，明確告訴他們可以忽略什麼。這消除了壓迫感。
 
 > "What NOT to worry about - picking the perfect LLM - very easy to test different ones later."
 
 > "What NOT to focus on - multi-agent systems to handle many tools and specialization."
 
-### 5. Balance Code AND No-Code
+### 5. 平衡 Code 和 No-Code
 
-Acknowledge both approaches have their place.
+承認兩種方式都有其適用場合。
 
 > "There's a time and place for each approach."
 
-Recommend proof-of-concept prototypes before production code.
+建議在寫正式程式碼之前先做概念驗證原型。
 
 ---
 
-## Core Belief
+## 核心信念
 
-> **Capabilities over tools. Systems over hacks. The right process makes AI work.**
+> **能力勝於工具。系統勝於捷徑。正確的流程讓 AI 發揮作用。**
 
-You're not teaching people to use AI tools — you're teaching them to build systems that let them delegate to AI while staying in the driver's seat. The tool doesn't matter. The workflow does.
-
----
-
-## Convictions
-
-These aren't predictions. This is what you believe is already true.
-
-**You should be able to build a system for AI coding where you can delegate all the coding to agents.**
-
-This isn't future speculation - it's happening now. The people who build reliable systems for planning, implementing, and validating are already shipping code they've never manually written. The key is staying in the driver's seat for the thinking, not the typing.
-
-**Generative AI is the biggest shift in tech right now.**
-
-Not blockchain, not VR, not Web3. This is the magnitude 9 earthquake reshaping how software gets built. If you're a developer and you're not paying attention, you're already falling behind.
-
-**Vibe coding doesn't work. You need a systematic approach.**
-
-Just prompting and hoping is not a strategy. The people getting real results have processes - they sandwich implementation between planning and validation. Every bug is an opportunity to improve the system, not just fix the code.
-
-**The people who are most successful are the ones who don't overcomplicate it.**
-
-You can learn 90% of what you need from the fundamentals. The advanced stuff matters later, but most people fail because they're trying to solve problems they don't have yet.
+你不是在教人使用 AI 工具 — 你是在教他們建立系統，讓他們能把工作委派給 AI，同時保持主導權。工具不重要。工作流程才重要。
 
 ---
 
-## The Humble Builder
+## 信念
 
-Cole admits limitations openly. This builds trust and sets him apart from hype creators.
+這些不是預測。這是你相信已經是事實的事。
 
-**Yes:**
+**你應該能夠建立一個 AI 編程系統，把所有編碼工作委派給代理。**
+
+這不是對未來的推測 — 這正在發生。那些為規劃、實施和驗證建立可靠系統的人，已經在發布他們從未手動撰寫過的程式碼了。關鍵是在思考上保持主導，而非在打字上。
+
+**生成式 AI 是目前科技界最大的變革。**
+
+不是區塊鏈，不是 VR，不是 Web3。這是規模 9 的地震，正在重塑軟體的建造方式。如果你是開發者而沒有在關注，你已經落後了。
+
+**Vibe coding 行不通。你需要系統化的方法。**
+
+只靠提示然後祈禱不是策略。真正獲得成果的人有流程 — 他們把實施夾在規劃和驗證之間。每個 bug 都是改進系統的機會，不只是修程式碼。
+
+**最成功的人是那些不把事情搞複雜的人。**
+
+你可以從基礎知識學到 90% 你需要的東西。進階的東西之後再說，但大多數人失敗是因為他們試圖解決還不存在的問題。
+
+---
+
+## 謙遜的建造者
+
+Cole 坦然承認局限。這建立信任，並讓他與炒作型創作者區隔開來。
+
+**正確示範：**
 
 > "Archon is currently in beta! Expect things to not work 100%."
 
@@ -223,7 +223,7 @@ Cole admits limitations openly. This builds trust and sets him apart from hype c
 
 > "Some other coding agents have disappointed me. They're just not there yet."
 
-**No:**
+**錯誤示範：**
 
 > "This tool will 10x your productivity overnight!"
 
@@ -233,11 +233,11 @@ Cole admits limitations openly. This builds trust and sets him apart from hype c
 
 ---
 
-## Signature Phrases
+## 標誌性用語
 
 **"And here's the thing"**
 
-Transition into a key insight. Used when shifting from setup to substance.
+轉入核心見解。用於從鋪墊轉到實質內容。
 
 > "And here's the thing - he's not alone."
 
@@ -245,15 +245,15 @@ Transition into a key insight. Used when shifting from setup to substance.
 
 **"But honestly"**
 
-Adds authenticity before a direct statement. Signals you're about to be real.
+在直接陳述前增加真實感。表示你接下來要說真話了。
 
 > "But honestly you can learn 90% of what you need to know from this video."
 
 > "But honestly, I've regretted using them in the past."
 
-**"Super [adjective]"**
+**"Super [形容詞]"**
 
-Cole's most distinctive intensifier. Use naturally, not forced.
+Cole 最具辨識度的加強詞。自然使用，不要硬塞。
 
 > "It's super easy to get started."
 
@@ -263,23 +263,23 @@ Cole's most distinctive intensifier. Use naturally, not forced.
 
 **"I've got you covered" / "That's why I'm here"**
 
-Reassurance that removes overwhelm.
+讓人安心，消除壓迫感。
 
 > "People tell me it's overwhelming all of the time, but take a deep breath, that's why I'm here."
 
 **"The people who are most successful are the ones who..."**
 
-Sets up a principle by pointing to evidence.
+透過指向證據來建立原則。
 
 > "The people who are the most successful are the ones who don't overcomplicate it."
 
 **"I want that to be you too"**
 
-Direct audience connection. Makes the viewer feel included in the success story.
+直接與觀眾連結。讓觀眾覺得自己也是成功故事的一部分。
 
 **"No matter what/how you're..."**
 
-Universal applicability. Signals the advice works regardless of their situation.
+普遍適用性。表示建議不管情況如何都有效。
 
 > "No matter what software you want to build..."
 
@@ -287,79 +287,79 @@ Universal applicability. Signals the advice works regardless of their situation.
 
 ---
 
-## What Cole Sounds Like
+## Cole 聽起來像什麼
 
-Real examples from actual content:
+來自實際內容的真實範例：
 
-**Video Announcement:**
+**影片公告：**
 
 > "Just dropped a new video: Context Engineering 101: The Simple Strategy to 100x AI Coding. Stop relying on vibe coding, start leveraging context engineering with PRPs to build real-world AI coding assistants that scale."
 
-**YouTube Intro:**
+**YouTube 開場：**
 
 > "Not only have I built hundreds of AI agents myself, I've seen other people build thousands of AI agents for every use case under the sun. The people who are the most successful are the ones who don't overcomplicate it - and I want that to be you too."
 
-**YouTube Description:**
+**YouTube 描述：**
 
 > "It's easy to think building AI agents is super complicated, but honestly you can learn 90% of what you need to know from this video. No matter how you're building your agents, I'll show you here what you need to think about, and more importantly what you shouldn't worry about when you're first creating your agent."
 
-**Teaching/Explanation:**
+**教學/解釋：**
 
 > "AI agents are simply Large Language Models that have been given the ability to interact with the outside world. They can do things like draft emails, book appointments in your CRM, create tasks in task management software, and really anything you can dream of."
 
-**Personal/Entrepreneurial:**
+**個人/創業：**
 
 > "My 9-5 was amazing. I learned so much and grew so much. But my biggest transformation didn't happen while I was in that corporate role... it happened when I decided to step out and go all-in on the entrepreneurial path. Now, I get to build AI agents for businesses and teach others how to do the same. Education has always been my #1 passion, and getting to live that every single day? Unreal."
 
-**Hot Take:**
+**犀利觀點：**
 
 > "The IDE is dying. So is tool calling. OpenAI won't win. And you'll be shipping code you've never read even as an experienced engineer."
 
 ---
 
-## What Cole Doesn't Sound Like
+## Cole 不像什麼
 
-| Avoid | Why |
-| ----- | --- |
-| Hype bro | Bullish but grounded - no empty excitement |
-| Corporate speaker | Talks like a developer, not a marketer |
-| Overpromiser | Admits limitations, shows iterations |
-| Doom and gloom | Focuses on possibilities, not fears |
-| Condescending explainer | Assumes intelligence, teaches with respect |
-| Hedge-everything academic | Takes positions and backs them up |
-
----
-
-## Cole vs Generic AI Creators
-
-| Cole Medin | Generic AI Creators |
-|------------|---------------------|
-| Admits limitations openly | Overpromises capabilities |
-| Shows iterations/versions | Only shows final product |
-| "Best tool for the job" mentality | Pushes one solution for everything |
-| Balances code + no-code | Usually one or the other |
-| Community-driven development | Solo creator approach |
-| Practical, immediately usable | Theoretical, abstract |
-| Humble about complexity | Oversimplifies |
+| 避免 | 原因 |
+|------|------|
+| 炒作型 | 看好但腳踏實地 — 沒有空洞的興奮 |
+| 企業演講者 | 像開發者一樣說話，不是行銷人員 |
+| 過度承諾者 | 承認局限，展示迭代過程 |
+| 末日預言者 | 專注於可能性，不是恐懼 |
+| 居高臨下的解說者 | 假設對方聰明，以尊重的態度教學 |
+| 什麼都要含糊的學者 | 有立場並用經驗支撐 |
 
 ---
 
-## Sentence Patterns
+## Cole vs 一般 AI 創作者
 
-**Opening hooks:**
+| Cole Medin | 一般 AI 創作者 |
+|------------|----------------|
+| 坦然承認局限 | 過度承諾能力 |
+| 展示迭代/版本 | 只展示最終產品 |
+| 「用最好的工具」心態 | 所有問題推一個解決方案 |
+| 平衡 code + no-code | 通常只選一邊 |
+| 社群驅動的開發 | 獨行俠創作者 |
+| 務實、可立即使用 | 理論性、抽象的 |
+| 對複雜性保持謙遜 | 過度簡化 |
 
-- Problem identification: "One of the biggest problems with [X] is..."
-- Bold statement: "The IDE is dying. So is tool calling."
-- Direct address: "Something massive is happening in [X] right now, and if you're not paying attention, you're already falling behind."
+---
 
-**Taking a position:**
+## 句型模式
+
+**開場鉤子：**
+
+- 問題辨識："One of the biggest problems with [X] is..."
+- 大膽聲明："The IDE is dying. So is tool calling."
+- 直接對話："Something massive is happening in [X] right now, and if you're not paying attention, you're already falling behind."
+
+**表明立場：**
 
 - "I will die on that hill."
 - "I'm gonna be honest..."
 - "Here's the thing..."
 - "And therein lies the problem with [X]."
 
-**Showing the work:**
+**展示成果：**
 
 - "Not only have I [done X] myself, I've seen other people [do Y]."
 - "After studying the workflows of developers who are genuinely [result]..."
@@ -367,119 +367,119 @@ Real examples from actual content:
 
 ---
 
-## Writing Patterns
+## 寫作模式
 
-### Practical First, Theory Second
+### 務實優先，理論其次
 
-Lead with what to do, then explain why.
+先說該做什麼，再解釋為什麼。
 
-**Yes:**
+**正確：**
 
 > "Start every project with a PRD. Before ANY code, document what you're building. The PRD becomes your source of truth for every conversation."
 
-**No:**
+**錯誤：**
 
 > "Understanding the theoretical underpinnings of documentation-driven development helps us appreciate why starting with a PRD is considered a best practice in the industry..."
 
-### Numbers and Specifics
+### 數字和具體事實
 
-Ground everything in real numbers, not vague claims.
+用真實數字支撐一切，不要含糊的聲明。
 
-**Yes:**
+**正確：**
 
 > "259 pull requests, 497 commits, 40,000 lines added - was written entirely by Claude Code."
 
-**No:**
+**錯誤：**
 
 > "A significant amount of code was generated using AI tools."
 
 ---
 
-## Avoiding Robotic Patterns
+## 避免機器化模式
 
-If AI assists with writing, catch and fix these patterns:
+如果 AI 協助撰寫，捕捉並修正這些模式：
 
-### Over-qualification
+### 過度限定
 
-**Robotic:**
+**機器化：**
 
 > "It might be worth considering that perhaps the traditional approach could potentially be somewhat less effective than some alternatives in certain contexts."
 
-**Human (Cole):**
+**人性化（Cole）：**
 
 > "Traditional prompt engineering wastes time. Here's what works better."
 
-### Empty Transitions
+### 空洞的轉場
 
-**Robotic:**
+**機器化：**
 
 > "Let's dive deeper into this fascinating topic and explore the nuances..."
 
-**Human (Cole):**
+**人性化（Cole）：**
 
 > "Here's why this matters."
 
-### Performative Excitement
+### 做作的興奮
 
-**Robotic:**
+**機器化：**
 
 > "I'm SO EXCITED to share this INCREDIBLE new feature!! This is HUGE!!"
 
-**Human (Cole):**
+**人性化（Cole）：**
 
 > "This is the feature I've wanted for two years. It changes how I work daily."
 
-### Abstract Frameworks
+### 抽象框架
 
-**Robotic:**
+**機器化：**
 
 > "The 7-step framework for optimizing your workflow leverages synergistic principles..."
 
-**Human (Cole):**
+**人性化（Cole）：**
 
 > "5 skills that separate top engineers. None require special tools. They're just better ways of working."
 
 ---
 
-## Audience Feeling
+## 受眾感受
 
-When someone consumes Cole's content, they should feel:
+當有人消費 Cole 的內容時，他們應該感覺：
 
-| Beginners | Experienced |
-| --------- | ----------- |
-| "This is actually doable" | "Finally, someone who gets it" |
-| "I know exactly what to focus on" | "I can respect this approach" |
-| "I'm excited to try this" | "This confirms what I've been thinking" |
-
----
-
-## Voice Test
-
-Before posting, ask:
-
-1. Does this sound like Cole explaining this to a developer friend over coffee?
-2. Is there genuine "super excited" energy or forced hype?
-3. Am I backing this with real experience, not just theory?
-4. Did I show what NOT to focus on, not just what to do?
-5. Is there a sharper, shorter way to say this?
-6. Would a beginner feel "this is doable"? Would an experienced dev feel "this person gets it"?
+| 初學者 | 有經驗的 |
+|--------|----------|
+| 「這真的做得到」 | 「終於有人懂了」 |
+| 「我知道該專注什麼了」 | 「我認同這個方法」 |
+| 「我很興奮想試試」 | 「這印證了我一直在想的」 |
 
 ---
 
-## Quick Reference
+## 語調測試
 
-| Always | Never |
-| ------ | ----- |
-| Use "super", "honestly", "so" naturally | Force vocabulary that doesn't fit |
-| Be direct and confident | Hedge with qualifiers |
-| Include specific numbers | Make vague claims |
-| Say what NOT to focus on | Only give the "to-do" list |
-| Show iterations and admit limitations | Only show polished results |
-| Back claims with experience | Cite theory without practice |
-| Keep it practical | Over-intellectualize |
-| Use "cuz", contractions, informal tone | Sound corporate or stiff |
-| Address hype honestly | Be purely negative or dismissive |
+發佈前，問自己：
+
+1. 這聽起來像是 Cole 在跟一個開發者朋友喝咖啡時解釋嗎？
+2. 是真實的「super excited」能量還是硬擠的炒作？
+3. 我是用真實經驗支撐的，不只是理論？
+4. 我有告訴他們什麼不需要關注，不只是該做什麼？
+5. 有沒有更精煉、更簡短的說法？
+6. 初學者會覺得「這做得到」嗎？有經驗的開發者會覺得「這個人懂」嗎？
 
 ---
 
-*Last updated: 2025-01-15*
+## 快速參考
+
+| 始終要 | 絕對不要 |
+|--------|----------|
+| 自然使用 "super"、"honestly"、"so" | 硬塞不合適的詞彙 |
+| 直接且自信 | 用限定詞含糊其辭 |
+| 包含具體數字 | 做模糊的聲明 |
+| 說什麼不需要關注 | 只給「要做」清單 |
+| 展示迭代過程並承認局限 | 只展示打磨過的結果 |
+| 用經驗支撐聲明 | 引用沒有實務的理論 |
+| 保持務實 | 過度學術化 |
+| 使用 "cuz"、縮寫、非正式語氣 | 聽起來企業化或僵硬 |
+| 誠實面對炒作 | 純粹負面或輕蔑 |
+
+---
+
+*最後更新：2025-01-15*

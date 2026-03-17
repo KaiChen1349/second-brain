@@ -15,62 +15,62 @@ description: |
   Creates PDF carousels for LinkedIn (square 1:1 format).
 ---
 
-# PPTX Slide Generator
+# PPTX 投影片產生器
 
-Generate professional, on-brand presentation slides using python-pptx. This skill supports:
-- **Slide Generation** - Create presentations for any brand in `brands/`
-- **Carousel Generation** - Create LinkedIn carousels (square format, exports to PDF)
-- **Slide Editing** - Modify existing PPTX files
-- **Layout Management** - Create, edit, update cookbook layouts
+使用 python-pptx 產生專業、符合品牌風格的簡報投影片。此技能支援：
+- **投影片產生** - 為 `brands/` 中的任何品牌建立簡報
+- **輪播圖產生** - 建立 LinkedIn 輪播圖（正方形格式，匯出為 PDF）
+- **投影片編輯** - 修改現有的 PPTX 檔案
+- **版面管理** - 建立、編輯、更新版面範本庫版面
 
-**IMPORTANT:** All skill resources are in `.claude/skills/pptx-generator/`. Always use Glob patterns starting with `.claude/skills/pptx-generator/` to find files.
-
----
-
-## ⚠️ CRITICAL: Batch Generation Rules
-
-**NEVER generate more than 5 slides at once.**
-
-| Rule | Details |
-|------|---------|
-| Max slides per batch | **5** (can be 1, 2, 3, 4, or 5) |
-| After each batch | **STOP and validate output** |
-| Validation required | Check: no duplicate titles, proper spacing, correct colors |
-| Continue when | Validation passes |
-| **After ALL batches** | **COMBINE into single file and DELETE part files** |
-
-This prevents token limit errors and catches quality issues early.
-
-**CRITICAL: Always clean up part files after combining.** The user should only see ONE final PPTX file, not multiple part files.
+**重要：** 所有技能資源都在 `.claude/skills/pptx-generator/` 中。搜尋檔案時，請始終使用以 `.claude/skills/pptx-generator/` 開頭的 Glob 模式。
 
 ---
 
-## ⚠️ PREREQUISITE: Brand Check
+## ⚠️ 關鍵：批次產生規則
 
-**Before generating slides, check if any brands exist.**
+**一次切勿產生超過 5 張投影片。**
+
+| 規則 | 詳情 |
+|------|------|
+| 每批次最多投影片數 | **5**（可以是 1、2、3、4 或 5） |
+| 每批次結束後 | **停下來驗證輸出** |
+| 必須驗證 | 檢查：沒有重複標題、正確的間距、正確的顏色 |
+| 繼續的條件 | 驗證通過 |
+| **所有批次完成後** | **合併成單一檔案並刪除分割檔案** |
+
+這可以防止 token 上限錯誤，並及早發現品質問題。
+
+**關鍵：合併後務必清理分割檔案。** 使用者應該只看到一個最終 PPTX 檔案，而不是多個分割檔案。
+
+---
+
+## ⚠️ 前置條件：品牌檢查
+
+**在產生投影片之前，請檢查是否有任何品牌存在。**
 
 ```
 Glob: .claude/skills/pptx-generator/brands/*/brand.json
 ```
 
-**If NO brands found (only `template/` exists):**
+**如果找不到品牌（只有 `template/` 存在）：**
 
-1. **STOP** - Do not proceed with slide generation
-2. **Ask the user:**
-   > "No brands are configured yet. Would you like me to help you create a brand first?
-   > I'll need your brand colors, fonts, and style guidelines to set this up."
+1. **停止** - 不要繼續產生投影片
+2. **詢問使用者：**
+   > "尚未設定任何品牌。您希望我先幫您建立一個品牌嗎？
+   > 我需要您的品牌色彩、字型和風格指南來完成設定。"
 
-3. **If user wants to create a brand**, follow the **Creating a New Brand** section below.
+3. **如果使用者想建立品牌**，請按照下方的**建立新品牌**章節操作。
 
-4. **If user declines**, explain that slides require a brand configuration and offer to use generic styling as a fallback.
+4. **如果使用者拒絕**，解釋投影片需要品牌設定，並提供使用通用樣式作為備選方案。
 
 ---
 
-## Creating a New Brand
+## 建立新品牌
 
-When no brands exist or user requests a new brand:
+當沒有品牌存在或使用者要求建立新品牌時：
 
-### Step 1: Read the Template
+### 步驟 1：閱讀範本
 
 ```
 Read: .claude/skills/pptx-generator/brands/template/README.md
@@ -78,31 +78,31 @@ Read: .claude/skills/pptx-generator/brands/template/brand.json
 Read: .claude/skills/pptx-generator/brands/template/config.json
 ```
 
-### Step 2: Gather Brand Information
+### 步驟 2：收集品牌資訊
 
-Ask the user for (or extract from provided materials):
+向使用者詢問（或從提供的素材中提取）：
 
-| Required | Description |
-|----------|-------------|
-| **Brand name** | Folder name (lowercase, no spaces) |
-| **Colors** | Background, text, accent colors (hex codes) |
-| **Fonts** | Heading font, body font, code font |
+| 必填 | 說明 |
+|------|------|
+| **品牌名稱** | 資料夾名稱（小寫、無空格） |
+| **色彩** | 背景色、文字色、強調色（十六進位色碼） |
+| **字型** | 標題字型、內文字型、程式碼字型 |
 
-| Optional | Description |
-|----------|-------------|
-| Output directory | Where to save generated files (default: `output/{brand}`) |
-| Logo | Path to logo file (PNG/SVG) |
-| Brand guidelines | Existing style guide or website to reference |
-| Tone of voice | Writing style, vocabulary preferences |
+| 選填 | 說明 |
+|------|------|
+| 輸出目錄 | 產生檔案的儲存位置（預設：`output/{brand}`） |
+| 標誌 | 標誌檔案路徑（PNG/SVG） |
+| 品牌指南 | 現有的風格指南或參考網站 |
+| 語氣風格 | 書寫風格、用語偏好 |
 
-### Step 3: Create Brand Files
+### 步驟 3：建立品牌檔案
 
-1. **Create the brand folder:**
+1. **建立品牌資料夾：**
    ```bash
    mkdir -p .claude/skills/pptx-generator/brands/{brand-name}
    ```
 
-2. **Create brand.json** with the gathered values:
+2. **建立 brand.json**，填入收集到的值：
    ```json
    {
      "name": "Brand Name",
@@ -132,7 +132,7 @@ Ask the user for (or extract from provided materials):
    }
    ```
 
-3. **Create config.json** with output settings:
+3. **建立 config.json**，填入輸出設定：
    ```json
    {
      "output": {
@@ -152,93 +152,93 @@ Ask the user for (or extract from provided materials):
    }
    ```
 
-4. **Create brand-system.md** - Copy from template and fill in brand guidelines
+4. **建立 brand-system.md** - 從範本複製並填入品牌指南
 
-5. **Create tone-of-voice.md** - Copy from template and fill in voice guidelines
+5. **建立 tone-of-voice.md** - 從範本複製並填入語氣風格指南
 
-6. **Add assets** - Copy logo/images to `brands/{brand-name}/assets/`
+6. **新增素材** - 將標誌/圖片複製到 `brands/{brand-name}/assets/`
 
-### Step 4: Verify
+### 步驟 4：驗證
 
-After creating the brand, verify with:
+建立品牌後，使用以下方式驗證：
 ```
 Glob: .claude/skills/pptx-generator/brands/{brand-name}/*
 ```
 
-Then proceed to slide generation.
+然後繼續產生投影片。
 
 ---
 
-## Skill Modes
+## 技能模式
 
-This skill operates in three modes:
+此技能有三種模式：
 
-### Mode 1: Generate Presentation Slides
-User wants presentation slides (16:9) created using a brand's styling.
-→ Follow: Brand Discovery → Layout Selection → Content Adaptation → Execute
-→ Layouts in: `cookbook/*.py`
+### 模式 1：產生簡報投影片
+使用者希望使用品牌樣式建立簡報投影片（16:9）。
+→ 依序執行：品牌探索 → 版面選擇 → 內容調整 → 執行
+→ 版面位於：`cookbook/*.py`
 
-### Mode 2: Generate LinkedIn Carousels
-User wants a LinkedIn carousel (square 1:1 format) for social media.
-→ Follow: Brand Discovery → Carousel Planning → Generate → Export PDF
-→ Layouts in: `cookbook/carousels/*.py`
+### 模式 2：產生 LinkedIn 輪播圖
+使用者希望為社群媒體建立 LinkedIn 輪播圖（正方形 1:1 格式）。
+→ 依序執行：品牌探索 → 輪播圖規劃 → 產生 → 匯出 PDF
+→ 版面位於：`cookbook/carousels/*.py`
 
-### Mode 3: Manage Cookbook Layouts
-User wants to create, edit, or improve layout templates.
-→ Follow: Layout CRUD Operations section
+### 模式 3：管理版面範本庫
+使用者希望建立、編輯或改善版面範本。
+→ 依序執行：版面 CRUD 操作章節
 
 ---
 
-## Mode 1: Generate Presentation Slides
+## 模式 1：產生簡報投影片
 
-### Step 1: Brand Discovery
+### 步驟 1：品牌探索
 
-1. **List available brands:**
+1. **列出可用品牌：**
    ```
    Glob: .claude/skills/pptx-generator/brands/*/brand.json
    ```
-   Extract unique brand names from paths (e.g., `brands/rasmus/...` → "rasmus")
+   從路徑提取唯一的品牌名稱（例如 `brands/rasmus/...` → "rasmus"）
 
-2. **Read the brand configuration files:**
+2. **讀取品牌設定檔案：**
    ```
    Read: .claude/skills/pptx-generator/brands/{brand-name}/brand.json
    Read: .claude/skills/pptx-generator/brands/{brand-name}/config.json
    ```
-   - `brand.json` - Colors, fonts, assets
-   - `config.json` - Output directory, generation settings
+   - `brand.json` - 色彩、字型、素材
+   - `config.json` - 輸出目錄、產生設定
 
-3. **Read supporting markdown files for context:**
+3. **讀取輔助 Markdown 檔案以獲取上下文：**
    ```
    Glob: .claude/skills/pptx-generator/brands/{brand-name}/*.md
    ```
-   These provide voice, tone, and design philosophy.
+   這些提供語氣、風格和設計理念。
 
-4. **Extract from brand files:**
-   - **From brand.json:** Colors (hex without #), fonts, asset paths
-   - **From config.json:** Output directory, slides per batch, naming convention
-   - **From markdown:** Voice, tone, vocabulary, visual principles
+4. **從品牌檔案中提取：**
+   - **從 brand.json：** 色彩（不含 # 的十六進位值）、字型、素材路徑
+   - **從 config.json：** 輸出目錄、每批次投影片數、命名規則
+   - **從 Markdown：** 語氣、風格、用語、視覺原則
 
-If brand not found, list available brands and ask user to choose.
+如果找不到品牌，列出可用品牌並請使用者選擇。
 
-### Step 2: Layout Discovery (READ ALL FRONTMATTERS)
+### 步驟 2：版面探索（閱讀所有前置資訊）
 
-**⚠️ MANDATORY: Read ALL layout frontmatters before selecting any layout.**
+**⚠️ 必須：在選擇任何版面之前，先閱讀所有版面的前置資訊。**
 
-This step is critical for making informed layout decisions. You must understand what ALL layouts offer before choosing.
+此步驟對於做出明智的版面決策至關重要。你必須了解所有版面的功能後才能做出選擇。
 
-**Step 2a: Discover all layouts:**
+**步驟 2a：探索所有版面：**
 ```
 Glob: .claude/skills/pptx-generator/cookbook/*.py
 ```
 
-**Step 2b: Read EVERY layout file** (not just one or two):
+**步驟 2b：閱讀每個版面檔案**（不是只讀一兩個）：
 
-For each `.py` file found, read the first 40 lines to extract the `# /// layout` frontmatter block. Build a mental map of:
-- What each layout is for (`purpose`, `best_for`)
-- What each layout should NOT be used for (`avoid_when`)
-- Limits and constraints (`max_*`, `min_*`, `*_max_chars`)
+對於找到的每個 `.py` 檔案，讀取前 40 行以提取 `# /// layout` 前置資訊區塊。建立心智地圖：
+- 每個版面的用途（`purpose`、`best_for`）
+- 每個版面不應使用的情況（`avoid_when`）
+- 限制和約束（`max_*`、`min_*`、`*_max_chars`）
 
-**The frontmatter block** looks like this:
+**前置資訊區塊**的格式如下：
 
 ```python
 # /// layout
@@ -261,97 +261,97 @@ For each `.py` file found, read the first 40 lines to extract the `# /// layout`
 # ///
 ```
 
-**Key frontmatter fields:**
-| Field | Description |
-|-------|-------------|
-| `name` | Layout identifier |
-| `purpose` | What this layout is for |
-| `best_for` | Ideal use cases (array) |
-| `avoid_when` | When NOT to use this layout (array) |
-| `max_*` / `min_*` | Item limits (cards, bullets, stats) |
-| `instructions` | Specific tips for using this layout |
+**關鍵前置資訊欄位：**
+| 欄位 | 說明 |
+|------|------|
+| `name` | 版面識別名稱 |
+| `purpose` | 此版面的用途 |
+| `best_for` | 理想使用情境（陣列） |
+| `avoid_when` | 不應使用此版面的情況（陣列） |
+| `max_*` / `min_*` | 項目限制（卡片、項目符號、統計數據） |
+| `instructions` | 使用此版面的特定技巧 |
 
-**Step 2c: Select layouts** (only AFTER reading all frontmatters):
+**步驟 2c：選擇版面**（僅在閱讀所有前置資訊後）：
 
-Now that you know all available layouts and their constraints:
+既然你已經知道所有可用版面及其約束：
 
-1. User specifies layout → Use that layout (but verify it fits the content)
-2. User describes content → Match to best-fitting `best_for` criteria
-3. **Check `avoid_when`** → Don't use a layout in situations it warns against
-4. **Respect limits** → If content exceeds `max_*`, use a different layout
-5. Multiple slides needed → Select appropriate layout for each
-6. No good fit → Create a custom layout (see Mode 2)
+1. 使用者指定版面 → 使用該版面（但驗證內容是否適合）
+2. 使用者描述內容 → 比對最符合的 `best_for` 標準
+3. **檢查 `avoid_when`** → 不要在警告的情況下使用該版面
+4. **遵守限制** → 如果內容超過 `max_*`，使用不同的版面
+5. 需要多張投影片 → 為每張選擇適當的版面
+6. 沒有合適的版面 → 建立自訂版面（見模式 2）
 
-**Example selection process:**
-- User wants "5 pillars of AI infrastructure"
-- You've read all frontmatters and know:
-  - `floating-cards-slide`: `max_cards = 3` → Won't work
-  - `multi-card-slide`: `max_cards = 5` → Perfect fit
-- Select `multi-card-slide`
+**選擇過程範例：**
+- 使用者想要「AI 基礎設施的 5 大支柱」
+- 你已閱讀所有前置資訊，知道：
+  - `floating-cards-slide`：`max_cards = 3` → 不適合
+  - `multi-card-slide`：`max_cards = 5` → 完美契合
+- 選擇 `multi-card-slide`
 
-**Why read ALL frontmatters?**
-- Layouts reference each other in `avoid_when` (e.g., "use multi-card-slide instead")
-- You can't make the right choice without knowing all options
-- Prevents backtracking when a layout doesn't fit
+**為什麼要閱讀所有前置資訊？**
+- 版面在 `avoid_when` 中互相參照（例如「使用 multi-card-slide 替代」）
+- 不了解所有選項就無法做出正確選擇
+- 防止因版面不適合而需要回頭重做
 
-### Step 2d: Visual-First Layout Selection (CRITICAL FOR VARIETY)
+### 步驟 2d：視覺優先版面選擇（多樣性關鍵）
 
-**🎨 DEFAULT TO VISUAL LAYOUTS. Content-slide is the LAST RESORT, not the default.**
+**🎨 預設使用視覺版面。content-slide 是最後手段，不是預設選項。**
 
-#### The Variety Problem
+#### 多樣性問題
 
-The biggest mistake in presentation generation is **defaulting to content-slide** (title + bullets) whenever you have information to convey. This creates repetitive, boring presentations.
+簡報產生中最大的錯誤是**將 content-slide**（標題 + 項目符號）作為傳達資訊的預設選擇。這會建立重複、無聊的簡報。
 
-**Common failure pattern:**
-- 11 out of 30 slides = content-slide (37% repetition)
-- User says "this lacks variety"
-- You think "but I used 11 different layout types!"
-- Reality: Layout variety exists, but distribution is terrible
+**常見失敗模式：**
+- 30 張投影片中有 11 張是 content-slide（37% 重複率）
+- 使用者說「這缺乏多樣性」
+- 你認為「但我使用了 11 種不同的版面類型！」
+- 現實：版面種類是有多樣性，但分佈很糟糕
 
-#### Variety Enforcement Rules
+#### 多樣性強制規則
 
-**HARD LIMITS:**
-1. **Never use the same layout more than 2-3 times consecutively**
-2. **Content-slide should be <25% of total slides** (not 35-40%)
-3. **Visual layouts (cards, stats, columns, hero, diagonal) should be 50%+ of slides**
-4. **Section breaks are NOT variety** - they're structural (don't count toward variety)
+**硬性限制：**
+1. **同一版面連續使用不超過 2-3 次**
+2. **content-slide 應佔總投影片數的 <25%**（不是 35-40%）
+3. **視覺版面（卡片、統計、分欄、主視覺、對角線）應佔 50% 以上**
+4. **段落分隔不算多樣性** - 它們是結構性的（不計入多樣性統計）
 
-#### Decision Tree: "Should I Use content-slide?"
+#### 決策樹：「我應該使用 content-slide 嗎？」
 
-Ask these questions IN ORDER before defaulting to content-slide:
+在預設使用 content-slide 之前，**依序**回答這些問題：
 
 ```
-Do I have 3-5 equal items?
-  YES → Use multi-card-slide (not content-slide)
+我有 3-5 個相等的項目嗎？
+  是 → 使用 multi-card-slide（不是 content-slide）
 
-Do I have 2-4 big numbers/metrics?
-  YES → Use stats-slide (not content-slide)
+我有 2-4 個大數字/指標嗎？
+  是 → 使用 stats-slide（不是 content-slide）
 
-Am I comparing two things?
-  YES → Use two-column-slide (not content-slide)
+我在比較兩樣東西嗎？
+  是 → 使用 two-column-slide（不是 content-slide）
 
-Do I have a central concept with surrounding items?
-  YES → Use circular-hero-slide (not content-slide)
+我有一個中心概念和周圍項目嗎？
+  是 → 使用 circular-hero-slide（不是 content-slide）
 
-Do I have exactly 3 related items?
-  YES → Use floating-cards-slide (not content-slide)
+我有剛好 3 個相關項目嗎？
+  是 → 使用 floating-cards-slide（不是 content-slide）
 
-Do I have 1-3 words I want to emphasize dramatically?
-  YES → Use giant-focus-slide or bold-diagonal-slide (not content-slide)
+我有 1-3 個字想要大幅強調嗎？
+  是 → 使用 giant-focus-slide 或 bold-diagonal-slide（不是 content-slide）
 
-Do I have a powerful quote or principle?
-  YES → Use quote-slide (not content-slide)
+我有一句有力的引言或原則嗎？
+  是 → 使用 quote-slide（不是 content-slide）
 
-Is this the ONLY way to present this information?
-  YES → NOW you can use content-slide
-  NO → Go back through the decision tree
+這是呈現此資訊的唯一方式嗎？
+  是 → 現在可以使用 content-slide
+  否 → 回到決策樹重新評估
 ```
 
-#### Transforming Bullets Into Visual Layouts
+#### 將項目符號轉換為視覺版面
 
-**Example 1: "Validation Patterns"**
+**範例 1：「驗證模式」**
 
-❌ **BAD (content-slide):**
+❌ **不好（content-slide）：**
 ```
 Title: Validation Patterns
 Bullets:
@@ -361,7 +361,7 @@ Bullets:
 - Deployment previews
 ```
 
-✅ **GOOD (multi-card-slide):**
+✅ **好（multi-card-slide）：**
 ```
 Title: Validation Patterns
 Cards:
@@ -371,9 +371,9 @@ Cards:
 4. Preview | Deployment previews for visual regression
 ```
 
-**Example 2: "Why PIV Works"**
+**範例 2：「為什麼 PIV 有效」**
 
-❌ **BAD (content-slide):**
+❌ **不好（content-slide）：**
 ```
 Title: Why PIV Works
 Bullets:
@@ -383,7 +383,7 @@ Bullets:
 - System gets smarter with every bug
 ```
 
-✅ **GOOD (floating-cards-slide with 3 cards):**
+✅ **好（floating-cards-slide，3 張卡片）：**
 ```
 Title: Why PIV Works
 Cards:
@@ -391,11 +391,11 @@ Cards:
 2. Fast Feedback | Validation catches issues immediately
 3. Compounds | System improves with every bug
 ```
-(Note: Reduced from 4 to 3 items to fit floating-cards-slide `max_cards` limit)
+（注意：從 4 個減少到 3 個項目以符合 floating-cards-slide 的 `max_cards` 限制）
 
-**Example 3: "Human-in-the-Loop Strategy"**
+**範例 3：「人機協作策略」**
 
-❌ **BAD (content-slide):**
+❌ **不好（content-slide）：**
 ```
 Title: Human-in-the-Loop Strategy
 Bullets:
@@ -405,7 +405,7 @@ Bullets:
 - AI generates, humans validate
 ```
 
-✅ **GOOD (two-column-slide):**
+✅ **好（two-column-slide）：**
 ```
 Title: Human-in-the-Loop Strategy
 Left: In-the-Loop
@@ -419,135 +419,135 @@ Right: On-the-Loop
 - AI generates, human validates
 ```
 
-#### Active Visual Thinking
+#### 主動視覺思維
 
-Before planning any slide, ask yourself:
+在規劃任何投影片之前，問自己：
 
-1. **"Can this be more visual?"** - The answer is almost always YES
-2. **"Have I used content-slide in the last 2 slides?"** - If yes, use something else
-3. **"Does this slide look like the previous slide?"** - If yes, change the layout
-4. **"Am I falling into a pattern?"** - Break it immediately
-5. **"Would this be more engaging as cards/columns/stats?"** - Usually yes
+1. **「這可以更視覺化嗎？」** - 答案幾乎總是「是」
+2. **「我在最近 2 張投影片中使用過 content-slide 嗎？」** - 如果是，使用其他版面
+3. **「這張投影片看起來和上一張一樣嗎？」** - 如果是，更換版面
+4. **「我是否陷入了模式？」** - 立即打破它
+5. **「以卡片/分欄/統計呈現會更吸引人嗎？」** - 通常是的
 
-#### When content-slide IS Appropriate
+#### 適合使用 content-slide 的情況
 
-Use content-slide ONLY when:
-- You've genuinely tried all other layouts and they don't fit
-- The information is inherently linear and textual (rare)
-- You need a "breather" slide between two complex visuals
-- You're at your layout distribution limits (already used all the visual ones recently)
+**僅在以下情況使用 content-slide：**
+- 你已經真正嘗試了所有其他版面，但都不適合
+- 資訊本質上是線性和文字性的（少見）
+- 你需要在兩個複雜視覺投影片之間加入「喘息」投影片
+- 你已經達到版面分佈上限（最近已使用完所有視覺版面）
 
-**Never use content-slide as your default thinking.**
+**永遠不要將 content-slide 作為你的預設思維。**
 
-#### Quick Reference: Content Type → Best Layout
+#### 快速參考：內容類型 → 最佳版面
 
-| Content Type | Best Layout | Why |
-|--------------|-------------|-----|
-| 3-5 equal features/steps | multi-card-slide | Cards create visual hierarchy |
-| Exactly 3 featured items | floating-cards-slide | Elevated cards add depth |
-| 2-4 metrics/KPIs | stats-slide | Big numbers grab attention |
-| Before/after comparison | two-column-slide | Side-by-side shows contrast |
-| Hub concept with types | circular-hero-slide | Radiating pattern shows relationships |
-| Dramatic emphasis (1-3 words) | giant-focus-slide | Scale creates impact |
-| High-energy warning | bold-diagonal-slide | Dynamic shapes convey urgency |
-| Powerful quote/principle | quote-slide | Attribution adds authority |
-| List of related items | multi-card-slide | Better than bullets |
-| Process with steps | floating-cards-slide | Visual flow beats text |
-| Technical comparison | two-column-slide | Structured comparison |
+| 內容類型 | 最佳版面 | 原因 |
+|----------|----------|------|
+| 3-5 個相等的功能/步驟 | multi-card-slide | 卡片建立視覺層次 |
+| 剛好 3 個精選項目 | floating-cards-slide | 浮動卡片增加深度 |
+| 2-4 個指標/KPI | stats-slide | 大數字吸引注意力 |
+| 前後比較 | two-column-slide | 並排顯示對比 |
+| 中心概念與類型 | circular-hero-slide | 放射狀模式展示關係 |
+| 戲劇性強調（1-3 個字） | giant-focus-slide | 放大比例產生衝擊力 |
+| 高能量警告 | bold-diagonal-slide | 動態形狀傳達緊迫感 |
+| 有力的引言/原則 | quote-slide | 出處增加權威性 |
+| 相關項目清單 | multi-card-slide | 比項目符號更好 |
+| 有步驟的流程 | floating-cards-slide | 視覺流程優於文字 |
+| 技術比較 | two-column-slide | 結構化比較 |
 
-**Only use content-slide when:**
-- None of the above fit
-- Information is truly linear
-- Need a text-heavy breather between visual slides
-- Already hit variety limits
+**僅在以下情況使用 content-slide：**
+- 以上都不適合
+- 資訊確實是線性的
+- 需要在視覺投影片之間加入文字量較大的喘息投影片
+- 已達到多樣性上限
 
-### Step 3: Slide Planning (ALWAYS DO THIS)
+### 步驟 3：投影片規劃（務必執行）
 
-**Before generating ANY slides, create a written plan.**
+**在產生任何投影片之前，建立書面計畫。**
 
-This applies to single slides, batches, and full presentations. Planning prevents:
-- Duplicate content across slides
-- Wrong layout choices
-- Missing key information
-- Poor flow and structure
+這適用於單張投影片、批次和完整簡報。規劃可以防止：
+- 投影片間內容重複
+- 版面選擇錯誤
+- 遺漏關鍵資訊
+- 不良的流程和結構
 
-**Create a slide plan table:**
+**建立投影片計畫表：**
 
 ```markdown
-| # | Layout | Title | Key Content | Notes |
-|---|--------|-------|-------------|-------|
-| 1 | title-slide | [Title] | [Subtitle, author] | Opening slide |
-| 2 | content-slide | [Title] | [3-4 bullet points] | Main concepts |
-| 3 | stats-slide | [Title] | [2-3 metrics] | Impact data |
+| # | 版面 | 標題 | 關鍵內容 | 備註 |
+|---|------|------|----------|------|
+| 1 | title-slide | [標題] | [副標題、作者] | 開場投影片 |
+| 2 | content-slide | [標題] | [3-4 個要點] | 主要概念 |
+| 3 | stats-slide | [標題] | [2-3 個指標] | 影響數據 |
 | ... | ... | ... | ... | ... |
 ```
 
-**For each slide, specify:**
-- **Slide number** - Position in presentation
-- **Layout** - Which cookbook layout to use
-- **Title** - Exact title text (check for duplicates!)
-- **Key content** - Bullet points, stats, quotes, etc.
-- **Notes** - Any special considerations
+**對於每張投影片，指定：**
+- **投影片編號** - 在簡報中的位置
+- **版面** - 使用哪個版面範本庫版面
+- **標題** - 確切的標題文字（檢查是否重複！）
+- **關鍵內容** - 要點、統計數據、引言等
+- **備註** - 任何特殊考量
 
-**Planning checklist:**
-- [ ] No duplicate titles across slides
-- [ ] Logical flow from slide to slide
-- [ ] Appropriate layout for each content type
-- [ ] Content fits the chosen layout
-- [ ] Batches are logically grouped (5 slides max each)
-- [ ] **VARIETY CHECK: Content-slide used <25% of total slides**
-- [ ] **VARIETY CHECK: No more than 2-3 consecutive slides with same layout**
-- [ ] **VARIETY CHECK: Visual layouts (cards, stats, columns, hero) are 50%+ of slides**
-- [ ] **VARIETY CHECK: Each content-slide was evaluated against decision tree first**
+**規劃檢查清單：**
+- [ ] 投影片之間沒有重複標題
+- [ ] 投影片之間有邏輯流程
+- [ ] 每種內容類型使用適當的版面
+- [ ] 內容適合所選版面
+- [ ] 批次按邏輯分組（每批最多 5 張）
+- [ ] **多樣性檢查：content-slide 使用率 <25%**
+- [ ] **多樣性檢查：同一版面連續使用不超過 2-3 次**
+- [ ] **多樣性檢查：視覺版面佔投影片 50% 以上**
+- [ ] **多樣性檢查：每個 content-slide 都先經過決策樹評估**
 
-**After planning, briefly present the plan before generating.**
+**規劃完成後，在產生前簡要呈現計畫。**
 
-**Example of good variety distribution for 30-slide presentation:**
-- Content-slide: 6-7 slides (20-23%)
-- Section breaks: 5 slides (17%)
-- Visual layouts: 15-16 slides (50-53%)
-  - Multi-card: 3-4 slides
-  - Two-column: 2-3 slides
-  - Stats: 1-2 slides
-  - Floating-cards: 2-3 slides
-  - Circular-hero: 1-2 slides
-  - Giant-focus/Bold-diagonal: 2-3 slides
-  - Quote: 1 slide
-- Title/Closing: 2-3 slides (7-10%)
+**30 張投影片簡報的良好多樣性分佈範例：**
+- Content-slide：6-7 張（20-23%）
+- 段落分隔：5 張（17%）
+- 視覺版面：15-16 張（50-53%）
+  - Multi-card：3-4 張
+  - Two-column：2-3 張
+  - Stats：1-2 張
+  - Floating-cards：2-3 張
+  - Circular-hero：1-2 張
+  - Giant-focus/Bold-diagonal：2-3 張
+  - Quote：1 張
+- 標題/結尾：2-3 張（7-10%）
 
-### Step 4: Content Adaptation
+### 步驟 4：內容調整
 
-**For each slide in your plan:**
+**對於計畫中的每張投影片：**
 
-#### Presentation Text Formatting Rules
+#### 簡報文字格式規則
 
-**IMPORTANT: Follow these rules for ALL slide text.**
+**重要：所有投影片文字都要遵循這些規則。**
 
-| Element | Rule | Example |
-|---------|------|---------|
-| Titles | No trailing periods or commas | "Why AI Matters" not "Why AI Matters." |
-| Subtitles | No trailing punctuation | "The future of coding" not "The future of coding." |
-| Bullet points | No trailing periods (unless full sentences) | "Faster development" not "Faster development." |
-| Headlines | Minimal punctuation, no ellipsis | "What's Next" not "What's Next..." |
-| Stats/Numbers | Clean format, no trailing punctuation | "50%" not "50%." |
-| CTAs | No trailing punctuation | "Get Started" not "Get Started." |
-| Labels | Short, no punctuation | "Step 1" not "Step 1:" |
+| 元素 | 規則 | 範例 |
+|------|------|------|
+| 標題 | 不加結尾句點或逗號 | "Why AI Matters" 而非 "Why AI Matters." |
+| 副標題 | 不加結尾標點 | "The future of coding" 而非 "The future of coding." |
+| 項目符號 | 不加結尾句點（除非是完整句子） | "Faster development" 而非 "Faster development." |
+| 大標題 | 最少標點，不用省略號 | "What's Next" 而非 "What's Next..." |
+| 統計/數字 | 乾淨格式，不加結尾標點 | "50%" 而非 "50%." |
+| 行動呼籲 | 不加結尾標點 | "Get Started" 而非 "Get Started." |
+| 標籤 | 簡短，不加標點 | "Step 1" 而非 "Step 1:" |
 
-**Avoid:**
-- Trailing periods on titles, bullets, labels
-- Ellipsis (...) in headlines
-- Excessive commas in short phrases
-- Colons at end of labels/headers
-- Semicolons in bullet points
+**避免：**
+- 標題、項目符號、標籤的結尾句點
+- 大標題中的省略號（...）
+- 短語中過多的逗號
+- 標籤/標頭結尾的冒號
+- 項目符號中的分號
 
-**Exception:** Full sentence descriptions or quotes may use appropriate punctuation.
+**例外：** 完整句子的描述或引言可以使用適當的標點。
 
-#### Brand Value Mapping
+#### 品牌值對應
 
-1. **Map brand.json values to layout placeholders:**
+1. **將 brand.json 的值對應到版面佔位符：**
 
-   | Layout Placeholder | brand.json Path |
-   |--------------------|-----------------|
+   | 版面佔位符 | brand.json 路徑 |
+   |-----------|-----------------|
    | `BRAND_BG` | `colors.background` |
    | `BRAND_BG_ALT` | `colors.background_alt` |
    | `BRAND_TEXT` | `colors.text` |
@@ -562,127 +562,127 @@ This applies to single slides, batches, and full presentations. Planning prevent
    | `BRAND_BODY_FONT` | `fonts.body` |
    | `BRAND_CODE_FONT` | `fonts.code` |
 
-   **Note:** All color values in brand.json are hex WITHOUT the `#` prefix.
+   **注意：** brand.json 中的所有顏色值都是不含 `#` 前綴的十六進位值。
 
-2. **Write content in brand's voice** (from tone-of-voice.md)
-3. **Preserve layout structure** (decorative elements, spacing, hierarchy)
+2. **以品牌語氣撰寫內容**（來自 tone-of-voice.md）
+3. **保留版面結構**（裝飾元素、間距、層次）
 
-### Step 5: Batch Generation (CRITICAL)
+### 步驟 5：批次產生（關鍵）
 
-**MAXIMUM 5 SLIDES PER BATCH. This is a hard limit.**
+**每批次最多 5 張投影片。這是硬性限制。**
 
-When generating multiple slides:
-1. Generate 1-5 slides in a single PPTX file
-2. **STOP and review the output** before generating more
-3. Only after validation passes, continue with the next batch
-4. Repeat until all slides are generated
+產生多張投影片時：
+1. 在單一 PPTX 檔案中產生 1-5 張投影片
+2. **在產生更多之前停下來檢查輸出**
+3. 只有在驗證通過後，才繼續下一批次
+4. 重複直到所有投影片產生完成
 
-**Why batching matters:**
-- Prevents token limit errors
-- Allows quality checks between batches
-- Catches issues early before they propagate
+**為什麼要批次處理：**
+- 防止 token 上限錯誤
+- 允許在批次之間進行品質檢查
+- 及早發現問題，避免問題擴散
 
-**⚠️ CRITICAL BACKGROUND BUG FIX:**
+**⚠️ 關鍵背景色錯誤修復：**
 
-**EVERY slide MUST have its background explicitly set.** If you don't set `slide.background.fill.solid()` and `slide.background.fill.fore_color.rgb`, the slide will use PowerPoint's default WHITE background, making text unreadable on dark-themed brands.
+**每張投影片都必須明確設定背景。** 如果你不設定 `slide.background.fill.solid()` 和 `slide.background.fill.fore_color.rgb`，投影片將使用 PowerPoint 預設的白色背景，導致深色主題品牌的文字無法閱讀。
 
-**Mandatory for every slide:**
+**每張投影片的必要設定：**
 ```python
 slide = prs.slides.add_slide(prs.slide_layouts[6])
-slide.background.fill.solid()  # ← REQUIRED
-slide.background.fill.fore_color.rgb = hex_to_rgb(BRAND_BG)  # ← REQUIRED
+slide.background.fill.solid()  # ← 必要
+slide.background.fill.fore_color.rgb = hex_to_rgb(BRAND_BG)  # ← 必要
 ```
 
-This is especially critical when:
-- Generating multiple batches (each batch is a new Presentation object)
-- Using helper functions to create slides
-- Combining separate PPTX files
+這在以下情況尤其關鍵：
+- 產生多個批次（每個批次是新的 Presentation 物件）
+- 使用輔助函式建立投影片
+- 合併多個 PPTX 檔案
 
-**Execution:**
+**執行：**
 
-**PREFERRED: Use heredoc (no files created):**
+**建議：使用 heredoc（不建立檔案）：**
 ```bash
 uv run --with python-pptx==1.0.2 python << 'EOF'
-# [Adapted code with brand values and content]
+# [已調整品牌值和內容的程式碼]
 EOF
 ```
 
-**IF heredoc fails (Windows issues): Use temp directory:**
+**如果 heredoc 失敗（Windows 問題）：使用暫存目錄：**
 ```bash
-# Create temp directory if needed
+# 如需要建立暫存目錄
 mkdir -p .claude/skills/pptx-generator/.tmp
 
-# Write script to temp directory
-# (create file at .claude/skills/pptx-generator/.tmp/gen.py)
+# 將腳本寫入暫存目錄
+# （在 .claude/skills/pptx-generator/.tmp/gen.py 建立檔案）
 
-# Execute
+# 執行
 uv run --with python-pptx==1.0.2 python .claude/skills/pptx-generator/.tmp/gen.py
 
-# MANDATORY: Clean up immediately after execution
+# 必須：執行後立即清理
 rm .claude/skills/pptx-generator/.tmp/gen.py
 ```
 
-**CRITICAL: Never create Python files in the repository root.** Always use heredoc or temp directory within the skill folder.
+**關鍵：永遠不要在專案根目錄建立 Python 檔案。** 始終使用 heredoc 或技能資料夾內的暫存目錄。
 
-### Step 6: Quality Validation (MANDATORY)
+### 步驟 6：品質驗證（必須執行）
 
-**After EVERY batch, validate before continuing:**
+**每個批次後，在繼續之前必須驗證：**
 
-1. **Open the generated PPTX** and visually inspect it
-2. **Check for these common issues:**
+1. **開啟產生的 PPTX** 並進行目視檢查
+2. **檢查這些常見問題：**
 
-| Issue | What to Look For | Fix |
-|-------|------------------|-----|
-| White background | Slide has white background instead of brand color | Add slide.background.fill.solid() and set fore_color.rgb |
-| Duplicate titles | Same title text appearing twice on a slide | Remove duplicate text boxes |
-| Spacing problems | Title too close to subtitle/content | Increase Y position of lower elements |
-| Text overflow | Content extending beyond slide bounds | Reduce font size or split content |
-| Missing elements | Decorative elements not rendering | Check shape positions and colors |
-| Wrong colors | Colors not matching brand | Verify hex values (no # prefix in code) |
-| Bad punctuation | Trailing periods/commas on titles/bullets | Remove unnecessary punctuation |
+| 問題 | 檢查重點 | 修復方式 |
+|------|----------|----------|
+| 白色背景 | 投影片背景為白色而非品牌色 | 加入 slide.background.fill.solid() 並設定 fore_color.rgb |
+| 重複標題 | 同一投影片上出現相同的標題文字 | 移除重複的文字方塊 |
+| 間距問題 | 標題與副標題/內容太近 | 增加下方元素的 Y 座標 |
+| 文字溢出 | 內容超出投影片邊界 | 縮小字型大小或分割內容 |
+| 缺少元素 | 裝飾元素未渲染 | 檢查形狀位置和顏色 |
+| 顏色錯誤 | 顏色與品牌不符 | 驗證十六進位值（程式碼中不含 # 前綴） |
+| 錯誤標點 | 標題/項目符號上有結尾句點/逗號 | 移除不必要的標點 |
 
-3. **If issues found:**
-   - Fix the current batch before continuing
-   - Note the issue to avoid repeating in future batches
+3. **如果發現問題：**
+   - 在繼續之前修復當前批次
+   - 記錄問題以避免在未來批次中重複
 
-4. **If validation passes:**
-   - Continue to next batch of slides
+4. **如果驗證通過：**
+   - 繼續下一批次投影片
 
-### Step 7: Output
+### 步驟 7：輸出
 
-**Use the output settings from config.json:**
+**使用 config.json 中的輸出設定：**
 
-| Config Setting | Default | Description |
-|----------------|---------|-------------|
-| `output.directory` | `output/{brand}` | Where to save files |
-| `output.naming` | `{name}-{date}` | File naming pattern |
-| `output.keep_parts` | `false` | Keep part files after combining |
+| 設定項目 | 預設值 | 說明 |
+|----------|--------|------|
+| `output.directory` | `output/{brand}` | 檔案儲存位置 |
+| `output.naming` | `{name}-{date}` | 檔案命名模式 |
+| `output.keep_parts` | `false` | 合併後是否保留分割檔案 |
 
-**Resolve placeholders:**
-- `{brand}` → Brand folder name
-- `{name}` → Presentation name from user request
-- `{date}` → Current date (YYYY-MM-DD)
+**解析佔位符：**
+- `{brand}` → 品牌資料夾名稱
+- `{name}` → 使用者要求的簡報名稱
+- `{date}` → 目前日期（YYYY-MM-DD）
 
 ```bash
-# Create output directory from config
+# 從設定建立輸出目錄
 mkdir -p {resolved-output-directory}
 ```
 
-**Batched generation workflow:**
-1. Generate each batch as `{name}-part1.pptx`, `{name}-part2.pptx`, etc.
-2. Validate each batch before continuing
-3. After ALL batches complete, **combine into final file** (if `auto_combine` is true)
-4. Delete part files (if `keep_parts` is false)
+**批次產生工作流程：**
+1. 將每個批次產生為 `{name}-part1.pptx`、`{name}-part2.pptx` 等
+2. 在繼續之前驗證每個批次
+3. 所有批次完成後，**合併成最終檔案**（如果 `auto_combine` 為 true）
+4. 刪除分割檔案（如果 `keep_parts` 為 false）
 
-### Step 8: Combine Batches (for multi-batch presentations)
+### 步驟 8：合併批次（適用於多批次簡報）
 
-**🚨 CRITICAL BUG WARNING: BACKGROUND MUST BE SET WHEN COMBINING 🚨**
+**🚨 關鍵錯誤警告：合併時必須設定背景 🚨**
 
-When combining presentations, `add_slide()` creates slides with **DEFAULT WHITE BACKGROUNDS**. Shape copying does NOT copy the slide background property. You MUST explicitly set the background immediately after creating each new slide.
+合併簡報時，`add_slide()` 建立的投影片具有**預設白色背景**。形狀複製不會複製投影片背景屬性。你必須在建立每張新投影片後立即明確設定背景。
 
-**This is the most common source of white slides in combined presentations.**
+**這是合併簡報中白色投影片最常見的原因。**
 
-After all batches are validated, combine them into a single PPTX:
+所有批次驗證完成後，合併成單一 PPTX：
 
 ```bash
 uv run --with python-pptx==1.0.2 python << 'SCRIPT'
@@ -695,226 +695,226 @@ def hex_to_rgb(hex_color: str) -> RGBColor:
     h = hex_color.lstrip("#")
     return RGBColor(int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16))
 
-# Brand background color (get from brand.json)
-BRAND_BG = "REPLACE_WITH_BRAND_BACKGROUND"  # e.g., "07090F"
+# 品牌背景色（從 brand.json 取得）
+BRAND_BG = "REPLACE_WITH_BRAND_BACKGROUND"  # 例如 "07090F"
 
-# List all part files in order
+# 依序列出所有分割檔案
 output_dir = Path("output/{brand-name}")
 part_files = sorted(output_dir.glob("{name}-part*.pptx"))
 
 if len(part_files) > 1:
-    # Start with first part as base
+    # 以第一個分割檔案作為基礎
     combined = Presentation(part_files[0])
 
-    # Add slides from remaining parts
+    # 從其餘分割檔案加入投影片
     for part_file in part_files[1:]:
         part_prs = Presentation(part_file)
         for slide in part_prs.slides:
-            # Copy slide layout and add to combined
+            # 複製投影片版面並加入合併檔案
             blank_layout = combined.slide_layouts[6]
             new_slide = combined.slides.add_slide(blank_layout)
 
-            # 🚨 CRITICAL: Set background IMMEDIATELY after creating slide
-            # PowerPoint defaults to WHITE background - this MUST be set before copying shapes
+            # 🚨 關鍵：建立投影片後立即設定背景
+            # PowerPoint 預設為白色背景 - 在複製形狀之前必須設定
             new_slide.background.fill.solid()
             new_slide.background.fill.fore_color.rgb = hex_to_rgb(BRAND_BG)
 
-            # Copy all shapes from source slide
+            # 從來源投影片複製所有形狀
             for shape in slide.shapes:
-                # Clone shape to new slide
+                # 將形狀複製到新投影片
                 el = shape.element
                 new_slide.shapes._spTree.insert_element_before(
                     el, 'p:extLst'
                 )
 
-    # Save combined file
+    # 儲存合併檔案
     combined.save(output_dir / "{name}-final.pptx")
-    print(f"Combined {len(part_files)} parts into {name}-final.pptx")
+    print(f"已將 {len(part_files)} 個分割檔案合併為 {name}-final.pptx")
 
-    # MANDATORY: Clean up part files - user should only see final file
+    # 必須：清理分割檔案 - 使用者應只看到最終檔案
     for part_file in part_files:
         part_file.unlink()
-        print(f"Deleted {part_file.name}")
+        print(f"已刪除 {part_file.name}")
 else:
-    # Single part, just rename
+    # 只有一個分割檔案，直接重新命名
     shutil.move(part_files[0], output_dir / "{name}-final.pptx")
 SCRIPT
 ```
 
-**Final output:** `output/{brand-name}/{name}-final.pptx`
+**最終輸出：** `output/{brand-name}/{name}-final.pptx`
 
-**Why this bug happens:**
-- `combined.slides.add_slide()` creates a NEW slide object with PowerPoint's default white background
-- `shapes._spTree.insert_element_before()` copies shapes (text, rectangles, images) but NOT the background
-- The background is a slide property, not a shape, so it must be set separately
-- Without explicit background setting, slides 6-30 (or however many are added after the base) will be white
+**為什麼會發生此錯誤：**
+- `combined.slides.add_slide()` 建立的新投影片物件具有 PowerPoint 預設白色背景
+- `shapes._spTree.insert_element_before()` 複製形狀（文字、矩形、圖片）但不複製背景
+- 背景是投影片屬性，不是形狀，所以必須單獨設定
+- 沒有明確設定背景，第 6-30 張（或基礎之後加入的所有投影片）將是白色的
 
-**Testing checklist after combining:**
-- [ ] Open the combined PPTX
-- [ ] Scroll through ALL slides (not just the first few)
-- [ ] Verify EVERY slide has the correct background color
-- [ ] If any white slides found, the combination code is missing the background setting
+**合併後測試檢查清單：**
+- [ ] 開啟合併後的 PPTX
+- [ ] 瀏覽所有投影片（不只是前幾張）
+- [ ] 驗證每張投影片都有正確的背景色
+- [ ] 如果發現任何白色投影片，表示合併程式碼缺少背景設定
 
 ---
 
-## Mode 2: Generate LinkedIn Carousels
+## 模式 2：產生 LinkedIn 輪播圖
 
-LinkedIn carousels are multi-page PDFs in square (1:1) format. Each page is a swipeable slide.
+LinkedIn 輪播圖是正方形（1:1）格式的多頁 PDF。每頁是一張可滑動的投影片。
 
-### Carousel vs Presentation
+### 輪播圖與簡報的比較
 
-| Aspect | Presentation | Carousel |
-|--------|--------------|----------|
-| Dimensions | 16:9 (13.333" × 7.5") | 1:1 (7.5" × 7.5") |
-| Layouts | `cookbook/*.py` | `cookbook/carousels/*.py` |
-| Output | PPTX | PDF (via PPTX conversion) |
-| Slides | 10-50+ typical | 5-10 optimal |
-| Text size | Standard | Larger (mobile readable) |
-| Content | Detailed | One idea per slide |
+| 面向 | 簡報 | 輪播圖 |
+|------|------|--------|
+| 尺寸 | 16:9（13.333" × 7.5"） | 1:1（7.5" × 7.5"） |
+| 版面 | `cookbook/*.py` | `cookbook/carousels/*.py` |
+| 輸出 | PPTX | PDF（透過 PPTX 轉換） |
+| 投影片數 | 通常 10-50+ 張 | 最佳 5-10 張 |
+| 文字大小 | 標準 | 較大（手機可讀） |
+| 內容 | 詳細 | 每張一個重點 |
 
-### Step 1: Brand Discovery
+### 步驟 1：品牌探索
 
-Same as Mode 1 - read brand.json, config.json, and tone-of-voice.md.
+與模式 1 相同 - 讀取 brand.json、config.json 和 tone-of-voice.md。
 
-### Step 2: Carousel Layout Discovery
+### 步驟 2：輪播圖版面探索
 
-**Discover carousel-specific layouts:**
+**探索輪播圖專用版面：**
 ```
 Glob: .claude/skills/pptx-generator/cookbook/carousels/*.py
 ```
 
-**Available carousel layouts:**
+**可用的輪播圖版面：**
 
-| Layout | Purpose | Best For |
-|--------|---------|----------|
-| `hook-slide` | Opening attention-grabber | First slide only |
-| `single-point-slide` | One key point with explanation | Body content |
-| `numbered-point-slide` | Numbered list item with big number | Listicles, steps |
-| `quote-slide` | Quote with attribution | Social proof, insights |
-| `cta-slide` | Call to action | Last slide only |
+| 版面 | 用途 | 最適合 |
+|------|------|--------|
+| `hook-slide` | 開場吸引注意力 | 僅限第一張 |
+| `single-point-slide` | 一個關鍵要點加說明 | 內文內容 |
+| `numbered-point-slide` | 帶大數字的編號清單項目 | 列表、步驟 |
+| `quote-slide` | 帶出處的引言 | 社交證明、見解 |
+| `cta-slide` | 行動呼籲 | 僅限最後一張 |
 
-Read frontmatters to understand limits and constraints for each.
+閱讀前置資訊以了解每個版面的限制和約束。
 
-### Step 3: Carousel Planning
+### 步驟 3：輪播圖規劃
 
-**Typical carousel structure (5-10 slides):**
+**典型的輪播圖結構（5-10 張）：**
 
 ```markdown
-| # | Layout | Content |
-|---|--------|---------|
-| 1 | hook-slide | Attention-grabbing hook |
-| 2-8 | single-point or numbered-point | Body content |
-| 9/10 | cta-slide | Call to action |
+| # | 版面 | 內容 |
+|---|------|------|
+| 1 | hook-slide | 吸引注意力的開場 |
+| 2-8 | single-point 或 numbered-point | 內文內容 |
+| 9/10 | cta-slide | 行動呼籲 |
 ```
 
-**Carousel content rules:**
-- **One idea per slide** - Don't cram multiple points
-- **Large text** - Must be readable on mobile
-- **Short copy** - Max 50 chars for headlines, 150 for body
-- **Clear flow** - Each slide should make sense if viewed alone
-- **Strong hook** - First slide stops the scroll
-- **Clear CTA** - Last slide tells them what to do
+**輪播圖內容規則：**
+- **每張一個重點** - 不要塞入多個要點
+- **大字體** - 必須在手機上可讀
+- **簡短文案** - 標題最多 50 字元，內文最多 150 字元
+- **清晰流程** - 每張投影片獨立觀看也要有意義
+- **強力開場** - 第一張投影片要讓人停下滑動
+- **明確行動呼籲** - 最後一張告訴他們該做什麼
 
-### Step 4: Generate Carousel
+### 步驟 4：產生輪播圖
 
-**Carousel dimensions (square 1:1):**
+**輪播圖尺寸（正方形 1:1）：**
 ```python
 prs.slide_width = Inches(7.5)
 prs.slide_height = Inches(7.5)
 ```
 
-Generate all slides as a single PPTX file (carousels are typically 5-10 slides, so batching rarely needed).
+將所有投影片產生為單一 PPTX 檔案（輪播圖通常為 5-10 張，很少需要批次處理）。
 
-**Execution:**
+**執行：**
 ```bash
 uv run --with python-pptx==1.0.2 python << 'SCRIPT'
-# Carousel generation code with 7.5" x 7.5" dimensions
+# 使用 7.5" x 7.5" 尺寸的輪播圖產生程式碼
 SCRIPT
 ```
 
-### Step 5: Export to PDF
+### 步驟 5：匯出為 PDF
 
-LinkedIn requires PDF for carousel posts. Convert the PPTX to PDF:
+LinkedIn 要求輪播圖貼文使用 PDF。將 PPTX 轉換為 PDF：
 
-**Option A: Using LibreOffice (recommended)**
+**方案 A：使用 LibreOffice（建議）**
 ```bash
 libreoffice --headless --convert-to pdf --outdir output/rasmus output/rasmus/carousel.pptx
 ```
 
-**Option B: Using soffice**
+**方案 B：使用 soffice**
 ```bash
 soffice --headless --convert-to pdf output/rasmus/carousel.pptx
 ```
 
-**Note:** LibreOffice must be installed. On macOS: `brew install --cask libreoffice`
+**注意：** 必須安裝 LibreOffice。在 macOS 上：`brew install --cask libreoffice`
 
-### Step 6: Output
+### 步驟 6：輸出
 
-Save both files:
-- `output/{brand}/{name}-carousel.pptx` - Editable source
-- `output/{brand}/{name}-carousel.pdf` - LinkedIn-ready
+儲存兩個檔案：
+- `output/{brand}/{name}-carousel.pptx` - 可編輯原始檔
+- `output/{brand}/{name}-carousel.pdf` - LinkedIn 就緒版本
 
-### Carousel Checklist
+### 輪播圖檢查清單
 
-- [ ] Read brand configuration
-- [ ] Read carousel layout frontmatters from `cookbook/carousels/`
-- [ ] Plan carousel structure (hook → body → CTA)
-- [ ] Keep text SHORT (check character limits in frontmatter)
-- [ ] Use 7.5" × 7.5" dimensions
-- [ ] Generate PPTX
-- [ ] Validate output
-- [ ] Export to PDF
-- [ ] Test PDF in LinkedIn preview
+- [ ] 讀取品牌設定
+- [ ] 從 `cookbook/carousels/` 讀取輪播圖版面前置資訊
+- [ ] 規劃輪播圖結構（開場 → 內文 → 行動呼籲）
+- [ ] 保持文字簡短（檢查前置資訊中的字元限制）
+- [ ] 使用 7.5" × 7.5" 尺寸
+- [ ] 產生 PPTX
+- [ ] 驗證輸出
+- [ ] 匯出為 PDF
+- [ ] 在 LinkedIn 預覽中測試 PDF
 
 ---
 
-## Mode 3: Layout CRUD Operations
+## 模式 3：版面 CRUD 操作
 
-### Creating New Layouts
+### 建立新版面
 
-When user requests a new layout type:
+當使用者要求新的版面類型時：
 
-1. **Study existing layouts for patterns:**
+1. **研究現有版面的模式：**
    ```
    Glob: .claude/skills/pptx-generator/cookbook/*.py
    ```
-   Read 2-3 layouts to understand:
-   - Code structure and imports
-   - How brand variables are used
-   - Decorative element patterns
-   - Positioning conventions
+   閱讀 2-3 個版面以了解：
+   - 程式碼結構和匯入
+   - 品牌變數的使用方式
+   - 裝飾元素模式
+   - 定位慣例
 
-2. **Design with these quality standards:**
+2. **依照以下品質標準設計：**
 
-   **MUST be production-ready:**
-   - Professional, polished appearance
-   - Visually engaging (not plain or generic)
-   - Distinctive decorative elements
-   - Strong visual hierarchy
-   - Proper use of whitespace
+   **必須達到生產品質：**
+   - 專業、精緻的外觀
+   - 視覺吸引力（不是平淡或通用的）
+   - 獨特的裝飾元素
+   - 強烈的視覺層次
+   - 正確使用留白
 
-   **Use appropriate elements:**
-   - **Charts** - Pie, doughnut, bar, column for data visualization
-   - **Images** - Placeholder shapes for screenshots, photos
-   - **Shapes** - Circles, rectangles, parallelograms for visual interest
-   - **Cards** - Floating cards with shadows for depth
-   - **Geometric patterns** - Bold shapes anchored to corners/edges
+   **使用適當的元素：**
+   - **圖表** - 圓餅圖、甜甜圈圖、長條圖、柱狀圖用於資料視覺化
+   - **圖片** - 佔位符形狀用於螢幕截圖、照片
+   - **形狀** - 圓形、矩形、平行四邊形增加視覺趣味
+   - **卡片** - 帶陰影的浮動卡片增加深度
+   - **幾何圖案** - 錨定在角落/邊緣的粗體形狀
 
-   **Avoid:**
-   - Plain text-only layouts
-   - Generic bullet points without styling
-   - Tiny decorative elements that don't make impact
-   - Centered-everything boring compositions
+   **避免：**
+   - 純文字版面
+   - 沒有樣式的通用項目符號
+   - 太小而沒有影響力的裝飾元素
+   - 全部置中的無聊構圖
 
-3. **Write the layout file with detailed frontmatter:**
+3. **撰寫帶有詳細前置資訊的版面檔案：**
 
-   **⚠️ CRITICAL: The frontmatter is documentation for future AI agents.**
+   **⚠️ 關鍵：前置資訊是為未來 AI 代理撰寫的文件。**
 
-   Every layout MUST include comprehensive frontmatter that teaches future AI agents:
-   - WHEN to use this layout (and when NOT to)
-   - HOW to use it correctly
-   - WHAT limits and constraints exist
-   - WHY certain choices matter
+   每個版面都必須包含完整的前置資訊，教導未來的 AI 代理：
+   - 何時使用此版面（以及何時不使用）
+   - 如何正確使用
+   - 存在哪些限制和約束
+   - 為什麼某些選擇很重要
 
    ```python
    #!/usr/bin/env -S uv run
@@ -952,25 +952,25 @@ When user requests a new layout type:
    # ... implementation
    ```
 
-   **Required frontmatter fields (be DETAILED and SPECIFIC):**
+   **必填前置資訊欄位（要詳細且具體）：**
 
-   | Field | Description | Example |
-   |-------|-------------|---------|
-   | `name` | Layout identifier (matches filename) | `"multi-card-slide"` |
-   | `purpose` | Clear one-line description | `"Multiple items as cards in a row, 3-5 cards"` |
-   | `best_for` | **Detailed** array of ideal scenarios | `["Exactly 3 related features", "Process with 3 steps"]` |
-   | `avoid_when` | **Specific** situations with alternatives | `["More than 3 items - use multi-card-slide instead"]` |
-   | `instructions` | **Actionable** tips for correct usage | `["Card titles must be SHORT: 1-2 words, max 15 chars"]` |
+   | 欄位 | 說明 | 範例 |
+   |------|------|------|
+   | `name` | 版面識別名稱（與檔案名稱相符） | `"multi-card-slide"` |
+   | `purpose` | 清晰的一行說明 | `"Multiple items as cards in a row, 3-5 cards"` |
+   | `best_for` | **詳細的**理想情境陣列 | `["Exactly 3 related features", "Process with 3 steps"]` |
+   | `avoid_when` | **具體的**需避免情況及替代方案 | `["More than 3 items - use multi-card-slide instead"]` |
+   | `instructions` | **可操作的**正確使用技巧 | `["Card titles must be SHORT: 1-2 words, max 15 chars"]` |
 
-   **Optional but recommended fields:**
-   | Field | Description | Example |
-   |-------|-------------|---------|
-   | `max_*` / `min_*` | Hard limits on items | `max_cards = 3`, `min_surrounding_items = 4` |
-   | `*_max_chars` | Character limits for text | `card_title_max_chars = 15` |
+   **選填但建議的欄位：**
+   | 欄位 | 說明 | 範例 |
+   |------|------|------|
+   | `max_*` / `min_*` | 項目的硬性限制 | `max_cards = 3`、`min_surrounding_items = 4` |
+   | `*_max_chars` | 文字的字元限制 | `card_title_max_chars = 15` |
 
-   **Writing good frontmatter:**
+   **撰寫良好前置資訊的方法：**
 
-   ✅ **DO:** Be specific and actionable
+   ✅ **要：** 具體且可操作
    ```python
    # avoid_when = [
    #     "More than 3 items - use multi-card-slide instead",
@@ -983,109 +983,109 @@ When user requests a new layout type:
    # ]
    ```
 
-   ❌ **DON'T:** Be vague or unhelpful
+   ❌ **不要：** 含糊或無用
    ```python
    # avoid_when = ["Too many items", "Wrong content"]
    # instructions = ["Use correctly", "Follow the pattern"]
    ```
 
-   **Think of frontmatter as teaching a colleague** - what would they need to know to use this layout correctly without asking you questions?
+   **將前置資訊視為教導同事** - 他們需要知道什麼才能在不問你問題的情況下正確使用此版面？
 
-4. **Save to cookbook:**
+4. **儲存到版面範本庫：**
    ```
    .claude/skills/pptx-generator/cookbook/{layout-name}-slide.py
    ```
 
-5. **Test by generating** a sample with the new layout
+5. **透過產生**範例來測試新版面
 
-### Editing Existing Layouts
+### 編輯現有版面
 
-1. **Find the layout:**
+1. **找到版面：**
    ```
    Glob: .claude/skills/pptx-generator/cookbook/*{name}*.py
    ```
 
-2. **Read and understand current structure** including the frontmatter
+2. **閱讀並了解目前結構**，包括前置資訊
 
-3. **Make modifications** while preserving:
-   - The script header format
-   - Brand variable naming conventions
-   - Docstring format (LAYOUT, PURPOSE, CUSTOMIZE)
+3. **進行修改**，同時保留：
+   - 腳本標頭格式
+   - 品牌變數命名慣例
+   - 文件字串格式（LAYOUT、PURPOSE、CUSTOMIZE）
 
-4. **Update the frontmatter** if your changes affect:
-   - What the layout is best for (`best_for`)
-   - When to avoid it (`avoid_when`)
-   - Item limits (`max_*`, `min_*`)
-   - Usage instructions (`instructions`)
+4. **更新前置資訊**，如果你的變更影響到：
+   - 版面最適合的用途（`best_for`）
+   - 何時應避免使用（`avoid_when`）
+   - 項目限制（`max_*`、`min_*`）
+   - 使用說明（`instructions`）
 
-5. **Save back to the same file**
+5. **儲存回同一檔案**
 
-6. **Test the modified layout**
+6. **測試修改後的版面**
 
-### Updating/Improving Layouts
+### 更新/改善版面
 
-When asked to improve layout quality:
+當被要求改善版面品質時：
 
-1. **Analyze current weaknesses:**
-   - Is it visually engaging?
-   - Does it have enough decorative elements?
-   - Is there good visual hierarchy?
-   - Does it use space well?
+1. **分析目前的弱點：**
+   - 是否具有視覺吸引力？
+   - 是否有足夠的裝飾元素？
+   - 是否有良好的視覺層次？
+   - 空間使用是否得當？
 
-2. **Apply improvements:**
-   - Add bold geometric shapes
-   - Improve color usage
-   - Add depth (shadows, overlapping)
-   - Better typography sizing
-   - More distinctive decorative elements
+2. **套用改善：**
+   - 加入粗體幾何形狀
+   - 改善色彩使用
+   - 增加深度（陰影、重疊）
+   - 更好的字型大小
+   - 更獨特的裝飾元素
 
-3. **Preserve functionality** - Don't break what works
+3. **保留功能** - 不要破壞已經可用的功能
 
-4. **Review and enhance frontmatter:**
-   - Are `best_for` and `avoid_when` still accurate?
-   - Do `instructions` reflect any new constraints?
-   - Add any lessons learned from the improvements
-   - Update limits if element sizes/counts changed
+4. **審查並強化前置資訊：**
+   - `best_for` 和 `avoid_when` 是否仍然準確？
+   - `instructions` 是否反映了新的約束？
+   - 加入從改善中學到的經驗
+   - 如果元素大小/數量改變，更新限制
 
-### Deleting Layouts
+### 刪除版面
 
-Simply remove the file:
+只需移除檔案：
 ```bash
 rm .claude/skills/pptx-generator/cookbook/{layout-name}.py
 ```
 
 ---
 
-## Editing Existing PPTX Files
+## 編輯現有 PPTX 檔案
 
-When user provides an existing PPTX:
+當使用者提供現有的 PPTX 時：
 
-1. **Read the file:**
+1. **讀取檔案：**
    ```python
    from pptx import Presentation
    prs = Presentation("path/to/existing.pptx")
    ```
 
-2. **Analyze:** Number of slides, styling, content structure
+2. **分析：** 投影片數量、樣式、內容結構
 
-3. **Apply changes:** Add/remove slides, update content, modify styling
+3. **套用變更：** 新增/移除投影片、更新內容、修改樣式
 
-4. **Save to output directory** (don't overwrite original unless requested)
+4. **儲存到輸出目錄**（除非要求，否則不要覆蓋原始檔案）
 
 ---
 
-## Technical Reference
+## 技術參考
 
-**Slide dimensions (16:9):**
-- Width: 13.333 inches
-- Height: 7.5 inches
-- Safe margins: 0.5 inches
+**投影片尺寸（16:9）：**
+- 寬度：13.333 英吋
+- 高度：7.5 英吋
+- 安全邊距：0.5 英吋
 
-**Always use:**
-- Blank layout: `prs.slide_layouts[6]`
-- python-pptx version: 1.0.2
+**始終使用：**
+- 空白版面：`prs.slide_layouts[6]`
+- python-pptx 版本：1.0.2
 
-**Common imports:**
+**常用匯入：**
 ```python
 from pptx import Presentation
 from pptx.chart.data import CategoryChartData
@@ -1096,14 +1096,14 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.util import Inches, Pt
 ```
 
-**Chart types available:**
-- `XL_CHART_TYPE.PIE` - Pie chart
-- `XL_CHART_TYPE.DOUGHNUT` - Doughnut chart
-- `XL_CHART_TYPE.BAR_CLUSTERED` - Horizontal bars
-- `XL_CHART_TYPE.COLUMN_CLUSTERED` - Vertical columns
-- `XL_CHART_TYPE.LINE` - Line chart
+**可用的圖表類型：**
+- `XL_CHART_TYPE.PIE` - 圓餅圖
+- `XL_CHART_TYPE.DOUGHNUT` - 甜甜圈圖
+- `XL_CHART_TYPE.BAR_CLUSTERED` - 水平長條圖
+- `XL_CHART_TYPE.COLUMN_CLUSTERED` - 垂直柱狀圖
+- `XL_CHART_TYPE.LINE` - 折線圖
 
-**Adding charts:**
+**新增圖表：**
 ```python
 chart_data = CategoryChartData()
 chart_data.categories = ["A", "B", "C"]
@@ -1117,77 +1117,77 @@ slide.shapes.add_chart(
 )
 ```
 
-**Adding images:**
+**新增圖片：**
 ```python
 slide.shapes.add_picture(
     "path/to/image.png",
     Inches(x), Inches(y),
-    width=Inches(w)  # Height auto-calculated
+    width=Inches(w)  # 高度自動計算
 )
 ```
 
 ---
 
-## Preview All Layouts
+## 預覽所有版面
 
-To see all available layouts:
+查看所有可用版面：
 ```bash
 uv run .claude/skills/pptx-generator/generate-cookbook-preview.py
 ```
 
-This generates `cookbook-preview.pptx` with every layout.
+這會產生包含每個版面的 `cookbook-preview.pptx`。
 
 ---
 
-## Checklist
+## 檢查清單
 
-**For Slide Generation:**
-- [ ] Read brand.json for colors/fonts
-- [ ] Read config.json for output directory and settings
-- [ ] Read markdown files for voice/tone
-- [ ] **Read ALL cookbook layout frontmatters** (first 40 lines of each .py):
-  - [ ] Glob all `.claude/skills/pptx-generator/cookbook/*.py`
-  - [ ] Read every file to extract `# /// layout` blocks
-  - [ ] Build understanding of all `best_for`, `avoid_when`, limits
-- [ ] **Then select layouts** based on complete knowledge:
-  - [ ] Match content to `best_for` criteria
-  - [ ] Respect `avoid_when` warnings
-  - [ ] Check `max_*` / `min_*` limits
-  - [ ] Follow `instructions` for chosen layouts
-- [ ] **Create slide plan table BEFORE generating:**
-  - [ ] List all slides with layout, title, content
-  - [ ] Check for duplicate titles
-  - [ ] Verify logical flow
-  - [ ] Group into batches (max 5 per batch)
-  - [ ] **VARIETY CHECK: Content-slide <25% of total**
-  - [ ] **VARIETY CHECK: No 3+ consecutive same-layout slides**
-  - [ ] **VARIETY CHECK: Visual layouts 50%+ of presentation**
-  - [ ] **VARIETY CHECK: Used decision tree to evaluate each content-slide**
-- [ ] Present plan briefly before proceeding
-- [ ] Apply brand colors and fonts
-- [ ] Write content in brand's voice
-- [ ] **Generate MAX 5 slides per batch** (or `slides_per_batch` from config)
-- [ ] Execute via UV REPL
-- [ ] **Validate output before continuing:**
-  - [ ] No duplicate titles
-  - [ ] Proper spacing between elements
-  - [ ] Content fits within bounds
-  - [ ] Colors match brand
-  - [ ] No trailing punctuation on titles/bullets
-- [ ] Save batch to output directory from config
-- [ ] Repeat for next batch if needed
-- [ ] **Combine all batches into final PPTX** (if `auto_combine` is true)
-- [ ] Clean up part files (if `keep_parts` is false)
+**投影片產生用：**
+- [ ] 讀取 brand.json 取得色彩/字型
+- [ ] 讀取 config.json 取得輸出目錄和設定
+- [ ] 讀取 Markdown 檔案取得語氣/風格
+- [ ] **讀取所有版面範本庫版面的前置資訊**（每個 .py 的前 40 行）：
+  - [ ] Glob 所有 `.claude/skills/pptx-generator/cookbook/*.py`
+  - [ ] 讀取每個檔案以提取 `# /// layout` 區塊
+  - [ ] 建立對所有 `best_for`、`avoid_when`、限制的理解
+- [ ] **然後選擇版面**（基於完整的了解）：
+  - [ ] 將內容比對 `best_for` 標準
+  - [ ] 遵守 `avoid_when` 警告
+  - [ ] 檢查 `max_*` / `min_*` 限制
+  - [ ] 遵循所選版面的 `instructions`
+- [ ] **在產生前建立投影片計畫表：**
+  - [ ] 列出所有投影片的版面、標題、內容
+  - [ ] 檢查重複標題
+  - [ ] 驗證邏輯流程
+  - [ ] 分組為批次（每批最多 5 張）
+  - [ ] **多樣性檢查：content-slide <25%**
+  - [ ] **多樣性檢查：同一版面連續使用不超過 2-3 次**
+  - [ ] **多樣性檢查：視覺版面佔 50% 以上**
+  - [ ] **多樣性檢查：使用決策樹評估每個 content-slide**
+- [ ] 在繼續前簡要呈現計畫
+- [ ] 套用品牌色彩和字型
+- [ ] 以品牌語氣撰寫內容
+- [ ] **每批次最多產生 5 張投影片**（或 config 中的 `slides_per_batch`）
+- [ ] 透過 UV REPL 執行
+- [ ] **繼續前驗證輸出：**
+  - [ ] 沒有重複標題
+  - [ ] 元素間距正確
+  - [ ] 內容在邊界內
+  - [ ] 顏色符合品牌
+  - [ ] 標題/項目符號沒有結尾標點
+- [ ] 將批次儲存到 config 中的輸出目錄
+- [ ] 如需要，重複下一批次
+- [ ] **將所有批次合併為最終 PPTX**（如果 `auto_combine` 為 true）
+- [ ] 清理分割檔案（如果 `keep_parts` 為 false）
 
-**For Creating Layouts:**
-- [ ] Study existing layouts for patterns
-- [ ] Design with production-ready quality
-- [ ] Include distinctive decorative elements
-- [ ] Use charts/images/shapes appropriately
-- [ ] **Add TOML-style frontmatter** with:
-  - [ ] `name`, `purpose`
-  - [ ] `best_for`, `avoid_when` arrays
-  - [ ] `instructions` array with usage tips
-  - [ ] `max_*` / `min_*` limits as needed
-- [ ] Write proper docstring (LAYOUT, PURPOSE, CUSTOMIZE)
-- [ ] Test the new layout
+**建立版面用：**
+- [ ] 研究現有版面的模式
+- [ ] 依生產品質標準設計
+- [ ] 包含獨特的裝飾元素
+- [ ] 適當使用圖表/圖片/形狀
+- [ ] **加入 TOML 風格前置資訊**，包含：
+  - [ ] `name`、`purpose`
+  - [ ] `best_for`、`avoid_when` 陣列
+  - [ ] `instructions` 陣列與使用技巧
+  - [ ] 需要時加入 `max_*` / `min_*` 限制
+- [ ] 撰寫正確的文件字串（LAYOUT、PURPOSE、CUSTOMIZE）
+- [ ] 測試新版面

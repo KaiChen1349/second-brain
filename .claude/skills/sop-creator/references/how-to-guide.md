@@ -1,68 +1,68 @@
-# How-To Guide Template
+# 操作指南範本
 
-For: One-off tasks, setup, configuration.
+適用於：一次性任務、設定、組態。
 
 ```markdown
-# How to [Do The Thing]
+# 如何 [做某件事]
 
-> **TL;DR:** [What this accomplishes in one sentence]
+> **摘要：** [這完成了什麼，一句話]
 
-## Definition of Done
+## 完成定義
 
-You're done when:
-- [ ] [Primary success indicator]
-- [ ] [Verification step]
-- [ ] [Any cleanup/confirmation]
+以下達成即為完成：
+- [ ] [主要成功指標]
+- [ ] [驗證步驟]
+- [ ] [任何清理/確認]
 
-## Prerequisites
+## 前提條件
 
-- [ ] [Access/tool needed]
-- [ ] [Permission needed]
+- [ ] [需要的存取權限/工具]
+- [ ] [需要的權限]
 
-## Steps
+## 步驟
 
-### 1. [First Step]
+### 1. [第一步]
 
 ```bash
-[command or action]
+[指令或動作]
 ```
 
-**Done when:** [Expected result]
+**完成條件：** [預期結果]
 
-### 2. [Second Step]
+### 2. [第二步]
 
 ```bash
-[command or action]
+[指令或動作]
 ```
 
-**Done when:** [Expected result]
+**完成條件：** [預期結果]
 
-### 3. [Final Step]
+### 3. [最後一步]
 
 ```bash
-[command or action]
+[指令或動作]
 ```
 
-**Done when:** [Expected result]
+**完成條件：** [預期結果]
 
-## Verify
+## 驗證
 
-Confirm Definition of Done:
+確認完成定義：
 ```bash
-[verification command or check]
+[驗證指令或檢查]
 ```
 
-Expected: [What you should see]
+預期結果：[你應該看到什麼]
 
-## Troubleshooting
+## 故障排除
 
-**Problem:** [Common issue]
-**Fix:** [Solution]
+**問題：** [常見問題]
+**修復：** [解決方案]
 
-## Undo
+## 復原
 
-If you need to revert:
+如果需要還原：
 ```bash
-[undo command]
+[復原指令]
 ```
 ```

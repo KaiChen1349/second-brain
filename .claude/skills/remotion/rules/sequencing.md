@@ -5,7 +5,7 @@ metadata:
   tags: sequence, series, timing, delay, trim
 ---
 
-Use `<Sequence>` to delay when an element appears in the timeline.
+使用 `<Sequence>` 來延遲元素在時間軸上出現的時間。
 
 ```tsx
 import { Sequence } from "remotion";
@@ -20,8 +20,8 @@ const {fps} = useVideoConfig();
 </Sequence>
 ```
 
-This will by default wrap the component in an absolute fill element.  
-If the items should not be wrapped, use the `layout` prop:
+預設情況下，這會將元件包裝在一個絕對填滿的元素中。
+如果不想被包裝，使用 `layout` 屬性：
 
 ```tsx
 <Sequence layout="none">
@@ -29,10 +29,10 @@ If the items should not be wrapped, use the `layout` prop:
 </Sequence>
 ```
 
-## Premounting
+## 預掛載
 
-This loads the component in the timeline before it is actually played.  
-Always premount any `<Sequence>`!
+這會在元件實際播放之前，就在時間軸中載入它。
+務必預掛載任何 `<Sequence>`！
 
 ```tsx
 <Sequence premountFor={1 * fps}>
@@ -40,9 +40,9 @@ Always premount any `<Sequence>`!
 </Sequence>
 ```
 
-## Series
+## 系列
 
-Use `<Series>` when elements should play one after another without overlap.
+當元素應該一個接一個播放且不重疊時，使用 `<Series>`。
 
 ```tsx
 import {Series} from 'remotion';
@@ -60,11 +60,11 @@ import {Series} from 'remotion';
 </Series>;
 ```
 
-Same as with `<Sequence>`, the items will be wrapped in an absolute fill element by default when using `<Series.Sequence>`, unless the `layout` prop is set to `none`.
+與 `<Sequence>` 相同，使用 `<Series.Sequence>` 時，項目預設會被包裝在絕對填滿的元素中，除非 `layout` 屬性設定為 `none`。
 
-### Series with overlaps
+### 帶重疊的系列
 
-Use negative offset for overlapping sequences:
+使用負偏移來建立重疊的序列：
 
 ```tsx
 <Series>
@@ -72,26 +72,26 @@ Use negative offset for overlapping sequences:
     <SceneA />
   </Series.Sequence>
   <Series.Sequence offset={-15} durationInFrames={60}>
-    {/* Starts 15 frames before SceneA ends */}
+    {/* 在 SceneA 結束前 15 幀開始 */}
     <SceneB />
   </Series.Sequence>
 </Series>
 ```
 
-## Frame References Inside Sequences
+## Sequence 內的影格參考
 
-Inside a Sequence, `useCurrentFrame()` returns the local frame (starting from 0):
+在 Sequence 內部，`useCurrentFrame()` 回傳本地影格（從 0 開始）：
 
 ```tsx
 <Sequence from={60} durationInFrames={30}>
   <MyComponent />
-  {/* Inside MyComponent, useCurrentFrame() returns 0-29, not 60-89 */}
+  {/* 在 MyComponent 內，useCurrentFrame() 回傳 0-29，而不是 60-89 */}
 </Sequence>
 ```
 
-## Nested Sequences
+## 巢狀 Sequence
 
-Sequences can be nested for complex timing:
+Sequence 可以巢狀使用以實現複雜的時序：
 
 ```tsx
 <Sequence from={0} durationInFrames={120}>
@@ -105,9 +105,9 @@ Sequences can be nested for complex timing:
 </Sequence>
 ```
 
-## Nesting compositions within another
+## 在合成中巢狀嵌入合成
 
-To add a composition within another composition, you can use the `<Sequence>` component with a `width` and `height` prop to specify the size of the composition.
+要在另一個合成中加入合成，可以使用帶有 `width` 和 `height` 屬性的 `<Sequence>` 元件來指定合成的大小。
 
 ```tsx
 <AbsoluteFill>

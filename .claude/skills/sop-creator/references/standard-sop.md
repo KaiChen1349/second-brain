@@ -1,72 +1,72 @@
-# Standard SOP Template
+# 標準 SOP 範本
 
-For: Any repeatable process.
+適用於：任何可重複的流程。
 
 ```markdown
 ---
-title: [Process Name]
-owner: [Person or team]
+title: [流程名稱]
+owner: [負責人或團隊]
 last_updated: YYYY-MM-DD
 ---
 
-# [Process Name]
+# [流程名稱]
 
-> **TL;DR:** [What this process does, in one sentence]
+> **摘要：** [此流程做什麼，一句話]
 
-## Definition of Done
+## 完成定義
 
-This process is complete when:
-- [ ] [Primary outcome achieved]
-- [ ] [Secondary outcome if applicable]
-- [ ] [Verification/confirmation step]
-- [ ] [Handoff/notification if needed]
+此流程完成的條件：
+- [ ] [主要成果已達成]
+- [ ] [次要成果（如適用）]
+- [ ] [驗證/確認步驟]
+- [ ] [交接/通知（如需要）]
 
-## When to Use This
+## 何時使用
 
-Use this when:
-- [Trigger condition 1]
-- [Trigger condition 2]
+在以下情況下使用：
+- [觸發條件 1]
+- [觸發條件 2]
 
-## Before You Start
+## 開始之前
 
-- [ ] [Prerequisite 1]
-- [ ] [Prerequisite 2]
+- [ ] [前提條件 1]
+- [ ] [前提條件 2]
 
-## The Process
+## 流程
 
-### Step 1: [Action]
+### 步驟 1：[動作]
 
-1. [Specific action]
-2. [Specific action]
+1. [具體動作]
+2. [具體動作]
 
-**Done when:** [How you know this step is complete]
+**完成條件：** [如何知道此步驟完成]
 
-### Step 2: [Action]
+### 步驟 2：[動作]
 
-1. [Specific action]
-2. [Specific action]
+1. [具體動作]
+2. [具體動作]
 
-**Done when:** [Completion criteria]
+**完成條件：** [完成標準]
 
-### Step 3: [Action]
+### 步驟 3：[動作]
 
-1. [Specific action]
-2. [Specific action]
+1. [具體動作]
+2. [具體動作]
 
-**Done when:** [Completion criteria]
+**完成條件：** [完成標準]
 
-## Verify Completion
+## 驗證完成
 
-Go back to Definition of Done and confirm all items checked.
+回到完成定義，確認所有項目已勾選。
 
-## Common Issues
+## 常見問題
 
-| Problem | Solution |
+| 問題 | 解決方案 |
 |---------|----------|
-| [Issue 1] | [Fix] |
-| [Issue 2] | [Fix] |
+| [問題 1] | [修復方式] |
+| [問題 2] | [修復方式] |
 
-## Questions?
+## 有問題？
 
-Contact: [Person/channel]
+聯絡：[人員/頻道]
 ```

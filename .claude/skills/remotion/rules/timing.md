@@ -5,30 +5,30 @@ metadata:
   tags: spring, bounce, easing, interpolation
 ---
 
-A simple linear interpolation is done using the `interpolate` function.
+簡單的線性插值使用 `interpolate` 函式完成。
 
-```ts title="Going from 0 to 1 over 100 frames"
+```ts title="在 100 幀內從 0 到 1"
 import {interpolate} from 'remotion';
 
 const opacity = interpolate(frame, [0, 100], [0, 1]);
 ```
 
-By default, the values are not clamped, so the value can go outside the range [0, 1].  
-Here is how they can be clamped:
+預設情況下，值不會被限制，所以值可能超出 [0, 1] 的範圍。
+以下是限制值的方法：
 
-```ts title="Going from 0 to 1 over 100 frames with extrapolation"
+```ts title="在 100 幀內從 0 到 1，帶外推限制"
 const opacity = interpolate(frame, [0, 100], [0, 1], {
   extrapolateRight: 'clamp',
   extrapolateLeft: 'clamp',
 });
 ```
 
-## Spring animations
+## 彈簧動畫
 
-Spring animations have a more natural motion.  
-They go from 0 to 1 over time.
+彈簧動畫具有更自然的運動感。
+它們隨時間從 0 到 1。
 
-```ts title="Spring animation from 0 to 1 over 100 frames"
+```ts title="在 100 幀內從 0 到 1 的彈簧動畫"
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 const frame = useCurrentFrame();
@@ -40,12 +40,12 @@ const scale = spring({
 });
 ```
 
-### Physical properties
+### 物理屬性
 
-The default configuration is: `mass: 1, damping: 10, stiffness: 100`.  
-This leads to the animation having a bit of bounce before it settles.
+預設配置為：`mass: 1, damping: 10, stiffness: 100`。
+這會導致動畫在穩定前有一些彈跳。
 
-The config can be overwritten like this:
+可以這樣覆蓋配置：
 
 ```ts
 const scale = spring({
@@ -55,21 +55,21 @@ const scale = spring({
 });
 ```
 
-The recommended configuration for a natural motion without a bounce is: `{ damping: 200 }`.
+推薦的無彈跳自然運動配置為：`{ damping: 200 }`。
 
-Here are some common configurations:
+以下是一些常見配置：
 
 ```tsx
-const smooth = {damping: 200}; // Smooth, no bounce (subtle reveals)
-const snappy = {damping: 20, stiffness: 200}; // Snappy, minimal bounce (UI elements)
-const bouncy = {damping: 8}; // Bouncy entrance (playful animations)
-const heavy = {damping: 15, stiffness: 80, mass: 2}; // Heavy, slow, small bounce
+const smooth = {damping: 200}; // 平滑，無彈跳（細微的顯現效果）
+const snappy = {damping: 20, stiffness: 200}; // 迅速，最小彈跳（UI 元素）
+const bouncy = {damping: 8}; // 彈跳式進入（活潑的動畫）
+const heavy = {damping: 15, stiffness: 80, mass: 2}; // 厚重，緩慢，小幅彈跳
 ```
 
-### Delay
+### 延遲
 
-The animation starts immediately by default.  
-Use the `delay` parameter to delay the animation by a number of frames.
+動畫預設立即開始。
+使用 `delay` 參數來延遲動畫指定的影格數。
 
 ```tsx
 const entrance = spring({
@@ -79,10 +79,10 @@ const entrance = spring({
 });
 ```
 
-### Duration
+### 持續時間
 
-A `spring()` has a natural duration based on the physical properties.  
-To stretch the animation to a specific duration, use the `durationInFrames` parameter.
+`spring()` 有基於物理屬性的自然持續時間。
+要將動畫拉伸到特定持續時間，使用 `durationInFrames` 參數。
 
 ```tsx
 const spring = spring({
@@ -92,9 +92,9 @@ const spring = spring({
 });
 ```
 
-### Combining spring() with interpolate()
+### 結合 spring() 和 interpolate()
 
-Map spring output (0-1) to custom ranges:
+將彈簧輸出（0-1）對應到自訂範圍：
 
 ```tsx
 const springProgress = spring({
@@ -102,15 +102,15 @@ const springProgress = spring({
   fps,
 });
 
-// Map to rotation
+// 對應到旋轉
 const rotation = interpolate(springProgress, [0, 1], [0, 360]);
 
 <div style={{rotate: rotation + 'deg'}} />;
 ```
 
-### Adding springs
+### 加法彈簧
 
-Springs return just numbers, so math can be performed:
+彈簧只回傳數字，所以可以進行數學運算：
 
 ```tsx
 const frame = useCurrentFrame();
@@ -130,9 +130,9 @@ const outAnimation = spring({
 const scale = inAnimation - outAnimation;
 ```
 
-## Easing
+## 緩動
 
-Easing can be added to the `interpolate` function:
+可以為 `interpolate` 函式加入緩動：
 
 ```ts
 import {interpolate, Easing} from 'remotion';
@@ -144,21 +144,21 @@ const value1 = interpolate(frame, [0, 100], [0, 1], {
 });
 ```
 
-The default easing is `Easing.linear`.  
-There are various other convexities:
+預設緩動為 `Easing.linear`。
+還有各種其他凸度：
 
-- `Easing.in` for starting slow and accelerating
-- `Easing.out` for starting fast and slowing down
+- `Easing.in` 用於慢速開始並加速
+- `Easing.out` 用於快速開始並減速
 - `Easing.inOut`
 
-and curves (sorted from most linear to most curved):
+以及曲線（從最線性到最彎曲排列）：
 
 - `Easing.quad`
 - `Easing.sin`
 - `Easing.exp`
 - `Easing.circle`
 
-Convexities and curves need be combined for an easing function:
+凸度和曲線需要組合才能構成緩動函式：
 
 ```ts
 const value1 = interpolate(frame, [0, 100], [0, 1], {
@@ -168,7 +168,7 @@ const value1 = interpolate(frame, [0, 100], [0, 1], {
 });
 ```
 
-Cubic bezier curves are also supported:
+也支援三次貝茲曲線：
 
 ```ts
 const value1 = interpolate(frame, [0, 100], [0, 1], {

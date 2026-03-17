@@ -1,14 +1,14 @@
-# Common MCP Server Configurations
+# 常見 MCP 伺服器設定
 
-Reference configurations for popular MCP servers. Copy relevant sections to your `.mcp.json`.
+常用 MCP 伺服器的參考設定。將相關區段複製到你的 `.mcp.json`。
 
-## Remote Servers (FastMCP/SSE/HTTP)
+## 遠端伺服器（FastMCP/SSE/HTTP）
 
 ### Zapier MCP
 
-Connects to 8,000+ apps with 30,000+ actions. Get your API key from [mcp.zapier.com](https://mcp.zapier.com/).
+連接超過 8,000 個應用程式和 30,000 個以上的動作。從 [mcp.zapier.com](https://mcp.zapier.com/) 取得你的 API 金鑰。
 
-**Current Format (FastMCP with Bearer Auth):**
+**目前格式（帶 Bearer 驗證的 FastMCP）：**
 ```json
 {
   "zapier": {
@@ -18,19 +18,19 @@ Connects to 8,000+ apps with 30,000+ actions. Get your API key from [mcp.zapier.
 }
 ```
 
-**Getting Your API Key:**
-1. Go to [mcp.zapier.com](https://mcp.zapier.com/)
-2. Sign in with your Zapier account
-3. Configure which actions/apps to expose
-4. Copy the generated MCP API key
+**取得 API 金鑰：**
+1. 前往 [mcp.zapier.com](https://mcp.zapier.com/)
+2. 用你的 Zapier 帳號登入
+3. 設定要暴露的動作/應用程式
+4. 複製產生的 MCP API 金鑰
 
-**How it works:** The script uses FastMCP client with StreamableHttpTransport and Bearer token authentication. When `api_key` is present in config, it automatically uses this transport.
+**運作原理：** 腳本使用 FastMCP 客戶端搭配 StreamableHttpTransport 和 Bearer 權杖驗證。當設定中有 `api_key` 時，會自動使用此傳輸方式。
 
-**Security:** Treat your API key like a password - it grants access to your configured Zapier actions.
+**安全性：** 將你的 API 金鑰視為密碼——它授予了對你已設定的 Zapier 動作的存取權限。
 
-**Token Cost:** One MCP tool call = 2 Zapier tasks from your plan quota.
+**Token 成本：** 一次 MCP 工具呼叫 = 你方案配額中的 2 個 Zapier 任務。
 
-**Legacy SSE Format (if needed):**
+**舊版 SSE 格式（如有需要）：**
 ```json
 {
   "zapier": {
@@ -41,11 +41,11 @@ Connects to 8,000+ apps with 30,000+ actions. Get your API key from [mcp.zapier.
 
 ---
 
-## Local Servers (stdio)
+## 本地伺服器（stdio）
 
 ### Sequential Thinking
 
-Structured problem-solving through dynamic, reflective thinking process. Useful for breaking down complex problems into steps.
+透過動態反思式思考流程進行結構化問題解決。適用於將複雜問題分解為步驟。
 
 ```json
 {
@@ -56,7 +56,7 @@ Structured problem-solving through dynamic, reflective thinking process. Useful 
 }
 ```
 
-**Docker Alternative:**
+**Docker 替代方案：**
 ```json
 {
   "sequential-thinking": {
@@ -66,19 +66,19 @@ Structured problem-solving through dynamic, reflective thinking process. Useful 
 }
 ```
 
-**Environment Variable:** Set `DISABLE_THOUGHT_LOGGING=true` to disable verbose output.
+**環境變數：** 設定 `DISABLE_THOUGHT_LOGGING=true` 以停用詳細輸出。
 
-**Tool:** `sequentialthinking`
-- `thought` (string): Current thinking step
-- `thoughtNumber` (int): Current step number
-- `totalThoughts` (int): Expected total steps
-- `nextThoughtNeeded` (bool): Whether more steps needed
+**工具：** `sequentialthinking`
+- `thought`（字串）：當前思考步驟
+- `thoughtNumber`（整數）：當前步驟編號
+- `totalThoughts`（整數）：預期總步驟數
+- `nextThoughtNeeded`（布林值）：是否還需要更多步驟
 
 ---
 
 ### GitHub MCP
 
-Access GitHub repositories, issues, PRs, and more.
+存取 GitHub 倉庫、議題、PR 等。
 
 ```json
 {
@@ -92,15 +92,15 @@ Access GitHub repositories, issues, PRs, and more.
 }
 ```
 
-**Getting Token:**
-1. Go to GitHub Settings > Developer Settings > Personal Access Tokens
-2. Generate token with appropriate scopes (repo, read:org, etc.)
+**取得權杖：**
+1. 前往 GitHub 設定 > 開發者設定 > 個人存取權杖
+2. 產生具有適當範圍的權杖（repo、read:org 等）
 
 ---
 
 ### Filesystem MCP
 
-Read/write access to local filesystem paths.
+對本地檔案系統路徑的讀寫存取。
 
 ```json
 {
@@ -111,13 +111,13 @@ Read/write access to local filesystem paths.
 }
 ```
 
-**Security:** Only the specified path (and subdirectories) are accessible.
+**安全性：** 只有指定路徑（及其子目錄）可被存取。
 
 ---
 
 ### Memory MCP
 
-Persistent key-value memory for conversations.
+對話的持久化鍵值記憶體。
 
 ```json
 {
@@ -132,7 +132,7 @@ Persistent key-value memory for conversations.
 
 ### PostgreSQL MCP
 
-Query PostgreSQL databases.
+查詢 PostgreSQL 資料庫。
 
 ```json
 {
@@ -150,7 +150,7 @@ Query PostgreSQL databases.
 
 ### Brave Search MCP
 
-Web search via Brave Search API.
+透過 Brave Search API 進行網路搜尋。
 
 ```json
 {
@@ -168,7 +168,7 @@ Web search via Brave Search API.
 
 ### Puppeteer MCP
 
-Browser automation for web scraping and testing.
+用於網頁爬取和測試的瀏覽器自動化。
 
 ```json
 {
@@ -181,9 +181,9 @@ Browser automation for web scraping and testing.
 
 ---
 
-## Custom Python Servers
+## 自訂 Python 伺服器
 
-For custom MCP servers written in Python:
+用 Python 撰寫的自訂 MCP 伺服器：
 
 ```json
 {
@@ -199,7 +199,7 @@ For custom MCP servers written in Python:
 }
 ```
 
-**With uv (recommended):**
+**使用 uv（建議）：**
 ```json
 {
   "my-server": {
@@ -212,7 +212,7 @@ For custom MCP servers written in Python:
 
 ---
 
-## Full Example Config
+## 完整範例設定
 
 ```json
 {
@@ -241,21 +241,21 @@ For custom MCP servers written in Python:
 
 ---
 
-## Transport Reference
+## 傳輸參考
 
-| Server Type | Transport | Config Key | Example |
+| 伺服器類型 | 傳輸方式 | 設定鍵 | 範例 |
 |-------------|-----------|------------|---------|
-| Remote (SSE) | SSE | `url` | `https://...../sse` |
-| Remote (HTTP) | Streamable HTTP | `url` | `https://...../mcp` |
-| Local (Node.js) | stdio | `command` | `npx` |
-| Local (Python) | stdio | `command` | `python` |
-| Local (Docker) | stdio | `command` | `docker` |
+| 遠端（SSE） | SSE | `url` | `https://...../sse` |
+| 遠端（HTTP） | 可串流 HTTP | `url` | `https://...../mcp` |
+| 本地（Node.js） | stdio | `command` | `npx` |
+| 本地（Python） | stdio | `command` | `python` |
+| 本地（Docker） | stdio | `command` | `docker` |
 
 ---
 
-## Resources
+## 資源
 
-- [MCP Specification](https://modelcontextprotocol.io/specification/)
-- [Official MCP Servers](https://github.com/modelcontextprotocol/servers)
-- [Zapier MCP Guide](https://zapier.com/blog/zapier-mcp-guide/)
+- [MCP 規範](https://modelcontextprotocol.io/specification/)
+- [官方 MCP 伺服器](https://github.com/modelcontextprotocol/servers)
+- [Zapier MCP 指南](https://zapier.com/blog/zapier-mcp-guide/)
 - [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk)

@@ -5,25 +5,25 @@ metadata:
   tags: captions, subtitles, srt, import, parse
 ---
 
-# Importing .srt subtitles into Remotion
+# 將 .srt 字幕匯入 Remotion
 
-If you have an existing `.srt` subtitle file, you can import it into Remotion using `parseSrt()` from `@remotion/captions`.
+如果你有現有的 `.srt` 字幕檔案，可以使用 `@remotion/captions` 的 `parseSrt()` 將其匯入 Remotion。
 
-## Prerequisites
+## 前置條件
 
-First, the @remotion/captions package needs to be installed.
-If it is not installed, use the following command:
+首先需要安裝 @remotion/captions 套件。
+如果尚未安裝，使用以下命令：
 
 ```bash
-npx remotion add @remotion/captions # If project uses npm
-bunx remotion add @remotion/captions # If project uses bun
-yarn remotion add @remotion/captions # If project uses yarn
-pnpm exec remotion add @remotion/captions # If project uses pnpm
+npx remotion add @remotion/captions # 如果專案使用 npm
+bunx remotion add @remotion/captions # 如果專案使用 bun
+yarn remotion add @remotion/captions # 如果專案使用 yarn
+pnpm exec remotion add @remotion/captions # 如果專案使用 pnpm
 ```
 
-## Reading an .srt file
+## 讀取 .srt 檔案
 
-Use `staticFile()` to reference an `.srt` file in your `public` folder, then fetch and parse it:
+使用 `staticFile()` 來引用 `public` 資料夾中的 `.srt` 檔案，然後獲取並解析它：
 
 ```tsx
 import {useState, useEffect, useCallback} from 'react';
@@ -56,12 +56,12 @@ export const MyComponent: React.FC = () => {
     return null;
   }
 
-  return <AbsoluteFill>{/* Use captions here */}</AbsoluteFill>;
+  return <AbsoluteFill>{/* 在此使用字幕 */}</AbsoluteFill>;
 };
 ```
 
-Remote URLs are also supported - you can `fetch()` a remote file via URL instead of using `staticFile()`.
+也支援遠端 URL - 你可以透過 URL `fetch()` 遠端檔案，而不使用 `staticFile()`。
 
-## Using imported captions
+## 使用匯入的字幕
 
-Once parsed, the captions are in the `Caption` format and can be used with all `@remotion/captions` utilities.
+解析完成後，字幕會以 `Caption` 格式呈現，可以搭配所有 `@remotion/captions` 工具使用。

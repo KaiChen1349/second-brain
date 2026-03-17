@@ -1,212 +1,212 @@
-# Dynamous — Brand System
+# Dynamous — 品牌系統
 
-> A complete design system for AI education content, community, and products.
+> AI 教育內容、社群和產品的完整設計系統。
 
 ---
 
-## Brand Philosophy
+## 品牌哲學
 
-### Core Principles
+### 核心原則
 
-1. **Technical but Approachable**
-   Complex AI topics made accessible without dumbing them down. Show the sophistication, explain it clearly.
+1. **技術但親切**
+   複雜的 AI 主題以易懂方式呈現，但不會過度簡化。展示精密度，清楚解釋。
 
-2. **Clean over Flashy**
-   No unnecessary decoration. Every visual element has a purpose. Elegance through restraint.
+2. **簡潔勝於花俏**
+   沒有不必要的裝飾。每個視覺元素都有其目的。透過節制達成優雅。
 
-3. **Dark Mode by Default**
-   Modern, developer-focused aesthetic. Easy on the eyes for people who stare at screens all day.
+3. **預設深色模式**
+   現代、以開發者為導向的美學。對整天盯著螢幕的人來說更護眼。
 
-4. **Diagrams Should Argue, Not Display**
-   Visual content makes a point. Shapes mirror meaning. If you removed the text, the structure alone should communicate the concept.
+4. **圖表應該論述，而非展示**
+   視覺內容要傳達觀點。形狀反映意義。如果你移除文字，結構本身就應該能傳達概念。
 
 ---
 
 ## Logo
 
-### The Dynamous Mark
+### Dynamous 標誌
 
-A stylized blue flame/droplet shape — fluid, dynamic, and modern. Represents energy, transformation, and forward momentum.
+一個風格化的藍色火焰/水滴形狀 — 流動、動態且現代。代表能量、轉化和前進動力。
 
-**Logo file**: `.claude/DynamousLogo.png`
+**Logo 檔案**：`.claude/DynamousLogo.png`
 
-**Usage rules:**
-- Maintain aspect ratio
-- Minimum clear space: 20% of logo width on all sides
-- On dark backgrounds: use as-is
-- On light backgrounds: use as-is (blue on white works)
-- Never distort, rotate, or add effects
+**使用規則：**
+- 維持原始比例
+- 最小淨空間：Logo 寬度的 20%（四周）
+- 深色背景上：直接使用
+- 淺色背景上：直接使用（藍色配白色可行）
+- 不要扭曲、旋轉或加特效
 
-**Logo colors:**
-- Primary fill: `#3B82F6` (Dynamous Blue)
-- Highlight gradient: lighter blue toward top-left
-- Outline: `#2563EB` (slightly darker)
+**Logo 顏色：**
+- 主要填充：`#3B82F6`（Dynamous 藍）
+- 高光漸層：朝左上方較淺的藍色
+- 外框：`#2563EB`（稍深）
 
 ---
 
-## Color System
+## 顏色系統
 
-### Primary Accent — Dynamous Blue
+### 主要強調色 — Dynamous 藍
 
-The signature brand color. Used for primary actions, links, highlights, and the logo.
+品牌標誌性顏色。用於主要操作、連結、高亮和 Logo。
 
-| Name | Hex | HSL | Use |
-|------|-----|-----|-----|
-| Dynamous Blue | `#3B82F6` | 217° 91% 60% | Primary buttons, links, logo |
-| Dynamous Dark | `#2563EB` | 217° 91% 53% | Hover states, outlines |
-| Dynamous Light | `#60A5FA` | 217° 91% 67% | Secondary accents, highlights |
-| Dynamous Cyan | `#0EA5E9` | 199° 89% 48% | Tertiary accents, variations |
-| Dynamous Pale | `#DBEAFE` | 214° 95% 93% | Light mode backgrounds, fills |
+| 名稱 | Hex | HSL | 用途 |
+|------|-----|-----|------|
+| Dynamous 藍 | `#3B82F6` | 217° 91% 60% | 主要按鈕、連結、Logo |
+| Dynamous 深 | `#2563EB` | 217° 91% 53% | 懸停狀態、外框 |
+| Dynamous 淺 | `#60A5FA` | 217° 91% 67% | 次要強調、高亮 |
+| Dynamous 青 | `#0EA5E9` | 199° 89% 48% | 第三強調、變化 |
+| Dynamous 淡 | `#DBEAFE` | 214° 95% 93% | 淺色模式背景、填充 |
 
-**Rule:** Dynamous Blue is the hero. Use it for actions and emphasis. Don't dilute it by overusing.
+**規則：** Dynamous 藍是主角。用於操作和強調。不要過度使用以避免稀釋效果。
 
-**CRITICAL: NO PURPLE.** Dynamous uses blue variations only. Never use purple (#6D28D9 or similar). For tertiary accents or AI/LLM representations, use Dynamous Cyan (#0EA5E9) or darker blues (#1E40AF) instead.
+**重要：禁止紫色。** Dynamous 只使用藍色變體。絕對不要使用紫色（#6D28D9 或類似色）。對於第三強調或 AI/LLM 表示，使用 Dynamous 青（#0EA5E9）或更深的藍色（#1E40AF）替代。
 
-### Secondary Accents — Functional Colors
+### 次要強調色 — 功能性顏色
 
-Used sparingly for specific semantic purposes.
+謹慎使用於特定語義目的。
 
-| Purpose | Fill | Stroke | When to Use |
-|---------|------|--------|-------------|
-| AI/LLM | `#DBEAFE` | `#0EA5E9` | Representing AI, agents, LLMs in diagrams |
-| Success/Start | `#A7F3D0` | `#047857` | Completed states, starting points, announcements |
-| Warning/Decision | `#FEF3C7` | `#B45309` | Decision points, caution, ratings |
-| Error/Stop | `#FECACA` | `#B91C1C` | Errors, destructive actions, end states |
-| Trigger/Input | `#FED7AA` | `#C2410C` | Input points, triggers in workflows |
+| 用途 | 填充 | 描邊 | 使用時機 |
+|------|------|------|----------|
+| AI/LLM | `#DBEAFE` | `#0EA5E9` | 在圖表中表示 AI、代理、LLM |
+| 成功/開始 | `#A7F3D0` | `#047857` | 完成狀態、起點、公告 |
+| 警告/決策 | `#FEF3C7` | `#B45309` | 決策點、注意、評分 |
+| 錯誤/停止 | `#FECACA` | `#B91C1C` | 錯誤、破壞性操作、結束狀態 |
+| 觸發/輸入 | `#FED7AA` | `#C2410C` | 輸入點、工作流程中的觸發器 |
 
-**Rule:** These are semantic, not decorative. Use them to encode meaning in diagrams and UI states.
+**規則：** 這些是語義性的，不是裝飾性的。用它們在圖表和 UI 狀態中編碼含義。
 
-### Theme Bases
+### 主題基底
 
-**Dark Theme (Default)**
+**深色主題（預設）**
 ```
-Background:     #07090F (near-black with blue tint)
-Background Alt: #080A13 (slightly warmer)
-Surface:        rgba(0, 0, 0, 0.4) (glass cards)
-Border:         rgba(255, 255, 255, 0.1)
-Text Primary:   rgba(255, 255, 255, 0.98)
-Text Secondary: rgba(255, 255, 255, 0.80)
-Text Muted:     rgba(255, 255, 255, 0.70)
-```
-
-**Light Theme (Diagrams/Excalidraw)**
-```
-Background:     #FFFFFF
-Surface:        #F1F5F9 (slate-100)
-Border:         #E5E7EB (gray-200)
-Text Primary:   #1E293B (slate-800)
-Text Secondary: #374151 (gray-700)
-Text Muted:     #64748B (slate-500)
+背景：          #07090F（帶藍色調的近黑色）
+替代背景：      #080A13（稍暖）
+表面：          rgba(0, 0, 0, 0.4)（玻璃卡片）
+邊框：          rgba(255, 255, 255, 0.1)
+主要文字：      rgba(255, 255, 255, 0.98)
+次要文字：      rgba(255, 255, 255, 0.80)
+淡化文字：      rgba(255, 255, 255, 0.70)
 ```
 
-### Gradient Backgrounds
+**淺色主題（圖表/Excalidraw）**
+```
+背景：          #FFFFFF
+表面：          #F1F5F9 (slate-100)
+邊框：          #E5E7EB (gray-200)
+主要文字：      #1E293B (slate-800)
+次要文字：      #374151 (gray-700)
+淡化文字：      #64748B (slate-500)
+```
 
-**Hero gradient (website):**
+### 漸層背景
+
+**主視覺漸層（網站）：**
 ```css
 background: linear-gradient(to bottom, #07090f, rgba(30, 58, 138, 0.9), #080a13);
 background-attachment: fixed;
 ```
 
-**Blue glow effect:**
+**藍色光暈效果：**
 ```css
 box-shadow: 0 0 15px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3);
 ```
 
 ---
 
-## Typography
+## 字型排版
 
-### Font Stack
+### 字型組合
 
-- **Primary:** Inter — Clean, modern sans-serif for all UI and body text
-- **Thumbnails:** Montserrat Bold or Inter Black — High-impact, readable at small sizes
-- **Code:** JetBrains Mono or system monospace
+- **主要字型：** Inter — 乾淨、現代的無襯線字型，用於所有 UI 和內文
+- **縮圖：** Montserrat Bold 或 Inter Black — 高衝擊力，小尺寸也清晰可讀
+- **程式碼：** JetBrains Mono 或系統等寬字型
 
-### Type Scale
+### 字型大小比例
 
-| Token | Size | Use |
-|-------|------|-----|
-| `xs` | 0.75rem (12px) | Labels, badges, meta |
-| `sm` | 0.875rem (14px) | Secondary text, descriptions |
-| `base` | 1rem (16px) | Body text, paragraphs |
-| `lg` | 1.125rem (18px) | Lead paragraphs, emphasis |
-| `xl` | 1.25rem (20px) | Section headers |
-| `2xl` | 1.5rem (24px) | Card titles |
-| `3xl` | 1.875rem (30px) | Page headers |
-| `4xl` | 2.25rem (36px) | Hero subheadings |
-| `5xl` | 3rem (48px) | Hero headings (mobile) |
-| `6xl` | 3.75rem (60px) | Hero headings (desktop) |
+| 代號 | 大小 | 用途 |
+|------|------|------|
+| `xs` | 0.75rem (12px) | 標籤、徽章、後設資料 |
+| `sm` | 0.875rem (14px) | 次要文字、描述 |
+| `base` | 1rem (16px) | 內文、段落 |
+| `lg` | 1.125rem (18px) | 引導段落、強調 |
+| `xl` | 1.25rem (20px) | 章節標題 |
+| `2xl` | 1.5rem (24px) | 卡片標題 |
+| `3xl` | 1.875rem (30px) | 頁面標題 |
+| `4xl` | 2.25rem (36px) | 主視覺副標題 |
+| `5xl` | 3rem (48px) | 主視覺標題（手機） |
+| `6xl` | 3.75rem (60px) | 主視覺標題（桌面） |
 
-### Typography Rules
+### 字型排版規則
 
-| Element | Font | Weight | Size | Line Height |
-|---------|------|--------|------|-------------|
-| Display/Hero | Inter | 700 (Bold) | 4xl-6xl | 1.1 |
+| 元素 | 字型 | 字重 | 大小 | 行高 |
+|------|------|------|------|------|
+| 展示/主視覺 | Inter | 700 (Bold) | 4xl-6xl | 1.1 |
 | H1 | Inter | 700 | 3xl | 1.2 |
 | H2 | Inter | 600 | 2xl | 1.3 |
 | H3 | Inter | 600 | xl | 1.4 |
-| Body | Inter | 400 | base | 1.6 |
-| Small | Inter | 400 | sm | 1.5 |
-| Code | JetBrains Mono | 400 | sm | 1.5 |
-| Buttons | Inter | 500 | sm-base | 1 |
-| Thumbnail Text | Montserrat | 800 | - | 1.1 |
+| 內文 | Inter | 400 | base | 1.6 |
+| 小字 | Inter | 400 | sm | 1.5 |
+| 程式碼 | JetBrains Mono | 400 | sm | 1.5 |
+| 按鈕 | Inter | 500 | sm-base | 1 |
+| 縮圖文字 | Montserrat | 800 | - | 1.1 |
 
-### Text Color Usage
+### 文字顏色使用
 
-| Context | Color | Notes |
-|---------|-------|-------|
-| Headings | white (98%) | Full contrast for emphasis |
-| Body content | white/80 | Comfortable reading |
-| Descriptions | white/70 | Secondary information |
-| Muted/meta | white/60 | Timestamps, labels |
-| Links | Dynamous Blue | `#3B82F6` with hover glow |
-
----
-
-## Spacing System
-
-**Base unit:** 4px
-
-| Token | Value | Use |
-|-------|-------|-----|
-| `xs` | 4px | Tight spacing, icon gaps |
-| `sm` | 8px | Related elements |
-| `md` | 12px | Form inputs internal |
-| `base` | 16px | Standard component padding |
-| `lg` | 24px | Section padding |
-| `xl` | 32px | Card padding |
-| `2xl` | 48px | Section margins |
-| `3xl` | 64px | Major section breaks |
-
-**Rule:** When in doubt, use multiples of 8px.
+| 情境 | 顏色 | 備註 |
+|------|------|------|
+| 標題 | white (98%) | 完全對比以強調 |
+| 內文 | white/80 | 舒適閱讀 |
+| 描述 | white/70 | 次要資訊 |
+| 淡化/後設 | white/60 | 時間戳、標籤 |
+| 連結 | Dynamous 藍 | `#3B82F6` 帶懸停光暈 |
 
 ---
 
-## Buttons
+## 間距系統
 
-### Button Types
+**基礎單位：** 4px
 
-| Type | Background | Text | Use |
-|------|------------|------|-----|
-| Primary | Dynamous Blue | White | Main actions, CTAs |
-| Secondary | white/10 | White | Secondary actions |
-| Outline | Transparent | White | Tertiary, paired with primary |
-| Ghost | Transparent | White | Navigation, subtle actions |
+| 代號 | 值 | 用途 |
+|------|------|------|
+| `xs` | 4px | 緊湊間距、圖示間隙 |
+| `sm` | 8px | 相關元素 |
+| `md` | 12px | 表單輸入內部 |
+| `base` | 16px | 標準元件內距 |
+| `lg` | 24px | 區段內距 |
+| `xl` | 32px | 卡片內距 |
+| `2xl` | 48px | 區段外距 |
+| `3xl` | 64px | 主要區段間隔 |
 
-### Button Specs
+**規則：** 不確定時，使用 8px 的倍數。
 
-- **Font:** Inter, 500 weight
-- **Border radius:** 8px (0.5rem)
-- **Padding:**
+---
+
+## 按鈕
+
+### 按鈕類型
+
+| 類型 | 背景 | 文字 | 用途 |
+|------|------|------|------|
+| 主要 | Dynamous 藍 | 白色 | 主要操作、CTA |
+| 次要 | white/10 | 白色 | 次要操作 |
+| 外框 | 透明 | 白色 | 第三層級，搭配主要按鈕 |
+| 幽靈 | 透明 | 白色 | 導覽、低調操作 |
+
+### 按鈕規格
+
+- **字型：** Inter, 500 字重
+- **圓角：** 8px (0.5rem)
+- **內距：**
   - sm: 6px 12px
   - md: 8px 16px
   - lg: 12px 24px
-- **Transition:** 200ms ease-out
-- **Primary shadow:** `0 4px 14px -4px rgba(59, 130, 246, 0.4)`
+- **過渡：** 200ms ease-out
+- **主要陰影：** `0 4px 14px -4px rgba(59, 130, 246, 0.4)`
 
-### Signature Button Effect
+### 標誌性按鈕效果
 
-Shimmer animation on hover:
+懸停時的微光動畫：
 ```css
 .shimmer {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
@@ -216,28 +216,28 @@ Shimmer animation on hover:
 
 ---
 
-## Motion
+## 動效
 
-### Timing
+### 時間設定
 
-| Type | Duration | Use |
-|------|----------|-----|
-| Micro | 150ms | Button states, toggles |
-| Fast | 200ms | Dropdowns, small transitions |
-| Normal | 300ms | Cards, modals |
-| Slow | 600ms | Page transitions, fade-ins |
+| 類型 | 持續時間 | 用途 |
+|------|----------|------|
+| 微型 | 150ms | 按鈕狀態、切換 |
+| 快速 | 200ms | 下拉選單、小型過渡 |
+| 正常 | 300ms | 卡片、彈窗 |
+| 緩慢 | 600ms | 頁面轉場、淡入 |
 
-**Rule:** Nothing should take longer than 600ms. Snappy > smooth.
+**規則：** 任何動效都不應超過 600ms。俐落 > 滑順。
 
-### Easing
+### 緩動
 
-- **Entrances:** `ease-out` or `cubic-bezier(0, 0, 0.2, 1)`
-- **Exits:** `ease-in` or `cubic-bezier(0.4, 0, 1, 1)`
-- **Never use:** Linear for UI transitions (feels robotic)
+- **進場：** `ease-out` 或 `cubic-bezier(0, 0, 0.2, 1)`
+- **離場：** `ease-in` 或 `cubic-bezier(0.4, 0, 1, 1)`
+- **絕不使用：** Linear 用於 UI 過渡（感覺機械化）
 
-### Signature Animations
+### 標誌性動畫
 
-**Float (decorative elements):**
+**浮動（裝飾元素）：**
 ```css
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -246,7 +246,7 @@ Shimmer animation on hover:
 animation: float 6s ease-in-out infinite;
 ```
 
-**Fade-in (content entrance):**
+**淡入（內容進場）：**
 ```css
 @keyframes fade-in {
   0% { opacity: 0; transform: translateY(10px); }
@@ -255,7 +255,7 @@ animation: float 6s ease-in-out infinite;
 animation: fade-in 0.6s ease-out forwards;
 ```
 
-**Glow pulse (emphasis):**
+**光暈脈動（強調）：**
 ```css
 @keyframes glow {
   0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
@@ -263,64 +263,64 @@ animation: fade-in 0.6s ease-out forwards;
 }
 ```
 
-### What Moves
+### 會動的元素
 
-- Buttons (hover, active states)
-- Cards (hover lift)
-- Decorative logos (floating)
-- Page sections (scroll reveal)
-- Modals (entrance/exit)
+- 按鈕（懸停、點擊狀態）
+- 卡片（懸停上浮）
+- 裝飾性 Logo（浮動）
+- 頁面區段（滾動顯現）
+- 彈窗（進場/離場）
 
-### What Doesn't Move
+### 不動的元素
 
-- Body text
-- Navigation (stays grounded)
-- Form inputs (stable)
-- Critical UI elements
-
----
-
-## Icons
-
-### Specifications
-
-| Property | Value |
-|----------|-------|
-| Library | Lucide React |
-| Style | Outline, 2px stroke |
-| Size (inline) | 14-16px |
-| Size (UI) | 18-20px |
-| Size (emphasis) | 24px |
-| Default color | currentColor (inherits text) |
-| Interactive | Opacity change on hover |
-
-### Usage Rules
-
-- Icons accompany text, rarely standalone
-- Use consistent sizing within a component
-- Match icon weight to surrounding text weight
-- Don't use icons purely for decoration
+- 內文
+- 導覽列（保持穩固）
+- 表單輸入（穩定）
+- 關鍵 UI 元素
 
 ---
 
-## Signature Elements
+## 圖示
 
-### Glass Card
+### 規格
 
-The defining UI pattern for Dynamous. Frosted glass effect over dark backgrounds.
+| 屬性 | 值 |
+|------|------|
+| 圖示庫 | Lucide React |
+| 樣式 | 線條、2px 描邊 |
+| 大小（行內） | 14-16px |
+| 大小（UI） | 18-20px |
+| 大小（強調） | 24px |
+| 預設顏色 | currentColor（繼承文字色） |
+| 互動 | 懸停時改變透明度 |
 
-**Use for:**
-- Content cards
-- Video containers
-- Feature highlights
-- Testimonials
+### 使用規則
 
-**Do NOT use for:**
-- Buttons (too subtle)
-- Navigation
-- Form inputs
+- 圖示配合文字使用，很少單獨出現
+- 在元件內使用一致的大小
+- 圖示粗細與周圍文字粗細匹配
+- 不要純粹為了裝飾而使用圖示
 
-**Implementation:**
+---
+
+## 標誌性元素
+
+### 玻璃卡片
+
+Dynamous 的定義性 UI 模式。深色背景上的毛玻璃效果。
+
+**適用於：**
+- 內容卡片
+- 影片容器
+- 功能亮點
+- 推薦見證
+
+**不適用於：**
+- 按鈕（太微妙）
+- 導覽列
+- 表單輸入
+
+**實作：**
 ```css
 .glass-card {
   background: rgba(0, 0, 0, 0.4);
@@ -331,19 +331,19 @@ The defining UI pattern for Dynamous. Frosted glass effect over dark backgrounds
 }
 ```
 
-### Blue Glow
+### 藍色光暈
 
-Signature emphasis effect. Creates a soft halo around important elements.
+標誌性強調效果。在重要元素周圍創造柔和光環。
 
-**Use for:**
-- Hero text highlights
-- Primary buttons
-- Featured content
-- The logo in hero sections
+**適用於：**
+- 主視覺文字高亮
+- 主要按鈕
+- 精選內容
+- 主視覺區段的 Logo
 
-**Rule:** Use sparingly. If everything glows, nothing does.
+**規則：** 謹慎使用。如果所有東西都發光，就什麼都不突出了。
 
-**Implementation:**
+**實作：**
 ```css
 .blue-glow {
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.5),
@@ -356,13 +356,13 @@ Signature emphasis effect. Creates a soft halo around important elements.
 }
 ```
 
-### Grid Pattern
+### 格線圖案
 
-Subtle background texture that adds depth without distraction.
+微妙的背景紋理，增加深度但不分散注意力。
 
-**Use only on:** Hero sections, large empty backgrounds
+**僅用於：** 主視覺區段、大面積空白背景
 
-**Implementation:**
+**實作：**
 ```css
 .grid-pattern {
   background-image:
@@ -374,97 +374,97 @@ Subtle background texture that adds depth without distraction.
 
 ---
 
-## Diagrams (Excalidraw)
+## 圖表（Excalidraw）
 
-### Color Palette for Diagrams
+### 圖表色彩調色盤
 
-| Semantic Purpose | Fill | Stroke |
-|------------------|------|--------|
-| Primary/Neutral | `#3B82F6` | `#1E3A5F` |
-| Secondary | `#60A5FA` | `#1E3A5F` |
-| Tertiary/AI | `#DBEAFE` | `#0EA5E9` |
-| Start/Trigger | `#FED7AA` | `#C2410C` |
-| End/Success | `#A7F3D0` | `#047857` |
-| Warning/Reset | `#FEE2E2` | `#DC2626` |
-| Decision | `#FEF3C7` | `#B45309` |
+| 語義用途 | 填充 | 描邊 |
+|----------|------|------|
+| 主要/中性 | `#3B82F6` | `#1E3A5F` |
+| 次要 | `#60A5FA` | `#1E3A5F` |
+| 第三/AI | `#DBEAFE` | `#0EA5E9` |
+| 開始/觸發 | `#FED7AA` | `#C2410C` |
+| 結束/成功 | `#A7F3D0` | `#047857` |
+| 警告/重置 | `#FEE2E2` | `#DC2626` |
+| 決策 | `#FEF3C7` | `#B45309` |
 
-### Diagram Rules
+### 圖表規則
 
-- **Background:** White (`#FFFFFF`) for maximum readability
-- **Text color:** `#1E3A5F` (deep blue)
-- **Font:** Virgil (Excalidraw default) or Hand-drawn style
-- **Stroke width:** 2px
-- **Roughness:** 1 (slight hand-drawn feel)
-- **Rule:** Always pair darker stroke with lighter fill
+- **背景：** 白色（`#FFFFFF`）以獲得最大可讀性
+- **文字顏色：** `#1E3A5F`（深藍色）
+- **字型：** Virgil（Excalidraw 預設）或手繪風格
+- **描邊寬度：** 2px
+- **粗糙度：** 1（輕微手繪感）
+- **規則：** 始終將較深的描邊與較淺的填充配對
 
-### Shape Meaning
+### 形狀含義
 
-| Concept Type | Shape |
-|--------------|-------|
-| Start, trigger, input | Ellipse |
-| End, output, result | Ellipse |
-| Decision, condition | Diamond |
-| Process, action, step | Rectangle |
-| Abstract state, context | Overlapping ellipses (cloud) |
-
----
-
-## YouTube Thumbnails
-
-### Specifications
-
-- **Dimensions:** 1280 × 720px
-- **Text:** 2-5 words maximum
-- **Font:** Montserrat Extra Bold (800) or Inter Black
-- **Text color:** White with dark outline/shadow for readability
-- **Background:** Dark with blue accents, or screenshot-based
-
-### Common Patterns
-
-1. **GitHub repo style** — Screenshot with logo "swoosh"
-2. **Excalidraw diagram** — Workflow visualization
-3. **You + logos** — Personal image surrounded by tech logos
-4. **Bold text + concept** — Large text with supporting visual
-
-### Thumbnail Rules
-
-- Face included when possible (increases CTR)
-- High contrast text (readable at small sizes)
-- Consistent blue accent somewhere in frame
-- No more than 5 words of text
-- Test readability at mobile size (small thumbnail preview)
+| 概念類型 | 形狀 |
+|----------|------|
+| 開始、觸發、輸入 | 橢圓 |
+| 結束、輸出、結果 | 橢圓 |
+| 決策、條件 | 菱形 |
+| 處理、動作、步驟 | 矩形 |
+| 抽象狀態、上下文 | 重疊橢圓（雲朵） |
 
 ---
 
-## Image Treatment
+## YouTube 縮圖
 
-### Screenshots & UI
+### 規格
 
-- **Border radius:** 12px
-- **Border:** 1px solid rgba(255, 255, 255, 0.1)
-- **Shadow:** `0 4px 12px -2px rgba(0, 0, 0, 0.3)`
-- **Optional:** Blue glow on featured screenshots
+- **尺寸：** 1280 × 720px
+- **文字：** 最多 2-5 個字
+- **字型：** Montserrat Extra Bold (800) 或 Inter Black
+- **文字顏色：** 白色帶深色外框/陰影以確保可讀性
+- **背景：** 深色帶藍色點綴，或基於截圖
 
-### Photos
+### 常見模式
 
-- **Border radius:** 8px or full (for avatars)
-- **Filters:** Slight cool tone to match blue palette
-- **Backgrounds:** Dark preferred, blur if busy
+1. **GitHub 儲存庫風格** — 截圖配 Logo「swoosh」
+2. **Excalidraw 圖表** — 工作流程視覺化
+3. **你 + Logo** — 個人照片周圍環繞科技 Logo
+4. **粗體文字 + 概念** — 大字搭配輔助視覺
+
+### 縮圖規則
+
+- 盡可能包含人臉（提高點擊率）
+- 高對比文字（小尺寸也可讀）
+- 畫面中某處有一致的藍色點綴
+- 文字不超過 5 個字
+- 在手機大小（小縮圖預覽）測試可讀性
 
 ---
 
-## CSS Variables Reference
+## 圖片處理
+
+### 截圖與 UI
+
+- **圓角：** 12px
+- **邊框：** 1px solid rgba(255, 255, 255, 0.1)
+- **陰影：** `0 4px 12px -2px rgba(0, 0, 0, 0.3)`
+- **選配：** 精選截圖加藍色光暈
+
+### 照片
+
+- **圓角：** 8px 或完整圓形（用於頭像）
+- **濾鏡：** 輕微冷色調以配合藍色調色盤
+- **背景：** 偏好深色，背景雜亂時模糊處理
+
+---
+
+## CSS 變數參考
 
 ```css
 :root {
-  /* Colors - Primary */
+  /* 顏色 - 主要 */
   --dynamous-blue: #3B82F6;
   --dynamous-dark: #2563EB;
   --dynamous-light: #60A5FA;
   --dynamous-cyan: #0EA5E9;
   --dynamous-pale: #DBEAFE;
 
-  /* Colors - Semantic */
+  /* 顏色 - 語義 */
   --success: #047857;
   --success-bg: #A7F3D0;
   --warning: #B45309;
@@ -474,7 +474,7 @@ Subtle background texture that adds depth without distraction.
   --ai-cyan: #0EA5E9;
   --ai-cyan-bg: #DBEAFE;
 
-  /* Colors - Theme (Dark) */
+  /* 顏色 - 主題（深色） */
   --background: #07090F;
   --background-alt: #080A13;
   --surface: rgba(0, 0, 0, 0.4);
@@ -483,7 +483,7 @@ Subtle background texture that adds depth without distraction.
   --text-secondary: rgba(255, 255, 255, 0.8);
   --text-muted: rgba(255, 255, 255, 0.7);
 
-  /* Spacing */
+  /* 間距 */
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 12px;
@@ -493,12 +493,12 @@ Subtle background texture that adds depth without distraction.
   --space-2xl: 48px;
   --space-3xl: 64px;
 
-  /* Typography */
+  /* 字型排版 */
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   --font-display: 'Montserrat', var(--font-sans);
 
-  /* Motion */
+  /* 動效 */
   --duration-micro: 150ms;
   --duration-fast: 200ms;
   --duration-normal: 300ms;
@@ -506,7 +506,7 @@ Subtle background texture that adds depth without distraction.
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
 
-  /* Radii */
+  /* 圓角 */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
@@ -517,29 +517,29 @@ Subtle background texture that adds depth without distraction.
 
 ---
 
-## Quick Reference
+## 快速參考
 
-### Dynamous Blue vs Other Blues
+### Dynamous 藍 vs 其他藍色
 
-| Dynamous Blue | Other Blues |
-|---------------|-------------|
-| Primary buttons | Never |
-| Links | - |
+| Dynamous 藍 | 其他藍色 |
+|-------------|----------|
+| 主要按鈕 | 絕不 |
+| 連結 | - |
 | Logo | - |
-| Accent glows | Secondary accents use semantic colors |
-| Hero highlights | Diagram fills use palette system |
-| Featured elements | - |
+| 強調光暈 | 次要強調使用語義顏色 |
+| 主視覺高亮 | 圖表填充使用調色盤系統 |
+| 精選元素 | - |
 
 ### Inter vs Montserrat
 
 | Inter | Montserrat |
 |-------|------------|
-| All UI text | YouTube thumbnail text |
-| Body copy | Bold headlines (optional) |
-| Buttons | - |
-| Navigation | - |
-| Everything else | Only when maximum impact needed |
+| 所有 UI 文字 | YouTube 縮圖文字 |
+| 內文 | 粗體標題（選用） |
+| 按鈕 | - |
+| 導覽 | - |
+| 其他所有場合 | 只在需要最大衝擊力時使用 |
 
 ---
 
-*Last updated: 2026-01-13*
+*最後更新：2026-01-13*

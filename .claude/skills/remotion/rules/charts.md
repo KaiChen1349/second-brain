@@ -5,23 +5,23 @@ metadata:
   tags: charts, data, visualization, bar-chart, pie-chart, graphs
 ---
 
-# Charts in Remotion
+# Remotion 中的圖表
 
-You can create bar charts in Remotion by using regular React code - HTML and SVG is allowed, as well as D3.js.
+你可以使用一般的 React 程式碼在 Remotion 中建立長條圖 - 允許使用 HTML、SVG 以及 D3.js。
 
-## No animations not powered by `useCurrentFrame()`
+## 禁止非 `useCurrentFrame()` 驅動的動畫
 
-Disable all animations by third party libraries.  
-They will cause flickering during rendering.  
-Instead, drive all animations from `useCurrentFrame()`.
+停用所有第三方函式庫的動畫。
+它們會在渲染時導致閃爍。
+改為從 `useCurrentFrame()` 驅動所有動畫。
 
-## Bar Chart Animations
+## 長條圖動畫
 
-See [Bar Chart Example](assets/charts/bar-chart.tsx) for a basic example implmentation.
+參見 [Bar Chart Example](assets/charts/bar-chart.tsx) 了解基本實作範例。
 
-### Staggered Bars
+### 交錯長條
 
-You can animate the height of the bars and stagger them like this:
+你可以這樣為長條的高度製作動畫並加入交錯效果：
 
 ```tsx
 const STAGGER_DELAY = 5;
@@ -40,9 +40,9 @@ const bars = data.map((item, i) => {
 });
 ```
 
-## Pie Chart Animation
+## 圓餅圖動畫
 
-Animate segments using stroke-dashoffset, starting from 12 o'clock.
+使用 stroke-dashoffset 為扇區製作動畫，從 12 點鐘方向開始。
 
 ```tsx
 const frame = useCurrentFrame();

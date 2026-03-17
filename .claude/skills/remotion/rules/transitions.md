@@ -5,24 +5,24 @@ metadata:
   tags: transitions, fade, slide, wipe, scenes
 ---
 
-## Fullscreen transitions
+## 全螢幕轉場
 
-Using `<TransitionSeries>` to animate between multiple scenes or clips.  
-This will absolutely position the children.
+使用 `<TransitionSeries>` 在多個場景或片段之間製作動畫。
+這會將子元素設為絕對定位。
 
-## Prerequisites
+## 前置條件
 
-First, the @remotion/transitions package needs to be installed.  
-If it is not, use the following command:
+首先，需要安裝 @remotion/transitions 套件。
+如果尚未安裝，請使用以下命令：
 
 ```bash
-npx remotion add @remotion/transitions # If project uses npm
-bunx remotion add @remotion/transitions # If project uses bun
-yarn remotion add @remotion/transitions # If project uses yarn
-pnpm exec remotion add @remotion/transitions # If project uses pnpm
+npx remotion add @remotion/transitions # 如果專案使用 npm
+bunx remotion add @remotion/transitions # 如果專案使用 bun
+yarn remotion add @remotion/transitions # 如果專案使用 yarn
+pnpm exec remotion add @remotion/transitions # 如果專案使用 pnpm
 ```
 
-## Example usage
+## 使用範例
 
 ```tsx
 import {TransitionSeries, linearTiming} from '@remotion/transitions';
@@ -39,9 +39,9 @@ import {fade} from '@remotion/transitions/fade';
 </TransitionSeries>;
 ```
 
-## Available Transition Types
+## 可用的轉場類型
 
-Import transitions from their respective modules:
+從各自的模組匯入轉場：
 
 ```tsx
 import {fade} from '@remotion/transitions/fade';
@@ -51,9 +51,9 @@ import {flip} from '@remotion/transitions/flip';
 import {clockWipe} from '@remotion/transitions/clock-wipe';
 ```
 
-## Slide Transition with Direction
+## 帶方向的滑動轉場
 
-Specify slide direction for enter/exit animations.
+指定進入/退出動畫的滑動方向。
 
 ```tsx
 import {slide} from '@remotion/transitions/slide';
@@ -61,48 +61,48 @@ import {slide} from '@remotion/transitions/slide';
 <TransitionSeries.Transition presentation={slide({direction: 'from-left'})} timing={linearTiming({durationInFrames: 20})} />;
 ```
 
-Directions: `"from-left"`, `"from-right"`, `"from-top"`, `"from-bottom"`
+方向：`"from-left"`、`"from-right"`、`"from-top"`、`"from-bottom"`
 
-## Timing Options
+## 時間選項
 
 ```tsx
 import {linearTiming, springTiming} from '@remotion/transitions';
 
-// Linear timing - constant speed
+// 線性時間 - 等速
 linearTiming({durationInFrames: 20});
 
-// Spring timing - organic motion
+// 彈簧時間 - 有機運動
 springTiming({config: {damping: 200}, durationInFrames: 25});
 ```
 
-## Duration calculation
+## 持續時間計算
 
-Transitions overlap adjacent scenes, so the total composition length is **shorter** than the sum of all sequence durations.
+轉場會與相鄰場景重疊，因此合成的總長度會比所有序列持續時間的總和**更短**。
 
-For example, with two 60-frame sequences and a 15-frame transition:
+例如，兩個 60 影格的序列和一個 15 影格的轉場：
 
-- Without transitions: `60 + 60 = 120` frames
-- With transition: `60 + 60 - 15 = 105` frames
+- 無轉場：`60 + 60 = 120` 影格
+- 有轉場：`60 + 60 - 15 = 105` 影格
 
-The transition duration is subtracted because both scenes play simultaneously during the transition.
+轉場持續時間被減去，因為兩個場景在轉場期間同時播放。
 
-### Getting the duration of a transition
+### 取得轉場的持續時間
 
-Use the `getDurationInFrames()` method on the timing object:
+使用時間物件上的 `getDurationInFrames()` 方法：
 
 ```tsx
 import {linearTiming, springTiming} from '@remotion/transitions';
 
 const linearDuration = linearTiming({durationInFrames: 20}).getDurationInFrames({fps: 30});
-// Returns 20
+// 回傳 20
 
 const springDuration = springTiming({config: {damping: 200}}).getDurationInFrames({fps: 30});
-// Returns calculated duration based on spring physics
+// 回傳根據彈簧物理計算的持續時間
 ```
 
-For `springTiming` without an explicit `durationInFrames`, the duration depends on `fps` because it calculates when the spring animation settles.
+對於沒有明確 `durationInFrames` 的 `springTiming`，持續時間取決於 `fps`，因為它會計算彈簧動畫何時穩定。
 
-### Calculating total composition duration
+### 計算合成的總持續時間
 
 ```tsx
 import {linearTiming} from '@remotion/transitions';
@@ -118,5 +118,5 @@ const transition1Duration = timing1.getDurationInFrames({fps: 30});
 const transition2Duration = timing2.getDurationInFrames({fps: 30});
 
 const totalDuration = scene1Duration + scene2Duration + scene3Duration - transition1Duration - transition2Duration;
-// 60 + 60 + 60 - 15 - 20 = 145 frames
+// 60 + 60 + 60 - 15 - 20 = 145 影格
 ```

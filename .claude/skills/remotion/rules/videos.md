@@ -5,21 +5,21 @@ metadata:
   tags: video, media, trim, volume, speed, loop, pitch
 ---
 
-# Using videos in Remotion
+# 在 Remotion 中使用影片
 
-## Prerequisites
+## 前置條件
 
-First, the @remotion/media package needs to be installed.  
-If it is not, use the following command:
+首先，需要安裝 @remotion/media 套件。
+如果尚未安裝，請使用以下命令：
 
 ```bash
-npx remotion add @remotion/media # If project uses npm
-bunx remotion add @remotion/media # If project uses bun
-yarn remotion add @remotion/media # If project uses yarn
-pnpm exec remotion add @remotion/media # If project uses pnpm
+npx remotion add @remotion/media # 如果專案使用 npm
+bunx remotion add @remotion/media # 如果專案使用 bun
+yarn remotion add @remotion/media # 如果專案使用 yarn
+pnpm exec remotion add @remotion/media # 如果專案使用 pnpm
 ```
 
-Use `<Video>` from `@remotion/media` to embed videos into your composition.
+使用 `@remotion/media` 的 `<Video>` 來將影片嵌入你的合成。
 
 ```tsx
 import { Video } from "@remotion/media";
@@ -30,15 +30,15 @@ export const MyComposition = () => {
 };
 ```
 
-Remote URLs are also supported:
+也支援遠端 URL：
 
 ```tsx
 <Video src="https://remotion.media/video.mp4" />
 ```
 
-## Trimming
+## 裁剪
 
-Use `trimBefore` and `trimAfter` to remove portions of the video. Values are in seconds.
+使用 `trimBefore` 和 `trimAfter` 來移除影片的部分片段。值以秒為單位。
 
 ```tsx
 const { fps } = useVideoConfig();
@@ -46,15 +46,15 @@ const { fps } = useVideoConfig();
 return (
   <Video
     src={staticFile("video.mp4")}
-    trimBefore={2 * fps} // Skip the first 2 seconds
-    trimAfter={10 * fps} // End at the 10 second mark
+    trimBefore={2 * fps} // 跳過前 2 秒
+    trimAfter={10 * fps} // 在第 10 秒處結束
   />
 );
 ```
 
-## Delaying
+## 延遲播放
 
-Wrap the video in a `<Sequence>` to delay when it appears:
+將影片包裹在 `<Sequence>` 中以延遲顯示時間：
 
 ```tsx
 import { Sequence, staticFile } from "remotion";
@@ -69,11 +69,11 @@ return (
 );
 ```
 
-The video will appear after 1 second.
+影片將在 1 秒後顯示。
 
-## Sizing and Position
+## 大小和位置
 
-Use the `style` prop to control size and position:
+使用 `style` 屬性來控制大小和位置：
 
 ```tsx
 <Video
@@ -89,15 +89,15 @@ Use the `style` prop to control size and position:
 />
 ```
 
-## Volume
+## 音量
 
-Set a static volume (0 to 1):
+設定靜態音量（0 到 1）：
 
 ```tsx
 <Video src={staticFile("video.mp4")} volume={0.5} />
 ```
 
-Or use a callback for dynamic volume based on the current frame:
+或使用回呼函式根據當前影格動態調整音量：
 
 ```tsx
 import { interpolate } from "remotion";
@@ -114,58 +114,58 @@ return (
 );
 ```
 
-Use `muted` to silence the video entirely:
+使用 `muted` 來完全靜音影片：
 
 ```tsx
 <Video src={staticFile("video.mp4")} muted />
 ```
 
-## Speed
+## 速度
 
-Use `playbackRate` to change the playback speed:
+使用 `playbackRate` 來改變播放速度：
 
 ```tsx
-<Video src={staticFile("video.mp4")} playbackRate={2} /> {/* 2x speed */}
-<Video src={staticFile("video.mp4")} playbackRate={0.5} /> {/* Half speed */}
+<Video src={staticFile("video.mp4")} playbackRate={2} /> {/* 2 倍速 */}
+<Video src={staticFile("video.mp4")} playbackRate={0.5} /> {/* 半速 */}
 ```
 
-Reverse playback is not supported.
+不支援倒轉播放。
 
-## Looping
+## 循環播放
 
-Use `loop` to loop the video indefinitely:
+使用 `loop` 來無限循環播放影片：
 
 ```tsx
 <Video src={staticFile("video.mp4")} loop />
 ```
 
-Use `loopVolumeCurveBehavior` to control how the frame count behaves when looping:
+使用 `loopVolumeCurveBehavior` 來控制循環時影格計數的行為：
 
-- `"repeat"`: Frame count resets to 0 each loop (for `volume` callback)
-- `"extend"`: Frame count continues incrementing
+- `"repeat"`：每次循環影格計數重置為 0（用於 `volume` 回呼）
+- `"extend"`：影格計數持續遞增
 
 ```tsx
 <Video
   src={staticFile("video.mp4")}
   loop
   loopVolumeCurveBehavior="extend"
-  volume={(f) => interpolate(f, [0, 300], [1, 0])} // Fade out over multiple loops
+  volume={(f) => interpolate(f, [0, 300], [1, 0])} // 跨多次循環淡出
 />
 ```
 
-## Pitch
+## 音高
 
-Use `toneFrequency` to adjust the pitch without affecting speed. Values range from 0.01 to 2:
+使用 `toneFrequency` 來調整音高而不影響速度。值範圍從 0.01 到 2：
 
 ```tsx
 <Video
   src={staticFile("video.mp4")}
-  toneFrequency={1.5} // Higher pitch
+  toneFrequency={1.5} // 較高音高
 />
 <Video
   src={staticFile("video.mp4")}
-  toneFrequency={0.8} // Lower pitch
+  toneFrequency={0.8} // 較低音高
 />
 ```
 
-Pitch shifting only works during server-side rendering, not in the Remotion Studio preview or in the `<Player />`.
+音高調整僅在伺服器端渲染時有效，在 Remotion Studio 預覽或 `<Player />` 中無效。

@@ -3,86 +3,86 @@ name: mcp-client
 description: Universal MCP client for connecting to any MCP server with progressive disclosure. Wraps MCP servers as skills to avoid context window bloat from tool definitions. Use when interacting with external MCP servers (Zapier, Sequential Thinking, GitHub, filesystem, etc.), listing available tools, or executing MCP tool calls. Triggers on requests like "connect to Zapier", "use MCP server", "list MCP tools", "call Zapier action", "use sequential thinking", or any MCP server interaction.
 ---
 
-# Universal MCP Client
+# 通用 MCP 客戶端
 
-Connect to any MCP server with progressive disclosure - load tool schemas on-demand instead of dumping thousands of tokens into context upfront.
+連接任何 MCP 伺服器，採用漸進式載入——按需載入工具結構定義，而非一次性將數千個 token 塞入上下文。
 
-## Skill Location
+## 技能位置
 
-This skill is located at: `.claude/skills/mcp-client/`
+此技能位於：`.claude/skills/mcp-client/`
 
-**Script path:** `.claude/skills/mcp-client/scripts/mcp_client.py`
+**腳本路徑：** `.claude/skills/mcp-client/scripts/mcp_client.py`
 
-## Configuration
+## 設定
 
-The script looks for config in this order:
-1. `MCP_CONFIG_PATH` env var (custom path)
-2. **`references/mcp-config.json`** (this skill's config - recommended)
-3. `.mcp.json` in project root
+腳本依以下順序尋找設定檔：
+1. `MCP_CONFIG_PATH` 環境變數（自訂路徑）
+2. **`references/mcp-config.json`**（此技能的設定檔——建議使用）
+3. 專案根目錄的 `.mcp.json`
 4. `~/.claude.json`
 
-**Your config file:** `.claude/skills/mcp-client/references/mcp-config.json`
+**你的設定檔：** `.claude/skills/mcp-client/references/mcp-config.json`
 
-Edit this file to add your API keys. The example file (`example-mcp-config.json`) is kept as a reference template.
+編輯此檔案以加入你的 API 金鑰。範例檔案（`example-mcp-config.json`）作為參考範本保留。
 
-**If the user hasn't provided their Zapier API key yet, ask them for it.**
+**如果使用者尚未提供 Zapier API 金鑰，請向他們索取。**
 
-## Running Commands
+## 執行指令
 
-All commands use the script at `.claude/skills/mcp-client/scripts/mcp_client.py`:
+所有指令使用位於 `.claude/skills/mcp-client/scripts/mcp_client.py` 的腳本：
 
 ```bash
-# List configured servers
+# 列出已設定的伺服器
 python .claude/skills/mcp-client/scripts/mcp_client.py servers
 
-# List tools from a server
+# 列出伺服器的工具
 python .claude/skills/mcp-client/scripts/mcp_client.py tools <server_name>
 
-# Call a tool
+# 呼叫工具
 python .claude/skills/mcp-client/scripts/mcp_client.py call <server> <tool> '{"arg": "value"}'
 ```
 
-## Workflow
+## 工作流程
 
-1. **Check config exists** - Run `servers` command. If error, create `.mcp.json`
-2. **List servers** - See what MCP servers are configured
-3. **List tools** - Get tool schemas from a specific server
-4. **Call tool** - Execute a tool with arguments
+1. **檢查設定檔是否存在** - 執行 `servers` 指令。如果出錯，建立 `.mcp.json`
+2. **列出伺服器** - 查看已設定的 MCP 伺服器
+3. **列出工具** - 從特定伺服器取得工具結構定義
+4. **呼叫工具** - 帶參數執行工具
 
-## Commands Reference
+## 指令參考
 
-| Command | Description |
+| 指令 | 說明 |
 |---------|-------------|
-| `servers` | List all configured MCP servers |
-| `tools <server>` | List tools with full parameter schemas |
-| `call <server> <tool> '<json>'` | Execute a tool with arguments |
+| `servers` | 列出所有已設定的 MCP 伺服器 |
+| `tools <server>` | 列出工具及完整參數結構定義 |
+| `call <server> <tool> '<json>'` | 帶參數執行工具 |
 
-## Example: Zapier
+## 範例：Zapier
 
 ```bash
-# 1. List servers to confirm Zapier is configured
+# 1. 列出伺服器以確認 Zapier 已設定
 python .claude/skills/mcp-client/scripts/mcp_client.py servers
 
-# 2. List Zapier tools
+# 2. 列出 Zapier 工具
 python .claude/skills/mcp-client/scripts/mcp_client.py tools zapier
 
-# 3. Call a Zapier tool
+# 3. 呼叫 Zapier 工具
 python .claude/skills/mcp-client/scripts/mcp_client.py call zapier <tool_name> '{"param": "value"}'
 ```
 
-## Example: Sequential Thinking
+## 範例：Sequential Thinking
 
 ```bash
-# 1. List tools
+# 1. 列出工具
 python .claude/skills/mcp-client/scripts/mcp_client.py tools sequential-thinking
 
-# 2. Use sequential thinking
+# 2. 使用 sequential thinking
 python .claude/skills/mcp-client/scripts/mcp_client.py call sequential-thinking sequentialthinking '{"thought": "Breaking down the problem...", "thoughtNumber": 1, "totalThoughts": 5, "nextThoughtNeeded": true}'
 ```
 
-## Config Format
+## 設定檔格式
 
-Config file format (`references/mcp-config.json`):
+設定檔格式（`references/mcp-config.json`）：
 
 ```json
 {
@@ -99,31 +99,31 @@ Config file format (`references/mcp-config.json`):
 }
 ```
 
-**Transport detection:**
-- `url` + `api_key` → FastMCP with Bearer auth (Zapier)
-- `command` + `args` → stdio (local servers like sequential-thinking)
-- `url` ending in `/sse` → SSE transport
-- `url` ending in `/mcp` → Streamable HTTP
+**傳輸偵測：**
+- `url` + `api_key` → 帶 Bearer 驗證的 FastMCP（Zapier）
+- `command` + `args` → stdio（本地伺服器如 sequential-thinking）
+- `url` 以 `/sse` 結尾 → SSE 傳輸
+- `url` 以 `/mcp` 結尾 → 可串流 HTTP
 
-## Error Handling
+## 錯誤處理
 
-Errors return JSON:
+錯誤以 JSON 格式回傳：
 ```json
 {"error": "message", "type": "configuration|validation|connection"}
 ```
 
-- `configuration` - Config file not found. Create `.mcp.json`
-- `validation` - Invalid server or tool name
-- `connection` - Failed to connect to server
+- `configuration` - 找不到設定檔。請建立 `.mcp.json`
+- `validation` - 無效的伺服器或工具名稱
+- `connection` - 無法連接到伺服器
 
-## Dependencies
+## 依賴套件
 
 ```bash
 pip install mcp fastmcp
 ```
 
-## References
+## 參考資料
 
-- `references/example-mcp-config.json` - Template config file
-- `references/mcp-servers.md` - Common server configurations
-- `references/python-mcp-sdk.md` - Python SDK documentation
+- `references/example-mcp-config.json` - 設定檔範本
+- `references/mcp-servers.md` - 常見伺服器設定
+- `references/python-mcp-sdk.md` - Python SDK 文件

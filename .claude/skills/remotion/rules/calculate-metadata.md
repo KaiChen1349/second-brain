@@ -5,17 +5,17 @@ metadata:
   tags: calculateMetadata, duration, dimensions, props, dynamic
 ---
 
-# Using calculateMetadata
+# 使用 calculateMetadata
 
-Use `calculateMetadata` on a `<Composition>` to dynamically set duration, dimensions, and transform props before rendering.
+在 `<Composition>` 上使用 `calculateMetadata` 來在渲染前動態設定時長、尺寸和轉換屬性。
 
 ```tsx
 <Composition id="MyComp" component={MyComponent} durationInFrames={300} fps={30} width={1920} height={1080} defaultProps={{videoSrc: 'https://remotion.media/video.mp4'}} calculateMetadata={calculateMetadata} />
 ```
 
-## Setting duration based on a video
+## 根據影片設定時長
 
-Use the `getMediaMetadata()` function from the mediabunny/metadata skill to get the video duration:
+使用 mediabunny/metadata 技能的 `getMediaMetadata()` 函式來取得影片時長：
 
 ```tsx
 import {CalculateMetadataFunction} from 'remotion';
@@ -30,7 +30,7 @@ const calculateMetadata: CalculateMetadataFunction<Props> = async ({props}) => {
 };
 ```
 
-## Matching dimensions of a video
+## 匹配影片尺寸
 
 ```tsx
 const calculateMetadata: CalculateMetadataFunction<Props> = async ({props}) => {
@@ -44,7 +44,7 @@ const calculateMetadata: CalculateMetadataFunction<Props> = async ({props}) => {
 };
 ```
 
-## Setting duration based on multiple videos
+## 根據多部影片設定時長
 
 ```tsx
 const calculateMetadata: CalculateMetadataFunction<Props> = async ({props}) => {
@@ -59,9 +59,9 @@ const calculateMetadata: CalculateMetadataFunction<Props> = async ({props}) => {
 };
 ```
 
-## Setting a default outName
+## 設定預設輸出檔名
 
-Set the default output filename based on props:
+根據屬性設定預設輸出檔名：
 
 ```tsx
 const calculateMetadata: CalculateMetadataFunction<Props> = async ({props}) => {
@@ -71,9 +71,9 @@ const calculateMetadata: CalculateMetadataFunction<Props> = async ({props}) => {
 };
 ```
 
-## Transforming props
+## 轉換屬性
 
-Fetch data or transform props before rendering:
+在渲染前獲取資料或轉換屬性：
 
 ```tsx
 const calculateMetadata: CalculateMetadataFunction<Props> = async ({props, abortSignal}) => {
@@ -89,16 +89,16 @@ const calculateMetadata: CalculateMetadataFunction<Props> = async ({props, abort
 };
 ```
 
-The `abortSignal` cancels stale requests when props change in the Studio.
+當屬性在 Studio 中變更時，`abortSignal` 會取消過時的請求。
 
-## Return value
+## 回傳值
 
-All fields are optional. Returned values override the `<Composition>` props:
+所有欄位都是選填的。回傳的值會覆蓋 `<Composition>` 的屬性：
 
-- `durationInFrames`: Number of frames
-- `width`: Composition width in pixels
-- `height`: Composition height in pixels
-- `fps`: Frames per second
-- `props`: Transformed props passed to the component
-- `defaultOutName`: Default output filename
-- `defaultCodec`: Default codec for rendering
+- `durationInFrames`：影格數
+- `width`：合成寬度（像素）
+- `height`：合成高度（像素）
+- `fps`：每秒影格數
+- `props`：傳遞給元件的轉換後屬性
+- `defaultOutName`：預設輸出檔名
+- `defaultCodec`：預設渲染編解碼器

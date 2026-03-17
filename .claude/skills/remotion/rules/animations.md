@@ -5,8 +5,8 @@ metadata:
   tags: animations, transitions, frames, useCurrentFrame
 ---
 
-All animations MUST be driven by the `useCurrentFrame()` hook.  
-Write animations in seconds and multiply them by the `fps` value from `useVideoConfig()`.
+所有動畫必須由 `useCurrentFrame()` hook 驅動。
+以秒為單位撰寫動畫，並乘以 `useVideoConfig()` 的 `fps` 值。
 
 ```tsx
 import { useCurrentFrame } from "remotion";
@@ -18,12 +18,12 @@ export const FadeIn = () => {
   const opacity = interpolate(frame, [0, 2 * fps], [0, 1], {
     extrapolateRight: 'clamp',
   });
- 
+
   return (
     <div style={{ opacity }}>Hello World!</div>
   );
 };
 ```
 
-CSS transitions or animations are FORBIDDEN - they will not render correctly.  
-Tailwind animation class names are FORBIDDEN - they will not render correctly.  
+禁止使用 CSS 過渡或動畫 - 它們無法正確渲染。
+禁止使用 Tailwind 動畫類別名稱 - 它們無法正確渲染。

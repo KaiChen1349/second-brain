@@ -5,11 +5,11 @@ metadata:
   tags: images, img, staticFile, png, jpg, svg, webp
 ---
 
-# Using images in Remotion
+# 在 Remotion 中使用圖片
 
-## The `<Img>` component
+## `<Img>` 元件
 
-Always use the `<Img>` component from `remotion` to display images:
+始終使用 `remotion` 的 `<Img>` 元件來顯示圖片：
 
 ```tsx
 import { Img, staticFile } from "remotion";
@@ -19,19 +19,19 @@ export const MyComposition = () => {
 };
 ```
 
-## Important restrictions
+## 重要限制
 
-**You MUST use the `<Img>` component from `remotion`.** Do not use:
+**你必須使用 `remotion` 的 `<Img>` 元件。** 不要使用：
 
-- Native HTML `<img>` elements
-- Next.js `<Image>` component
+- 原生 HTML `<img>` 元素
+- Next.js `<Image>` 元件
 - CSS `background-image`
 
-The `<Img>` component ensures images are fully loaded before rendering, preventing flickering and blank frames during video export.
+`<Img>` 元件確保圖片在渲染前完全載入，防止影片匯出時出現閃爍和空白影格。
 
-## Local images with staticFile()
+## 使用 staticFile() 載入本機圖片
 
-Place images in the `public/` folder and use `staticFile()` to reference them:
+將圖片放在 `public/` 資料夾中，並使用 `staticFile()` 來引用它們：
 
 ```
 my-video/
@@ -49,21 +49,21 @@ import { Img, staticFile } from "remotion";
 <Img src={staticFile("logo.png")} />
 ```
 
-## Remote images
+## 遠端圖片
 
-Remote URLs can be used directly without `staticFile()`:
+遠端 URL 可以直接使用，不需要 `staticFile()`：
 
 ```tsx
 <Img src="https://example.com/image.png" />
 ```
 
-Ensure remote images have CORS enabled.
+確保遠端圖片已啟用 CORS。
 
-For animated GIFs, use the `<Gif>` component from `@remotion/gif` instead.
+對於動態 GIF，請改用 `@remotion/gif` 的 `<Gif>` 元件。
 
-## Sizing and positioning
+## 尺寸和定位
 
-Use the `style` prop to control size and position:
+使用 `style` 屬性來控制大小和位置：
 
 ```tsx
 <Img
@@ -79,35 +79,35 @@ Use the `style` prop to control size and position:
 />
 ```
 
-## Dynamic image paths
+## 動態圖片路徑
 
-Use template literals for dynamic file references:
+使用模板字串來動態引用檔案：
 
 ```tsx
 import { Img, staticFile, useCurrentFrame } from "remotion";
 
 const frame = useCurrentFrame();
 
-// Image sequence
+// 圖片序列
 <Img src={staticFile(`frames/frame${frame}.png`)} />
 
-// Selecting based on props
+// 根據屬性選擇
 <Img src={staticFile(`avatars/${props.userId}.png`)} />
 
-// Conditional images
+// 條件式圖片
 <Img src={staticFile(`icons/${isActive ? "active" : "inactive"}.svg`)} />
 ```
 
-This pattern is useful for:
+此模式適用於：
 
-- Image sequences (frame-by-frame animations)
-- User-specific avatars or profile images
-- Theme-based icons
-- State-dependent graphics
+- 圖片序列（逐幀動畫）
+- 使用者專屬的頭像或個人照片
+- 主題式圖示
+- 狀態相關的圖形
 
-## Getting image dimensions
+## 取得圖片尺寸
 
-Use `getImageDimensions()` to get the dimensions of an image:
+使用 `getImageDimensions()` 來取得圖片的尺寸：
 
 ```tsx
 import { getImageDimensions, staticFile } from "remotion";
@@ -115,7 +115,7 @@ import { getImageDimensions, staticFile } from "remotion";
 const { width, height } = await getImageDimensions(staticFile("photo.png"));
 ```
 
-This is useful for calculating aspect ratios or sizing compositions:
+這對於計算長寬比或設定合成大小很有用：
 
 ```tsx
 import { getImageDimensions, staticFile, CalculateMetadataFunction } from "remotion";

@@ -3,214 +3,220 @@ name: sop-creator
 description: Create runbooks, playbooks, and technical documentation for engineering teams. Use when the user wants to document a process, create a runbook, build operational docs, or formalize any repeatable technical procedure. Triggers on requests like "create a runbook for...", "document this process", "write a playbook", or any technical documentation request.
 ---
 
-# SOP & Runbook Creator
+# SOP 與 Runbook 建立器
 
-Create practical documentation that people actually follow.
+建立人們真的會照著做的實用文件。
 
-## Philosophy
+## 理念
 
-**Nobody reads 50-page docs.** Make it scannable, actionable, and impossible to misunderstand.
+**沒有人會讀 50 頁的文件。** 讓它可掃描、可執行，而且不可能被誤解。
 
-Core principles:
-- **Scannable** - Headers, bullets, tables. No walls of text.
-- **Actionable** - Every step is something you DO, not something you "consider"
-- **Specific** - Numbers, names, thresholds. No "as needed" or "when appropriate"
-- **Testable** - Clear success criteria. How do you know it worked?
-- **Maintained** - Owner, last updated, review schedule
+核心原則：
+- **可掃描** - 標題、條列、表格。不要整片文字牆。
+- **可執行** - 每個步驟都是你要「做」的事，而不是你要「考慮」的事
+- **具體明確** - 數字、名稱、閾值。不要用「視需要」或「適當時」
+- **可測試** - 明確的成功標準。你怎麼知道它成功了？
+- **持續維護** - 負責人、最後更新日期、審查排程
 
-## SOP Categories
+## SOP 類別
 
-Pick the right format for your use case:
+根據你的使用情境選擇正確的格式：
 
-### Tech/Engineering
-| Type | When to Use |
+### 技術/工程
+| 類型 | 何時使用 |
 |------|-------------|
-| **Runbook** | Emergency response, incidents, on-call |
-| **Deployment Playbook** | Releases, migrations, maintenance |
-| **Troubleshooting Guide** | Debugging, diagnosis trees |
-| **How-To Guide** | One-off setup, configuration |
-| **ADR** | Architecture decisions |
+| **Runbook** | 緊急回應、事件、值班 |
+| **部署 Playbook** | 版本發佈、遷移、維護 |
+| **故障排除指南** | 除錯、診斷樹 |
+| **操作指南** | 一次性設定、組態 |
+| **ADR** | 架構決策 |
 
-### Operations/Business
-| Type | When to Use |
+### 營運/業務
+| 類型 | 何時使用 |
 |------|-------------|
-| **Process SOP** | Repeatable business workflows |
-| **Checklist** | Quality control, verification |
-| **Decision Tree** | Complex if/then scenarios |
-| **Handoff Doc** | Role transitions, shift changes |
+| **流程 SOP** | 可重複的業務工作流程 |
+| **檢查清單** | 品質控制、驗證 |
+| **決策樹** | 複雜的條件判斷場景 |
+| **交接文件** | 角色交替、班次交接 |
 
-### Content/Creative
-| Type | When to Use |
+### 內容/創意
+| 類型 | 何時使用 |
 |------|-------------|
-| **Production Workflow** | Content creation pipelines |
-| **Review Process** | Approval workflows |
-| **Publishing Checklist** | Pre-launch verification |
+| **製作工作流程** | 內容產出管線 |
+| **審查流程** | 審批工作流程 |
+| **發佈檢查清單** | 上線前驗證 |
 
-### General
-| Type | When to Use |
+### 通用
+| 類型 | 何時使用 |
 |------|-------------|
-| **Standard SOP** | Any repeatable process |
-| **Quick Reference** | Condensed version of longer SOP |
-| **Onboarding Guide** | New person ramping up |
+| **標準 SOP** | 任何可重複的流程 |
+| **快速參考** | 較長 SOP 的精簡版 |
+| **入職指南** | 新人上手 |
 
-## Universal Structure
+## 通用結構
 
-Every SOP needs at minimum:
+每個 SOP 至少需要：
 
 ```markdown
-# [What This Does]
+# [這做什麼]
 
-> **TL;DR:** One sentence - what, when, who.
+> **摘要：** 一句話——做什麼、何時做、誰來做。
 
-## Definition of Done
+## 完成定義
 
-This is complete when:
-- [ ] [Primary outcome]
-- [ ] [Verification step]
-- [ ] [Any handoff/notification]
+以下全部達成即為完成：
+- [ ] [主要成果]
+- [ ] [驗證步驟]
+- [ ] [任何交接/通知]
 
-## When to Use This
-[Trigger conditions]
+## 何時使用
 
-## Prerequisites
-[What you need before starting]
+[觸發條件]
 
-## The Process
-[Numbered steps - the actual work]
+## 前提條件
 
-## Verify Completion
-[Return to Definition of Done, confirm all checked]
+[開始前需要什麼]
 
-## When Things Go Wrong
-[Common issues and fixes]
+## 流程
 
-## Questions?
-[Who to contact]
+[編號步驟——實際的工作]
+
+## 驗證完成
+
+[回到完成定義，確認全部勾選]
+
+## 出問題時怎麼辦
+
+[常見問題與修復方式]
+
+## 有問題？
+
+[聯絡誰]
 ```
 
-**Definition of Done is the most important section.** Put it near the top. Make it a checklist. Be specific.
+**完成定義是最重要的區段。** 放在最前面。做成檢查清單。要具體。
 
-## Writing Rules
+## 撰寫規則
 
-### Be Specific
+### 要具體
 
-| Don't Write | Write Instead |
+| 不要這樣寫 | 改成這樣 |
 |-------------|---------------|
-| "Contact the team" | "Message @sarah in #ops-team" |
-| "Wait until ready" | "Wait until status shows 'Complete' (~5 min)" |
-| "Review carefully" | "Check items A, B, C in the dashboard" |
-| "As appropriate" | "If value > 100" |
-| "Regularly" | "Every Monday at 9am" |
-| "Soon" | "Within 2 hours" |
+| 「聯絡團隊」 | 「在 #ops-team 頻道中 @sarah」 |
+| 「等到準備好」 | 「等到狀態顯示『完成』（約 5 分鐘）」 |
+| 「仔細審查」 | 「在儀表板中檢查項目 A、B、C」 |
+| 「適當時」 | 「如果數值 > 100」 |
+| 「定期」 | 「每週一上午 9 點」 |
+| 「盡快」 | 「2 小時內」 |
 
-### Action-First Steps
-
-```markdown
-# Bad
-"The report should be reviewed before sending to ensure
-accuracy and completeness of all data fields."
-
-# Good
-1. Open the report in [System]
-2. Verify these fields are populated:
-   - [ ] Customer name
-   - [ ] Amount
-   - [ ] Date
-3. Click "Send"
-```
-
-### Warnings Come First
+### 步驟以動作開頭
 
 ```markdown
-# Bad
-1. Delete the old records
-   Note: This cannot be undone
+# 不好
+「報告在發送之前應該先經過審查，以確保
+所有資料欄位的正確性和完整性。」
 
-# Good
-> **WARNING:** This permanently deletes records. Export first if needed.
-
-1. Delete the old records
+# 好
+1. 在 [系統] 中開啟報告
+2. 驗證以下欄位已填寫：
+   - [ ] 客戶名稱
+   - [ ] 金額
+   - [ ] 日期
+3. 點擊「發送」
 ```
 
-### Decision Points are Clear
+### 警告放在前面
 
 ```markdown
-# Bad
-"Handle the request based on priority level"
+# 不好
+1. 刪除舊記錄
+   注意：此操作無法復原
 
-# Good
-**If priority is:**
-- **Critical:** Drop everything, handle now, notify manager
-- **High:** Handle within 4 hours
-- **Normal:** Handle within 24 hours
-- **Low:** Add to weekly batch
+# 好
+> **警告：** 這會永久刪除記錄。如有需要請先匯出。
+
+1. 刪除舊記錄
 ```
 
-## Format Selection Guide
+### 決策點要清楚
 
-Ask yourself:
+```markdown
+# 不好
+「依優先等級處理請求」
 
-1. **Is this for emergencies?** → Runbook
-2. **Is this a complex multi-phase project?** → Playbook
-3. **Is this a simple repeated task?** → Standard SOP or Checklist
-4. **Does it have lots of if/then branching?** → Decision Tree
-5. **Is it for debugging?** → Troubleshooting Guide
-6. **Is it recording a decision?** → ADR
-7. **Is it for someone new?** → Onboarding Guide
+# 好
+**如果優先等級是：**
+- **緊急：** 放下一切，立刻處理，通知主管
+- **高：** 4 小時內處理
+- **一般：** 24 小時內處理
+- **低：** 加入每週批次處理
+```
 
-## Metadata (Keep it Light)
+## 格式選擇指南
+
+問你自己：
+
+1. **這是用於緊急情況嗎？** → Runbook
+2. **這是複雜的多階段專案嗎？** → Playbook
+3. **這是簡單的重複性任務嗎？** → 標準 SOP 或檢查清單
+4. **有很多條件判斷分支嗎？** → 決策樹
+5. **這是用於除錯嗎？** → 故障排除指南
+6. **這是記錄一個決策嗎？** → ADR
+7. **這是給新人看的嗎？** → 入職指南
+
+## 中繼資料（保持簡潔）
 
 ```yaml
 ---
-title: [Clear name]
-owner: [Person or team]
-last_updated: [Date]
-review_schedule: [quarterly/annually/as-needed]
+title: [清楚的名稱]
+owner: [負責人或團隊]
+last_updated: [日期]
+review_schedule: [季度/年度/視需要]
 ---
 ```
 
-That's it. No document IDs, version matrices, or approval chains unless you actually need them.
+就這樣。除非你真的需要，否則不用文件編號、版本矩陣或審批流程。
 
-## Templates
+## 範本
 
-Each template is in `references/`:
+每個範本都在 `references/` 中：
 
-| Template | Use For |
+| 範本 | 用途 |
 |----------|---------|
-| [runbook.md](references/runbook.md) | Incidents, emergencies, on-call |
-| [standard-sop.md](references/standard-sop.md) | Any repeatable process |
-| [how-to-guide.md](references/how-to-guide.md) | One-off tasks, setup |
-| [onboarding-guide.md](references/onboarding-guide.md) | New person ramping up |
-| [decision-tree.md](references/decision-tree.md) | Complex if/then flows |
-| [checklist.md](references/checklist.md) | QC, verification |
+| [runbook.md](references/runbook.md) | 事件、緊急情況、值班 |
+| [standard-sop.md](references/standard-sop.md) | 任何可重複的流程 |
+| [how-to-guide.md](references/how-to-guide.md) | 一次性任務、設定 |
+| [onboarding-guide.md](references/onboarding-guide.md) | 新人上手 |
+| [decision-tree.md](references/decision-tree.md) | 複雜的條件判斷流程 |
+| [checklist.md](references/checklist.md) | 品質控制、驗證 |
 
-**All templates have Definition of Done as the primary success criteria.**
+**所有範本都以完成定義作為主要的成功標準。**
 
-## Quality Checklist
+## 品質檢查清單
 
-Before publishing:
-- [ ] Can someone unfamiliar follow this?
-- [ ] Are all steps actionable (verbs, not descriptions)?
-- [ ] Are specifics provided (names, numbers, thresholds)?
-- [ ] Is there a clear "done" state?
-- [ ] Is the owner/contact info current?
-- [ ] Has it been tested recently?
+發佈前：
+- [ ] 不熟悉的人能照著做嗎？
+- [ ] 所有步驟都是可執行的嗎（動詞，不是描述）？
+- [ ] 有提供具體資訊嗎（名稱、數字、閾值）？
+- [ ] 有明確的「完成」狀態嗎？
+- [ ] 負責人/聯絡資訊是最新的嗎？
+- [ ] 最近測試過嗎？
 
-## Anti-Patterns
+## 反模式
 
-**Kill these:**
-- "Per company policy..." (just state what to do)
-- "It is recommended that..." (just say "do X")
-- "Please ensure..." (just say "check X")
-- Passive voice ("the form should be submitted" → "submit the form")
-- Describing what to do instead of showing it
-- Walls of text with no structure
-- Screenshots that will be outdated in a month
+**消滅這些：**
+- 「根據公司政策...」（直接說該做什麼）
+- 「建議...」（直接說「做 X」）
+- 「請確保...」（直接說「檢查 X」）
+- 被動語態（「表單應被提交」→「提交表單」）
+- 描述要做什麼而不是展示
+- 沒有結構的文字牆
+- 一個月後就過時的截圖
 
-**Do these:**
-- Start with the most common path
-- Put edge cases at the bottom
-- Link to related docs instead of duplicating
-- Use tables for reference info
-- Use checklists for verification steps
-- Include "I'm stuck" escape hatches
+**要做這些：**
+- 從最常見的路徑開始
+- 把邊緣情況放在底部
+- 連結到相關文件而不是複製
+- 用表格呈現參考資訊
+- 用檢查清單做驗證步驟
+- 包含「我卡住了」的逃生出口
